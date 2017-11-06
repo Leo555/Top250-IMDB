@@ -46,6 +46,7 @@
   .movie {
     overflow: hidden;
     display: block;
+    float: left;
     margin: 40px 20px;
     img {
       width: 250px;
@@ -54,7 +55,7 @@
     }
     .movie-intro {
       margin-left: 260px;
-      width: 660px;
+      width: 600px;
       h1 {
         display: inline-block;
         line-height: 38px;
