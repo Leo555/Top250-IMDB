@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import * as helpers from 'helpers'
 import * as stringHelper from 'helpers/string'
 import SearchBarItem from 'components/Search/SearchBarItem.vue'
@@ -31,6 +32,7 @@ Object.keys(_filters).forEach(key => {
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: {App}
 })
