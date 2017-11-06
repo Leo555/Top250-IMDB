@@ -24,17 +24,20 @@
 </template>
 <script>
   import debounce from 'debounce'
-  const mData = require('movies.json')
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'movie-search',
     data () {
       return {
-        movies: [],
+        sMovies: [],
         restaurants: 0,
         keyword: '',
         showItem: false
       }
+    },
+    computed: {
+      ...mapGetters(['movies'])
     },
     methods: {
       submit (e) {
@@ -59,7 +62,7 @@
         this.$set(this.$refs.input, 'highlightedIndex', -1)
         let keyword = this.keyword
         let files = []
-        this.movies.some(m => {
+        this.sMovies.some(m => {
           if (m.name.includes(keyword)) {
             files.push(m)
           }
@@ -80,14 +83,14 @@
       }
     },
     created () {
-      mData.map(m => {
+      this.movies.map(m => {
         if (m.subject) {
-          this.movies.push({name: m.subject.title, year: m.subject.year, order: m.order})
+          this.sMovies.push({name: m.subject.title, year: m.subject.year, order: m.order})
         } else {
           let name = m.name.split(/（|）/)[0]
           let year = m.name.split(/（|）/)[1]
           let order = m.order
-          this.movies.push({name, year, order})
+          this.sMovies.push({name, year, order})
         }
       })
     }

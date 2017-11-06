@@ -8,21 +8,25 @@ export default new Vuex.Store({
 
   plugins: [],
 
+  state: {
+    movies: []
+  },
+
   getters: {
     movies (state) {
       return state.movies
     }
   },
-
   modules: {},
 
-  state: {
-    movies: []
+  actions: {
+    INIT_MOVIES_DATA ({commit}, movies) {
+      commit(SET_MOVIES_DATA, movies)
+    }
   },
 
   mutations: {
     [SET_MOVIES_DATA]: (state, movies) => {
-      debugger
       state.movies = movies
     }
   }

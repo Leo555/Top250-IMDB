@@ -1,22 +1,26 @@
 <template>
   <div class="movie" :href="movie.name">
-    <a :href="movie.name">
+    <router-link :to="_to">
       <img :src="`static/img/${movie.src}`" :alt="movie.name">
-    </a>
+    </router-link>
     <div class="movie-intro">
       <div class="name">
-        <a :href="movie.name">
+        <router-link :to="_to">
           <h1>{{movie.order}}. {{movie.name}}</h1>
           <h1 class="score">{{movie.score}}</h1>
-        </a>
+        </router-link>
       </div>
       <div class="details">
         <p>英文名：<i>{{movie.englishName}}</i></p>
         <p>别名：<i>{{movie.nickName}}</i></p>
         <p>导演：<i>{{movie.director}}</i></p>
         <p>主演：<i>{{movie.actors}}</i></p>
-        <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`">{{name}}</a>
-          豆瓣：<a :href="`http://www.imdb.cn/title/${movie.href}`">{{name}}</a></p>
+        <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
+          <span v-if="movie.subject">
+            豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
+                  target="_blank">{{name}}</a>
+          </span>
+        </p>
         <p>简介：<i class="short">{{movie.short || movie.synopsis}}</i></p>
       </div>
     </div>
@@ -31,7 +35,11 @@
         name: this.movie.name.split('（')[0]
       }
     },
-    computed: {}
+    computed: {
+      _to () {
+        return {name: 'View', params: {name: this.movie.englishName}}
+      }
+    }
   }
 </script>
 <style lang="less" scoped>

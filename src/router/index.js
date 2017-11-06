@@ -19,9 +19,8 @@ export default new Router({
         path: '',
         component: Main
       }, {
-        path: '/view/:order',
+        path: '/view/:name',
         name: 'View',
-        meta: Object.assign({keepAlive: true}),
         component: View
       }]
     }

@@ -4,8 +4,8 @@ import router from './router'
 import store from './store'
 import * as helpers from 'helpers'
 import * as stringHelper from 'helpers/string'
-import SearchBarItem from 'components/Search/SearchBarItem.vue'
-import Icon from 'components/Icon.vue'
+import SearchBarItem from 'components/Search/SearchBarItem'
+import Icon from 'components/Icon'
 import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 
 Vue.config.productionTip = false

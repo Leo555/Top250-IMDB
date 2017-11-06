@@ -47,7 +47,7 @@
       line-height: 38px;
       padding: 0 15px;
       font-size: 12px;
-      color: #666666;
+      color: #666;
     }
     .el-col {
       padding: 0 !important;
