@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import * as helpers from 'helpers'
 import * as stringHelper from 'helpers/string'
-import SearchBarItem from 'components/Search/SearchBarItem'
+import SearchBarItem from 'components/search/SearchBarItem'
 import Icon from 'components/Icon'
 import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 

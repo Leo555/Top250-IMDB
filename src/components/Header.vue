@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-  import SearchBar from './Search/SearchBar.vue'
+  import SearchBar from './search/SearchBar.vue'
   export default {
     name: 'movie-header',
     components: {SearchBar}

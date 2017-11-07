@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { SET_MOVIES_DATA } from 'constants/actions'
+import { SET_MOVIES_DATA, INIT_MOVIES_DATA } from 'constants/actions'
 
 Vue.use(Vuex)
 
@@ -20,7 +20,7 @@ export default new Vuex.Store({
   modules: {},
 
   actions: {
-    INIT_MOVIES_DATA ({commit}, movies) {
+    [INIT_MOVIES_DATA]: ({commit}, movies) => {
       commit(SET_MOVIES_DATA, movies)
     }
   },
