@@ -1,35 +1,48 @@
 <template>
-  <div class="movie" :href="movie.name">
-    <img :src="`/static/img/${movie.src}`" :alt="movie.name">
-    <div class="movie-intro">
-      <div class="name">
-        <h1>{{movie.order}}. {{movie.name}}</h1>
-        <h1 class="score">{{movie.score}}</h1>
+  <div class="movie-container">
+    <m-header></m-header>
+    <div class="movie" :href="movie.name">
+      <div class="image-wrap">
+      <img :src="`/static/img/${movie.src}`" :alt="movie.name">
       </div>
-      <div class="details">
-        <p>英文名：<i>{{movie.englishName}}</i></p>
-        <p>别名：<i>{{movie.nickName}}</i></p>
-        <p>导演：<i>{{movie.director}}</i></p>
-        <p>主演：<i>{{movie.actors}}</i></p>
-        <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
-          <span v-if="movie.subject">
-            豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
-                                           target="_blank">{{name}}</a>
-          </span>
-        </p>
-        <p>简介：<i class="short">{{movie.short || movie.synopsis}}</i></p>
+      <div class="movie-score">
+        <p> {{movie.score}}</p>
+      </div>
+      <div class="movie-intro">
+        <div class="name">
+          <h1>{{movie.order}}. {{movie.name}}</h1>
+        </div>
+        <div class="details">
+          <p>英文名：<i>{{movie.englishName}}</i></p>
+          <p>别名：<i>{{movie.nickName}}</i></p>
+          <p>导演：<i>{{movie.director}}</i></p>
+          <p>主演：<i>{{movie.actors}}</i></p>
+          <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
+            <span v-if="movie.subject">
+              豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
+                                             target="_blank">{{name}}</a>
+            </span>
+          </p>
+          <p>上映时间：<i>{{movie.subject?movie.subject.year:movie.name|getYear}}</i></p>
+          <p>简介：<i class="short">{{movie.short || movie.synopsis}}</i></p>
+        </div>
+        <div class="download">
+          下载地址：<a :href="movie.download">{{movie.name}}</a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
   import { mapGetters } from 'Vuex'
+  import Header from 'components/Header.vue'
   import {
     INIT_MOVIES_DATA
   } from 'constants/actions'
   const movies = require('movies.json')
   export default {
     name: 'movieView',
+    components: {'m-header': Header},
     computed: {
       ...mapGetters(['movies']),
       name () {
@@ -50,3 +63,63 @@
     }
   }
 </script>
+<style lang="less" scoped>
+  .movie-container {
+    background: #e9e9e9;
+    overflow: hidden;
+    .movie {
+      position: relative;
+      padding: 30px;
+      width: 750px;
+      margin: 0 auto;
+      .image-wrap {
+        background: #333;
+        img {
+          display: block;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+      }
+      .movie-score {
+        position: absolute;
+        background: #000;
+        filter: alpha(opacity=70);
+        filter: alpha(opacity=70);
+        opacity: 0.7;
+        margin-top: -36px;
+        p {
+          line-height: 30px;
+          padding-left: 20px;
+          padding-right: 40px;
+          color: #fff;
+          font-style: italic;
+        }
+      }
+      .movie-intro {
+        padding: 20px 3%;
+        h1 {
+          font-size: 36px;
+          line-height: 46px;
+          padding-bottom: 5px;
+          padding-top: 5px;
+          color: #111;
+        }
+        p {
+          font-size: 13px;
+          color: #454545;
+          line-height: 24px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+        }
+        i {
+          color: #181818;
+          font-style: normal;
+        }
+      }
+    }
+  }
+  a {
+    color: #42b983;
+    cursor: pointer;
+  }
+</style>

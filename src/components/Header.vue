@@ -1,8 +1,8 @@
 <template>
   <div class="header-wrap">
-    <div class="logo">
+    <router-link :to="{name: 'Main'}">
       IMDB Top250
-    </div>
+    </router-link>
     <search-bar></search-bar>
   </div>
 </template>
@@ -13,18 +13,26 @@
     components: {SearchBar}
   }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   .header-wrap {
     height: 54px;
     background: #5a5e66;
     position: relative;
-    .logo {
+    a {
       line-height: 54px;
       text-align: center;
       float: left;
       width: 245px;
       color: #fff;
       font-size: 20px;
+      user-select: none;
+      cursor: pointer;
+      &:hover {
+        color: #dbdbdb;
+      }
+      &:active {
+        color: #dbdbdb;
+      }
     }
   }
 
