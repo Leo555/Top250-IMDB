@@ -6,8 +6,8 @@
     <div class="movie-intro">
       <div class="name">
         <router-link :to="_to">
-          <h1>{{movie.order}}. {{movie.name}}</h1>
-          <h1 class="score">{{movie.score}}</h1>
+          <h2>{{movie.order}}. {{movie.name}}</h2>
+          <h2 class="score">{{movie.score}}</h2>
         </router-link>
       </div>
       <div class="details">
@@ -21,7 +21,6 @@
                   target="_blank">{{name}}</a>
           </span>
         </p>
-        <p>简介：<i class="short">{{movie.short || movie.synopsis}}</i></p>
       </div>
     </div>
   </div>
@@ -44,32 +43,34 @@
 </script>
 <style lang="less" scoped>
   .movie {
+    width: 300px;
     overflow: hidden;
-    display: block;
-    float: left;
-    margin: 40px 20px;
+    display: inline-block;
+    margin: 40px 20px 0 20px;
+    vertical-align: top;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
     img {
-      width: 250px;
-      height: 370px;
-      float: left;
+      width: 100%;
+      min-height: 400px;
+      display: block;
     }
     .movie-intro {
-      margin-left: 260px;
-      width: 600px;
-      h1 {
-        display: inline-block;
-        line-height: 38px;
+      width: 100%;
+      background: #ccc;
+      padding: 10px;
+      h2 {
+        display: inherit;
+        line-height: 30px;
       }
       .score {
         float: right;
       }
       .details {
-        margin-top: 1rem;
-        height: 300px;
         color: #9a9a9a;
-        font-size: 1rem;
+        font-size: 14px;
         i {
-          color: #000;
+          color: #181818;
           font-style: normal;
         }
         .short {
