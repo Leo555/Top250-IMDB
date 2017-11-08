@@ -1,6 +1,6 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
-const jsonfile = require('jsonfile')
+const {persist} = require('./utils')
 
 const baseUrl = 'https://api.douban.com/v2/movie/search?count=1&q='
 let movies = require('./movies.json')
@@ -32,10 +32,7 @@ async function go () {
     if (!movie) {
       clearInterval(inter)
       setTimeout(() => {
-        jsonfile.writeFile('./movies.json', movies, {spaces: 2}, err => {
-          if (err) console.error(err)
-          console.log('movies persisted')
-        })
+        persist(movies)
       }, 10 * 1000)
     }
   }, 2000)

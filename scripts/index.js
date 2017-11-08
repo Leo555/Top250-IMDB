@@ -1,7 +1,6 @@
 const cheerio = require('cheerio')
-const fs = require('fs')
 const axios = require('axios')
-const jsonfile = require('jsonfile')
+const {download, persist} = require('./utils')
 
 const baseUrl = 'http://www.imdb.cn'
 const keyMap = {
@@ -27,10 +26,7 @@ async function go () {
   }
   await Promise.all(tasks)
   movies.sort((a, b) => a.order - b.order)
-  jsonfile.writeFile('./movies.json', movies, {spaces: 2}, err => {
-    if (err) console.error(err)
-    console.log('movies persisted')
-  })
+  persist(movies)
 }
 async function buildMovie (href, order) {
   const {data} = await axios(`${baseUrl}${href}`)
@@ -60,19 +56,6 @@ async function buildMovie (href, order) {
   movie['synopsis'] = synopsis.substr(0, 500).trim()
   movies.push(movie)
   Promise.resolve()
-}
-
-// 下载方法
-const download = (url, dir, filename) => {
-  axios.get(url, {
-    responseType: 'arraybuffer'
-  }).then(response => {
-    let stream = fs.createWriteStream(dir + '/' + filename)
-    stream.once('open', () => {
-      stream.write(new Buffer(response.data, 'binary'))
-      stream.end()
-    })
-  })
 }
 
 go()

@@ -3,7 +3,7 @@
     <m-header></m-header>
     <div class="movie" :href="movie.name">
       <div class="image-wrap">
-      <img :src="`/static/img/${movie.src}`" :alt="movie.name">
+        <img :src="`/static/img/${movie.src}`" :alt="movie.name">
       </div>
       <div class="movie-score">
         <p> {{movie.score}}</p>
@@ -19,12 +19,35 @@
           <p>主演：<i>{{movie.actors}}</i></p>
           <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
             <span v-if="movie.subject">
-              豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
-                                             target="_blank">{{name}}</a>
+              豆瓣：<a
+              :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
+              target="_blank">{{name}}</a>
             </span>
           </p>
-          <p>上映时间：<i>{{movie.subject?movie.subject.year:movie.name|getYear}}</i></p>
+          <p>上映时间：<i>{{movie.subject ? movie.subject.year : movie.name | getYear}}</i></p>
+          <p>类型：<i>{{movie.subject ? movie.subject.genres.join(', ') : '剧情'}}</i></p>
           <p>简介：<i class="short">{{movie.short || movie.synopsis}}</i></p>
+        </div>
+        <h3>演职员表</h3>
+        <div v-if="movie.subject" class="actors-list">
+          <p>导演</p>
+          <div class="items">
+            <div v-for="d in movie.subject.directors" class="item">
+              <a class="director-name" :href="d.alt" target="_blank">
+                <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                <span>{{d.name}}</span>
+              </a>
+            </div>
+          </div>
+          <p>主要演员</p>
+          <div class="items">
+            <div v-for="d in movie.subject.casts" class="item">
+              <a class="director-name" :href="d.alt" target="_blank">
+                <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                <span>{{d.name}}</span>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="download">
           下载地址：<a :href="movie.download">{{movie.name}}</a>
@@ -115,11 +138,43 @@
           color: #181818;
           font-style: normal;
         }
+        .actors-list {
+          border: 1px solid #ccc;
+          p {
+            font-size: 18px;
+            text-align: center;
+          }
+          .items {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            span {
+              line-height: 30px;
+            }
+            .item {
+              margin: 0 10px;
+              text-align: center;
+              width: 220px;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .download {
+          margin-top: 26px;
+          margin-bottom: 30px;
+        }
       }
     }
   }
+
   a {
     color: #42b983;
     cursor: pointer;
+  }
+
+  h3 {
+    line-height: 2em;
   }
 </style>
