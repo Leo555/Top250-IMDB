@@ -7,6 +7,7 @@ import * as stringHelper from 'helpers/string'
 import SearchBarItem from 'components/search/SearchBarItem'
 import Icon from 'components/Icon'
 import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
+import VueLazyload from 'vue-lazyload'
 
 Vue.config.productionTip = false
 
@@ -21,6 +22,8 @@ const components = [
 ]
 
 components.forEach((item) => Vue.component(item.name, item))
+
+Vue.use(VueLazyload)
 
 // register global utility filters.
 let _filters = Object.assign(helpers, stringHelper)

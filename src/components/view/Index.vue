@@ -34,7 +34,7 @@
           <div class="items">
             <div v-for="d in movie.subject.directors" class="item">
               <a class="director-name" :href="d.alt" target="_blank">
-                <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                <img v-lazy="`/static/img/avatars/${d.avatars}`" :alt="d.name">
                 <span>{{d.name}}</span>
               </a>
             </div>
@@ -43,7 +43,7 @@
           <div class="items">
             <div v-for="d in movie.subject.casts" class="item">
               <a class="director-name" :href="d.alt" target="_blank">
-                <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                <img v-lazy="`/static/img/avatars/${d.avatars}`" :alt="d.name">
                 <span>{{d.name}}</span>
               </a>
             </div>
