@@ -23,7 +23,11 @@ const components = [
 
 components.forEach((item) => Vue.component(item.name, item))
 
-Vue.use(VueLazyload)
+Vue.use(VueLazyload, {
+  error: '/static/img/movie.png',
+  loading: '/static/img/movie.png',
+  attempt: 1
+})
 
 // register global utility filters.
 let _filters = Object.assign(helpers, stringHelper)

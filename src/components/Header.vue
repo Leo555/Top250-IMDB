@@ -15,6 +15,7 @@
 </script>
 <style lang="less" scoped>
   .header-wrap {
+    min-width: 820px;
     height: 54px;
     background: #5a5e66;
     position: relative;

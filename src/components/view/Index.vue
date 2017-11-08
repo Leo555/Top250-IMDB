@@ -1,7 +1,7 @@
 <template>
   <div class="movie-container">
     <m-header></m-header>
-    <div class="movie" :href="movie.name">
+    <article class="movie" :href="movie.name">
       <div class="image-wrap">
         <img :src="`/static/img/${movie.src}`" :alt="movie.name">
       </div>
@@ -9,9 +9,9 @@
         <p> {{movie.score}}</p>
       </div>
       <div class="movie-intro">
-        <div class="name">
+        <header class="name">
           <h1>{{movie.order}}. {{movie.name}}</h1>
-        </div>
+        </header>
         <div class="details">
           <p>英文名：<i>{{movie.englishName}}</i></p>
           <p>别名：<i>{{movie.nickName}}</i></p>
@@ -34,7 +34,9 @@
           <div class="items">
             <div v-for="d in movie.subject.directors" class="item">
               <a class="director-name" :href="d.alt" target="_blank">
-                <img v-lazy="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                <p class="image-container">
+                  <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                </p>
                 <span>{{d.name}}</span>
               </a>
             </div>
@@ -43,7 +45,9 @@
           <div class="items">
             <div v-for="d in movie.subject.casts" class="item">
               <a class="director-name" :href="d.alt" target="_blank">
-                <img v-lazy="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                <p class="image-container">
+                  <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                </p>
                 <span>{{d.name}}</span>
               </a>
             </div>
@@ -53,11 +57,15 @@
           下载地址：<a :href="movie.download">{{movie.name}}</a>
         </div>
       </div>
-    </div>
+    </article>
+    <nav class="movie-nav">
+      <a class="preview">preview</a>
+      <a class="next">next</a>
+    </nav>
   </div>
 </template>
 <script>
-  import { mapGetters } from 'Vuex'
+  import { mapGetters } from 'vuex'
   import Header from 'components/Header.vue'
   import {
     INIT_MOVIES_DATA
@@ -77,12 +85,23 @@
         movie: {name: '', imdb: '', href: '', src: ''}
       }
     },
+    methods: {
+      init () {
+        let name = this.$route.params.name
+        this.movie = this.movies.find(m => m.englishName === name)
+      }
+    },
+    watch: {
+      $route (to, from) {
+        if (this._inactive) return
+        this.init()
+      }
+    },
     beforeCreate () {
       this.$store.dispatch(INIT_MOVIES_DATA, movies)
     },
     activated () {
-      let name = this.$route.params.name
-      this.movie = this.movies.find(m => m.englishName === name)
+      this.init()
     }
   }
 </script>
@@ -155,8 +174,14 @@
               margin: 0 10px;
               text-align: center;
               width: 220px;
-              img {
+              .image-container {
                 width: 100%;
+                height: 0;
+                padding-bottom: 150%;
+                overflow: hidden;
+                img {
+                  width: 100%;
+                }
               }
             }
           }
@@ -165,6 +190,28 @@
           margin-top: 26px;
           margin-bottom: 30px;
         }
+      }
+    }
+    .movie-nav {
+      text-align: center;
+      position: relative;
+      padding: 0 30px;
+      bottom: 30px;
+      width: 750px;
+      margin: 0 auto;
+      .preview {
+        width: 80px;
+        float: left;
+      }
+      .next {
+        width: 80px;
+        float: right;
+      }
+      a {
+        background: #ccc;
+        padding-left: 20px;
+        padding-right: 40px;
+        line-height: 30px;
       }
     }
   }

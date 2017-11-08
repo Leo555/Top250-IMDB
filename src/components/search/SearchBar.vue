@@ -33,7 +33,8 @@
         sMovies: [],
         restaurants: 0,
         keyword: '',
-        showItem: false
+        showItem: false,
+        hash: {}
       }
     },
     computed: {
@@ -41,25 +42,25 @@
     },
     methods: {
       submit (e) {
-        this.showItem = false
-        let regu = '^[ ]+$'
-        let checkNull = new RegExp(regu).test(this.keyword)
+//        this.showItem = false
+//        let regu = '^[ ]+$'
+//        let checkNull = new RegExp(regu).test(this.keyword)
 
-        if (!checkNull && this.keyword && this.keyword.length > 0) {
-          this.$router.push({
-            name: 'Search',
-            params: {
-              keyword: encodeURIComponent(this.keyword)
-            }
-          })
-        }
+//        if (!checkNull && this.keyword && this.keyword.length > 0) {
+//          this.$router.push({
+//            name: 'Search',
+//            params: {
+//              keyword: encodeURIComponent(this.keyword)
+//            }
+//          })
+//        }
+        return false
       },
       querySearch: debounce(async function (queryString, cb) {
         if (!queryString || queryString.trim().length === 0) {
           this.showItem = false
           return
         }
-        this.$set(this.$refs.input, 'highlightedIndex', -1)
         let keyword = this.keyword
         let files = []
         this.sMovies.some(m => {
@@ -77,6 +78,12 @@
         cb(files)
       }, 50),
       handleSelect (item) {
+        this.$router.push({
+          name: 'View',
+          params: {
+            name: item.englishName
+          }
+        })
       },
       keydown (e) {
 
@@ -85,12 +92,12 @@
     created () {
       this.movies.map(m => {
         if (m.subject) {
-          this.sMovies.push({name: m.subject.title, year: m.subject.year, order: m.order})
+          this.sMovies.push({englishName: m.englishName, name: m.subject.title, year: m.subject.year, order: m.order})
         } else {
           let name = m.name.split(/（|）/)[0]
           let year = m.name.split(/（|）/)[1]
           let order = m.order
-          this.sMovies.push({name, year, order})
+          this.sMovies.push({englishName: m.englishName, name, year, order})
         }
       })
     }
