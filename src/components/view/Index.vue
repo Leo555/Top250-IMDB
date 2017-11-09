@@ -59,8 +59,14 @@
       </div>
     </article>
     <nav class="movie-nav">
-      <a class="preview">preview</a>
-      <a class="next">next</a>
+      <router-link :to="{name: 'View', params: {name: preview.englishName}}"
+                   class="preview nav" v-if="preview && preview.name">
+        <Icon type="circle-left"></Icon>
+      </router-link>
+      <router-link :to="{name: 'View', params: {name: next.englishName}}"
+                   class="next nav" v-if="next && next.name">
+        <Icon type="circle-right"></Icon>
+      </router-link>
     </nav>
   </div>
 </template>
@@ -82,6 +88,8 @@
     },
     data () {
       return {
+        preview: {},
+        next: {},
         movie: {name: '', imdb: '', href: '', src: ''}
       }
     },
@@ -89,6 +97,8 @@
       init () {
         let name = this.$route.params.name
         this.movie = this.movies.find(m => m.englishName === name)
+        this.preview = this.movies.find(m => m.order === (this.movie.order - 1))
+        this.next = this.movies.find(m => m.order === (this.movie.order + 1))
       }
     },
     watch: {
@@ -193,24 +203,25 @@
       }
     }
     .movie-nav {
+      overflow: hidden;
       text-align: center;
       position: relative;
       padding: 0 30px;
       bottom: 30px;
       width: 750px;
       margin: 0 auto;
+      .nav {
+        font-size: 30px;
+        padding: 0 3%;
+      }
       .preview {
-        width: 80px;
         float: left;
       }
       .next {
-        width: 80px;
         float: right;
       }
       a {
-        background: #ccc;
-        padding-left: 20px;
-        padding-right: 40px;
+        color: #222;
         line-height: 30px;
       }
     }

@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'movie';
   src: url('~static/fonts/iconfont.ttf') format('truetype'),
-       url('~static/fonts/iconfont.woff') format('woff'),
-       url('~static/fonts/iconfont.svg') format('svg');
+  url('~static/fonts/iconfont.woff') format('woff'),
+  url('~static/fonts/iconfont.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.components-icons{
+.components-icons {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'movie';
   speak: none;
@@ -29,6 +29,9 @@
 
 @components-icons-search: "\E65B";
 @components-icons-close: "\E60C";
+@components-icons-circle-left: "\E71F";
+@components-icons-circle-right: "\E720";
+
 .components-icons-search {
   &:before {
     content: @components-icons-search;
@@ -38,5 +41,17 @@
 .components-icons-close {
   &:before {
     content: @components-icons-close;
+  }
+}
+
+.components-icons-circle-left {
+  &:before {
+    content: @components-icons-circle-left;
+  }
+}
+
+.components-icons-circle-right {
+  &:before {
+    content: @components-icons-circle-right;
   }
 }

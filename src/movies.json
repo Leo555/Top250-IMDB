@@ -2822,7 +2822,7 @@
     "englishName": "The Dark Knight Rises",
     "nickName": "蝙蝠侠：黑暗骑士崛起",
     "director": "未知",
-    "actors": "",
+    "actors": "克里斯蒂安·贝尔 汤姆·哈迪 安妮·海瑟薇",
     "synopsis": "",
     "subject": {
       "genres": [
@@ -3145,7 +3145,7 @@
     "englishName": "Intouchables",
     "nickName": "无法触碰/触不可及/逆转人生（台）/最佳拍档",
     "director": "未知",
-    "actors": "",
+    "actors": "弗朗索瓦·克鲁塞 奥玛·希 安娜·勒尼",
     "synopsis": "因为一次跳伞事故，白人富翁菲利普Philippe（弗朗索瓦·克鲁塞 François Cluzet 饰）瘫痪在床，欲招聘一名全职陪护。由于薪酬高，应聘者云集，个个舌灿莲花，却无法打动他的心。直到黑人德希斯Driss（奥玛·赛 Omar Sy 饰）的出现才让他作出决定。德希斯刚从监狱出来，背负家庭重担，一心只想寻张辞退信以申领救济金，而且他明显对女助理的兴趣要远大于这份工作。但是菲利普还是一眼相中了这个小伙子。于是，德希斯开始了一个月的试用期。虽然舒适的豪宅环境让他倍感虚荣，但是他仍面临很多挑战：不仅要为菲利普作身体复健，还得给他洗浴、灌肠、拆信、穿丝袜等。起初，两人的思维方式与价值观大相径庭，但是，随着了解的不断深入，他们成为了朋友……",
     "subject": {
       "genres": [
@@ -3765,7 +3765,7 @@
         },
         {
           "alt": null,
-          "avatars": null,
+          "avatars": "KlausWennemann.png",
           "name": "Klaus Wennemann",
           "id": null
         }
@@ -4876,7 +4876,7 @@
     "imdb": "/tt0086879",
     "order": 92,
     "url": "http://posters.imdb.cn/upload/2006/02/20/m11DU7aQr_1162780859.jpg",
-    "name": "莫扎特（1984）",
+    "name": "莫扎特传（1984）",
     "score": "8.4",
     "src": "莫扎特（1984）.png",
     "englishName": "Amadeus",
@@ -4885,23 +4885,48 @@
     "actors": "默里·亚伯拉罕 F. Murray Abraham 汤姆·休斯 Tom Hulce 伊丽莎白·贝里奇 Elizabeth Berridge 西蒙·卡洛 Simon Callow",
     "synopsis": "影片开始于奥地利宫廷乐师萨里埃利向神父忏悔，音乐家莫扎特的英年早逝与他不可饶恕的嫉妒和坑害有关。    42年前萨里埃利从偏僻小镇到了维也纳，在约瑟夫二世的王宫里当了宫廷乐师。谁知被莫扎特的乐曲迷得神魂颠倒，一次在主教家里终于见到仰慕已久的莫扎特，这位人称4岁写协奏曲，7岁写交响乐，11岁写大型歌剧的大音乐家原来是个放荡不羁，玩世不恭又十分傲慢的青年人。     约瑟夫二世热爱音乐，闻知莫扎特来到维也纳并接见了他，国王弹奏萨里埃利谱写的曲子表示欢迎莫扎特，并征求对这曲子的看法，莫扎特一面赞扬曲子，一面把曲子又弹了一遍，边弹边修改，使曲子变得更流畅和充满热情，惊叹之余使萨里埃利感到羞耻，为什么莫扎特有如此才华，自己却偏偏平庸。    由于国王的喜爱，莫扎特留在维也纳写歌剧。他写的歌剧《后宫诱逃》、《费加罗的婚礼》都是不朽之作，由于萨里埃里的作梗，借助国王的招牌，每剧上演不超过一星期，因此莫扎特的经济收入很少，生活贫穷。    莫扎特的妻子康丝坦丝受不了贫穷的折磨，带着莫扎特的手稿去见萨里埃利，求他为莫扎特谋一个皇家音乐教师的职位，萨里埃利翻见一迭厚厚的手稿，他惊呆了，手稿",
     "subject": {
-      "genres": [],
-      "title": "BBC伟大的作曲家第六集：莫扎特",
-      "casts": [],
-      "original_title": "Great Composers: Wolfgang Amadeus Mozart",
+      "genres": [" 剧情", "音乐", "传记"],
+      "title": "莫扎特传",
+      "original_title": "Amadeus",
       "directors": [
         {
-          "alt": null,
-          "avatars": null,
-          "name": "Francesca Kemp",
-          "id": null
+          "alt": "https://movie.douban.com/celebrity/1053561/",
+          "avatars": "米洛斯·福尔曼.png",
+          "name": "米洛斯·福尔曼",
+          "id": "1053561"
         }
       ],
-      "year": "1997",
-      "alt": "https://movie.douban.com/subject/10560724/",
-      "id": "10560724"
+      "casts": [
+        {
+          "alt": "https://movie.douban.com/celebrity/1036401/",
+          "avatars": "汤姆·休斯克.png",
+          "name": "汤姆·休斯克",
+          "id": "1036401"
+        },
+        {
+          "alt": "https://movie.douban.com/celebrity/1055073/",
+          "avatars": "F·默里·亚伯拉罕.png",
+          "name": "F·默里·亚伯拉罕",
+          "id": "1055073"
+        },
+        {
+          "alt": "https://movie.douban.com/celebrity/1054824/",
+          "avatars": "伊丽莎白·贝里奇.png",
+          "name": "伊丽莎白·贝里奇",
+          "id": "1054824"
+        },
+        {
+          "alt": "https://movie.douban.com/celebrity/1019181/",
+          "avatars": "罗伊·多特里斯.png",
+          "name": "罗伊·多特里斯",
+          "id": "1019181"
+        }
+      ],
+      "year": "1984",
+      "alt": "https://movie.douban.com/subject/1293399/",
+      "id": "1293399"
     },
-    "short": ""
+    "short": "影片开始于奥地利宫廷乐师萨里埃利向神父忏悔，音乐家莫扎特的英年早逝与他不可饶恕的嫉妒和坑害有关。42年前的1782年，萨里埃利从偏僻小镇到了维也纳，在约瑟夫二世的王宫里当了宫廷乐师。谁知被莫扎特的乐曲迷得神魂颠倒，一次在主教家里终于见到仰慕已久的莫扎特，这位人称4岁写协奏曲，7岁写交响乐，11岁写大型歌剧的大音乐家原来是个放荡不羁，玩世不恭又十分傲慢的青年人。约瑟夫二世热爱音乐，闻知莫扎特来到维也纳并接见了他，国王弹奏萨里埃利谱写的曲子表示欢迎莫扎特，并征求对这曲子的看法，莫扎特一面赞扬曲子，一面把曲子又弹了一遍，边弹边修改，使曲子变得更流畅和充满热情，惊叹之余使萨里埃利感到羞耻，为什么莫扎特有如此才华，自己却偏偏平庸。由于国王的喜爱，莫扎特留在维也纳写歌剧。他写的歌剧《后宫诱逃》、《费加罗的婚礼》都是不朽之作，由于萨里埃里的作梗，借助国王的招牌，每剧上演不超过一星期，因此莫扎特的经济收入很少，生活贫穷。莫扎特的妻子康丝坦丝受不了贫穷的折磨，带着莫扎特的手稿去见萨里埃利，求他为莫扎特谋一个皇家音乐教师的职位，萨里埃利翻见一迭厚厚的手稿，他惊呆了，手稿上没有一处修改的痕迹，所有的音符都是一气呵成的。他既陶醉又痛苦，他抱怨上帝为什么把智慧和天赋都给了莫扎特，他愤怒地把刻有耶稣的十字架扔进了壁炉中。萨里埃利一面假装是最关心莫扎特的人，一面在精神上折磨他，他装扮成神迷的黑衣人上门向莫扎特买乐曲，迫使他不停地交出作品换取报酬来维持生活，莫扎特的身体日趋虚弱。莫扎特创作的歌剧《魔笛》在剧院上演了，莫扎特担任乐队的指挥，终于有一天在演出进行到一半时晕倒在地。莫扎特卧病在床，萨里埃利要他写《安魂曲》，萨里埃利迫不及待地想像，在莫扎特的葬礼上由他演奏死者创作的安魂曲，他的名字将和音乐大师一起永世长存。病床上的莫扎特极度虚弱无法执笔，萨里埃利建议由他执笔而莫扎特则口述。莫扎特的灵感像泉水喷涌，萨里埃利甚至来不及记录。曲子完成了，莫扎特的生命之火也熄灭了。一代音乐大师永远离开了他无法适应的社会。下葬的那天，大雨滂沱，好像苍天也在为他哭泣。萨利埃里得逞之后，自感莫扎特的冤魂日夜索命不休，最后精神失常，被送进疯人院。时光流逝，曾经烜赫一时的萨利埃里渐渐被人遗忘，莫扎特的作品却成为人类音乐殿堂里的瑰宝，在世间永远传唱。"
   },
   {
     "imdb": "/tt0062622",
@@ -7777,10 +7802,10 @@
           "id": "1027865"
         },
         {
-          "alt": null,
-          "avatars": null,
-          "name": "T.K. Carter",
-          "id": null
+          "alt": "https://movie.douban.com/celebrity/1078440/",
+          "avatars": "大卫·科列侬.png",
+          "name": "大卫·科列侬",
+          "id": "1078440"
         }
       ],
       "original_title": "The Thing",
@@ -9967,16 +9992,16 @@
           "id": "1041009"
         },
         {
-          "alt": null,
-          "avatars": null,
-          "name": "Emilio Echevarría",
-          "id": null
+          "alt": "https://movie.douban.com/celebrity/1282964/",
+          "avatars": "埃米利洛·艾切瓦利亚.png",
+          "name": "埃米利洛·艾切瓦利亚",
+          "id": "1282964"
         },
         {
-          "alt": null,
-          "avatars": null,
-          "name": "Álvaro Guerrero",
-          "id": null
+          "alt": "https://movie.douban.com/celebrity/1032220/",
+          "avatars": "艾德里安娜·巴拉扎.png",
+          "name": "艾德里安娜·巴拉扎",
+          "id": "1032220"
         }
       ],
       "original_title": "Amores perros",
@@ -10485,7 +10510,7 @@
     "englishName": "The Hustler",
     "nickName": "江湖浪子/桌球浪子/骗子",
     "director": "未知",
-    "actors": "",
+    "actors": "保罗·纽曼 杰基·格黎森 派珀·劳瑞",
     "synopsis": "本片讲述的是，以撞球赌博为生的年轻职业球手艾迪向芝加哥久富盛名的提夫挑战，因输给了他而一厥不振。某夜天色将明时，艾迪在一家咖啡店邂逅了一位期望当小说家却不良于行的女大学生西拉，由于二人各自有不同的遭遇，所以相互同情对方，从此陷入爱河。艾迪遇见巴多，他曾观看艾迪的比赛，想做他的经理人，但因为分红不公艾迪拒绝了他，后来因为经济困难而不得不借助巴多，终于获得最后的胜利。可是西拉却因失身于巴多绝望离去，下落不明。艾迪以此为由，毅然与巴多分手，再度向提夫挑战，经过一场激战，终于洗雪前耻。◎一句话评论：A motion picture that probes the stranger... the pick-up... why a man hustles for a buck or a place in the sun!They called him \"Fast Eddie\"... He was a winner... He was a loser... He was a hustler.Only the angel who falls knows the depths of hell",
     "subject": {
       "genres": [
@@ -11781,7 +11806,7 @@
     "englishName": "Life of Pi",
     "nickName": "派的生活/漂流少年Pi",
     "director": "李安 Ang Lee",
-    "actors": "",
+    "actors": "苏拉·沙玛 拉菲·斯波 伊尔凡·可汗",
     "synopsis": "主人公Pi的父亲经营着一个动物园，使得他从小就很了解动物的习性。在后来举家迁往加拿大时，与他们同船的还有动物园里的一些动物，因为父亲打算把它们趁机以高价卖掉。然而货船中途沉没，Pi的家人全部遇难。只留下Pi和一只名叫理查德·帕克的孟加拉虎、一只鬣狗、一只大猩猩，一匹斑马逃到救生艇上，随后上演了一出海上逃命求生的故事。",
     "subject": {
       "genres": [
@@ -12138,7 +12163,7 @@
     "englishName": "Incendies",
     "nickName": "焦土之城",
     "director": "丹尼斯·维伦纽瓦 Denis Villeneuve",
-    "actors": "",
+    "actors": "雷米·吉拉德 梅丽莎·德索蒙斯-波林 马克西姆·高德特",
     "synopsis": "编自剧作家Wajdi Mouawad同名剧作，巧妙游走于两个时空。双胞胎姐弟循着母亲的遗嘱，前往中东寻找素未谋面的父亲与兄长，意外扯出母亲不为人知的过去。",
     "subject": {
       "genres": [
@@ -12647,10 +12672,16 @@
           "id": "1016707"
         },
         {
-          "alt": "https://movie.douban.com/celebrity/1008090/",
-          "avatars": "约翰·雷.png",
-          "name": "约翰·雷",
-          "id": "1008090"
+          "alt": "https://movie.douban.com/celebrity/1060714/",
+          "avatars": "本·亚历山大.png",
+          "name": "本·亚历山大",
+          "id": "1060714"
+        },
+        {
+          "alt": "",
+          "avatars": "文斯·巴尼特.png",
+          "name": "文斯·巴尼特",
+          "id": "1060714"
         }
       ],
       "original_title": "All Quiet on the Western Front",
