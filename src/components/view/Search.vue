@@ -1,17 +1,11 @@
 <template>
   <div class="movie-search">
-    <ul>
-      <li v-for="m in movieList">{{m}}</li>
-    </ul>
+    <movie v-for="m in movieList" :movie="m" :key="m.order"></movie>
   </div>
 </template>
 <script>
   import { mapGetters } from 'vuex'
-  import { constructMoviesData } from 'helpers'
-  import {
-    INIT_MOVIES_DATA
-  } from 'constants/actions'
-  const movies = require('movies.json')
+  import Movie from 'components/main/Movie'
 
   export default {
     name: 'search',
@@ -21,18 +15,15 @@
         movieList: []
       }
     },
+    components: { Movie },
     computed: {
       ...mapGetters(['movies'])
     },
     methods: {
       init () {
-        debugger
         this.keyword = this.$route.params.keyword
-        this.movieList = constructMoviesData(this.movies)
+        this.movieList = this.movies
       }
-    },
-    beforeCreate () {
-      this.$store.dispatch(INIT_MOVIES_DATA, movies)
     },
     activated () {
       this.init()

@@ -1,7 +1,7 @@
 <template>
   <div class="movie" :href="movie.name">
     <router-link :to="_to">
-      <img v-lazy="`static/img/${movie.src}`" :alt="movie.name">
+      <img v-lazy="`/static/img/${movie.src}`" :alt="movie.name">
     </router-link>
     <div class="movie-intro">
       <div class="name">

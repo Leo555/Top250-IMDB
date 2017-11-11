@@ -9,7 +9,6 @@
 
 <script>
   import { mapGetters } from 'vuex'
-  import Header from '../Header.vue'
   import Movie from './Movie.vue'
   export default {
     name: 'Main',
@@ -28,7 +27,7 @@
     computed: {
       ...mapGetters(['movies'])
     },
-    components: {Movie, 'm-header': Header}
+    components: {Movie}
   }
 </script>
 <style lang="less" scoped>

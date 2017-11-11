@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { SET_MOVIES_DATA, INIT_MOVIES_DATA } from 'constants/actions'
+const movies = require('movies.json')
 
 Vue.use(Vuex)
 
@@ -9,7 +10,7 @@ export default new Vuex.Store({
   plugins: [],
 
   state: {
-    movies: []
+    movies: movies.sort((a, b) => a.order - b.order)
   },
 
   getters: {

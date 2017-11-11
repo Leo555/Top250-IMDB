@@ -71,14 +71,9 @@
 </template>
 <script>
   import { mapGetters } from 'vuex'
-  import Header from 'components/Header.vue'
-  import {
-    INIT_MOVIES_DATA
-  } from 'constants/actions'
-  const movies = require('movies.json')
+
   export default {
     name: 'movieView',
-    components: {'m-header': Header},
     computed: {
       ...mapGetters(['movies']),
       name () {
@@ -96,6 +91,8 @@
       init () {
         let name = this.$route.params.name
         this.movie = this.movies.find(m => m.englishName === name)
+        if (!this.movie || !this.movie.name) {
+        }
         this.preview = this.movies.find(m => m.order === (this.movie.order - 1))
         this.next = this.movies.find(m => m.order === (this.movie.order + 1))
       }
@@ -105,9 +102,6 @@
         if (this._inactive) return
         this.init()
       }
-    },
-    beforeCreate () {
-      this.$store.dispatch(INIT_MOVIES_DATA, movies)
     },
     activated () {
       this.init()

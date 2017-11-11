@@ -1,9 +1,18 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <section id="app">
+    <m-header></m-header>
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
+  </section>
 </template>
-
+<script>
+  import Header from 'components/Header.vue'
+  export default {
+    name: 'Movie',
+    components: {'m-header': Header}
+  }
+</script>
 <style lang="less">
   @font-family: 'Helvetica Neue', Helvetica, "PingFang SC", "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", SimSun, sans-serif;
   body {

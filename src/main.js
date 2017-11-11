@@ -1,5 +1,7 @@
+import 'es6-promise/auto'
 import Vue from 'vue'
-import App from './App'
+import VueRouter from 'vue-router'
+import App from 'components/App'
 import router from './router'
 import store from './store'
 import * as helpers from 'helpers'
@@ -8,7 +10,8 @@ import SearchBarItem from 'components/search/SearchBarItem'
 import Icon from 'components/Icon'
 import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 import VueLazyload from 'vue-lazyload'
-
+import 'nprogress/nprogress.css'
+import 'styles/components/nprogress.less'
 Vue.config.productionTip = false
 
 const components = [
@@ -22,6 +25,8 @@ const components = [
 ]
 
 components.forEach((item) => Vue.component(item.name, item))
+
+Vue.use(VueRouter)
 
 Vue.use(VueLazyload, {
   error: '/static/img/movie.png',
