@@ -1,6 +1,5 @@
 <template>
   <div class="main-container">
-    <m-header></m-header>
     <div class="movie-container">
       <movie v-for="m in movies" :movie="m" :key="m.order"></movie>
     </div>

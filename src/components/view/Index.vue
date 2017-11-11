@@ -1,6 +1,5 @@
 <template>
   <div class="movie-container">
-    <m-header></m-header>
     <article class="movie" :href="movie.name">
       <div class="image-wrap">
         <img :src="`/static/img/${movie.src}`" :alt="movie.name">
