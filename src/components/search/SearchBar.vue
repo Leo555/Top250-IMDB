@@ -1,5 +1,5 @@
 <template>
-  <form @keyup.enter="submit" class="searchbar-form">
+  <div class="searchbar">
     <el-autocomplete
       ref="input"
       class="searchbar"
@@ -9,9 +9,8 @@
       custom-item="search-bar-item"
       placeholder='请输入电影名'
       :trigger-on-focus="false"
-      @keyup.enter="submit"
+      @keyup.enter.native="submit"
       v-model.trim="keyword"
-      @keydown.native="keydown"
     >
       <template slot="prepend">
         <Icon type="search"></Icon>
@@ -20,14 +19,14 @@
         <Icon v-show="!!keyword" type="close" @click.native="keyword=''"></Icon>
       </template>
     </el-autocomplete>
-  </form>
+  </div>
 </template>
 <script>
   import debounce from 'debounce'
   import { mapGetters } from 'vuex'
 
   export default {
-    name: 'movie-search',
+    name: 'search-bar',
     data () {
       return {
         sMovies: [],
@@ -42,19 +41,18 @@
     },
     methods: {
       submit (e) {
-//        this.showItem = false
-//        let regu = '^[ ]+$'
-//        let checkNull = new RegExp(regu).test(this.keyword)
+        this.showItem = false
+        let regu = '^[ ]+$'
+        let checkNull = new RegExp(regu).test(this.keyword)
 
-//        if (!checkNull && this.keyword && this.keyword.length > 0) {
-//          this.$router.push({
-//            name: 'Search',
-//            params: {
-//              keyword: encodeURIComponent(this.keyword)
-//            }
-//          })
-//        }
-        return false
+        if (!checkNull && this.keyword && this.keyword.length > 0) {
+          this.$router.push({
+            name: 'Search',
+            params: {
+              keyword: encodeURIComponent(this.keyword)
+            }
+          })
+        }
       },
       querySearch: debounce(async function (queryString, cb) {
         if (!queryString || queryString.trim().length === 0) {
@@ -84,9 +82,6 @@
             name: item.englishName
           }
         })
-      },
-      keydown (e) {
-
       }
     },
     created () {
@@ -106,7 +101,7 @@
 <style lang="less">
   @import "~styles/index";
 
-  .searchbar-form {
+  .searchbar {
     display: inline-block;
     .components-icons:hover {
       -webkit-transform: scale(1.2);
