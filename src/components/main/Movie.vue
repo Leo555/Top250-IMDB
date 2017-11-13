@@ -15,7 +15,7 @@
         <p>别名：<i>{{movie.nickName}}</i></p>
         <p>导演：<i>{{movie.director}}</i></p>
         <p>主演：<i>{{movie.actors}}</i></p>
-        <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
+        <p>IMDB：<a :href="`http://www.imdb.cn/title${movie.imdb}`" target="_blank">{{name}}</a>
           <span v-if="movie.subject">
             豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
                   target="_blank">{{name}}</a>
