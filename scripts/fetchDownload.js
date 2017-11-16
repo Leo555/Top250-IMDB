@@ -5,6 +5,7 @@ let movies = require('./movies.json')
 const axios = require('axios')
 const cheerio = require('cheerio')
 const {persist} = require('./utils')
+const _ = require('lodash')
 
 const getUrl = keyword => {
   return `http://www.zimuzu.tv/search/index?keyword=${encodeURIComponent(keyword)}&search_type=`
@@ -40,7 +41,7 @@ const step2 = async href => {
   const {data} = await get(`http://www.zimuzu.tv/resource/index_json/rid/${href}/channel/movie`)
   let url = data.replace(/\\/g, '').match(/http:\/\/xiazai003.com(.{7})/g)
   let res = url[0]
-  if (res.endsWith('"')) res = res.substring(0, res.length - 1)
+  if (res.endsWith('"')) res = res.substring(0, res.length - 1) // 正则学得不好，写出这么丑陋的代码
   return res
 }
 
@@ -59,7 +60,7 @@ const start = async (name) => {
     if (url) {
       const res = await step3(url)
       console.log(name, res)
-      let movie = movies.find(m => m.subject.title === name)
+      let movie = movies.find(m => m.subject && m.subject.title === name)
       movie.download = res
     }
   }
@@ -68,18 +69,23 @@ const start = async (name) => {
 async function go () {
   let count = 0
   let cmovies = movies.filter(m => !m.download)
-  cmovies = [cmovies[0], cmovies[1]]
+  cmovies.forEach(m => console.log(m.name))
+  // 建议分多次取数据
+  cmovies = _.chunk(cmovies, 50)[0]
   console.log(cmovies.length)
   let inter = setInterval(async () => {
     let movie = cmovies[count++]
-    if (!movie) {
+    if (movie) {
+      if (movie.subject) {
+        start(movie.subject.title).catch(e => console.log(e))
+      }
+    } else {
       clearInterval(inter)
       setTimeout(() => {
         persist(movies)
         console.log('end')
       }, 10 * 1000)
     }
-    start(movie.subject.title).catch(e => console.log(e))
   }, 5000)
 }
 
