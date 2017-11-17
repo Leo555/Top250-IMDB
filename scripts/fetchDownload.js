@@ -86,7 +86,7 @@ async function go () {
     let movie = cmovies[count++]
     if (movie) {
       if (movie.subject) {
-        start(movie.subject.title).catch(e => console.log(e))
+        start(movie.subject.title).catch(e => console.log(movie.name, 'error'))
       }
     } else {
       clearInterval(inter)
@@ -100,4 +100,4 @@ async function go () {
 
 go()
 
-// start('十二只猴子')
+// start('黄金时代')

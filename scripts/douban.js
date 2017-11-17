@@ -37,5 +37,10 @@ async function go () {
     }
   }, 2000)
 }
-go()
+// go()
 // fetchMovie(movies[13])
+
+(async function test (name = 'Goldene Zeiten') {
+  const r = await axios(`${baseUrl}${encodeURIComponent(name)}`)
+  console.log(r.data.subjects[0])
+})()
