@@ -26,7 +26,7 @@ const step1 = async name => {
   let $ = cheerio.load(data)
   $('.search-result li').each((index, e) => {
     let $ = cheerio.load(e)
-    if ($(e).find('em').text() === '电影') {
+    if (!result && $(e).find('em').text() === '电影') {
       result = $(e).find('a').attr('href')
     }
   })
@@ -48,7 +48,16 @@ const step2 = async href => {
 const step3 = async url => {
   const {data} = await get(url)
   let $ = cheerio.load(data)
+  // 优先拿 HR-HDTV
   let li = $('#tab-g1-HR-HDTV.tab-pane').find('li')[2]
+  // 如果没有的话用 720p
+  if (!li) {
+    li = $('#tab-g1-720P.tab-pane').find('li')[2]
+  }
+  // 还没有的话用 mp4
+  if (!li) {
+    li = $('#tab-g1-MP4.tab-pane').find('li')[2]
+  }
   let res = $(li).find('a').attr('href')
   return res
 }
@@ -90,3 +99,5 @@ async function go () {
 }
 
 go()
+
+// start('十二只猴子')
