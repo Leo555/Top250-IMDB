@@ -4,13 +4,15 @@
     <keep-alive>
       <router-view/>
     </keep-alive>
+    <m-footer></m-footer>
   </section>
 </template>
 <script>
   import Header from 'components/Header.vue'
+  import Footer from 'components/Footer.vue'
   export default {
     name: 'Movie',
-    components: {'m-header': Header}
+    components: {'m-header': Header, 'm-footer': Footer}
   }
 </script>
 <style lang="less">

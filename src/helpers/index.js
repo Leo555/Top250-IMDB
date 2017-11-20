@@ -13,6 +13,10 @@ function fixzero (str) {
   return str.length === 1 ? '0' + str : str
 }
 
+export function year (date) {
+  return date.getYear() + 1900
+}
+
 export function dateformat (str) {
   let d = new Date(str)
   return d.getFullYear() + '-' + fixzero((d.getMonth() + 1)) + '-' + fixzero(d.getDate())
