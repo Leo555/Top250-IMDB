@@ -97,20 +97,16 @@
         this.next = this.movies.find(m => m.order === (this.movie.order + 1))
       }
     },
-    watch: {
-      $route (to, from) {
-        if (this._inactive) return
-        this.init()
-      }
-    },
     activated () {
       this.init()
     }
   }
 </script>
 <style lang="less" scoped>
+  @import "~styles/index.less";
+
   .movie-container {
-    background: #e9e9e9;
+    background: @background;
     overflow: hidden;
     .movie {
       position: relative;
@@ -128,7 +124,6 @@
       .movie-score {
         position: absolute;
         background: #000;
-        filter: alpha(opacity=70);
         filter: alpha(opacity=70);
         opacity: 0.7;
         margin-top: -36px;
@@ -222,7 +217,6 @@
 
   a {
     color: #42b983;
-    cursor: pointer;
   }
 
   h3 {

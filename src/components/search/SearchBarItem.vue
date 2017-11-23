@@ -37,7 +37,7 @@
 </script>
 
 <style lang="less">
-  @import '~styles/index';
+  @import "~styles/index";
 
   li.search-bar-item {
     &.highlighted {

@@ -2,7 +2,7 @@ import Router from 'vue-router'
 import Main from 'components/main/Index'
 import View from 'components/view/Index'
 import Search from 'components/view/Search'
-import NotFound from 'components/main/NotFound'
+import NotFound from 'components/view/NotFound'
 import NProgress from 'nprogress'
 
 NProgress.configure({

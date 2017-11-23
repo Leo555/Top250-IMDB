@@ -1,14 +1,9 @@
 <template>
-  <div class="movie-container">
-    <movie v-for="m in movies" :movie="m" :key="m.order"></movie>
-  </div>
+  <button @click="backToTop">Top</button>
 </template>
-
 <script>
-  import { mapGetters } from 'vuex'
-  import Movie from './Movie.vue'
   export default {
-    name: 'Main',
+    name: 'BackTop',
     methods: {
       backToTop () {
         let time = setInterval(() => {
@@ -20,10 +15,22 @@
           }
         }, 10)
       }
-    },
-    computed: {
-      ...mapGetters(['movies'])
-    },
-    components: {Movie}
+    }
   }
 </script>
+<style scoped>
+  button {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #111111;
+    opacity: 0.9;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+  }
+</style>

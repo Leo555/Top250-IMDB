@@ -7,27 +7,28 @@
   </div>
 </template>
 <script>
-  import SearchBar from './search/SearchBar.vue'
+  import SearchBar from 'components/search/SearchBar.vue'
   export default {
     name: 'movie-header',
     components: {SearchBar}
   }
 </script>
 <style lang="less" scoped>
+  @import "~styles/index.less";
+
   .header-wrap {
     min-width: 820px;
-    height: 54px;
-    background: #5a5e66;
+    height: @header-height;
+    line-height: @header-height;
+    background: @header-color;
     position: relative;
     a {
-      line-height: 54px;
       text-align: center;
       float: left;
       width: 245px;
       color: #fff;
       font-size: 20px;
       user-select: none;
-      cursor: pointer;
       &:hover {
         color: #dbdbdb;
       }

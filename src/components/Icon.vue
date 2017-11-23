@@ -19,5 +19,5 @@
 </script>
 
 <style lang='less'>
-  @import '~styles/components/icon.less';
+  @import "~styles/components/icon.less";
 </style>

@@ -18,17 +18,18 @@
   }
 </script>
 <style lang="less" scoped>
+  @import "~styles/index.less";
+
   #footer {
     font-size: 12px;
     font-family: Menlo, Monaco, Andale Mono, lucida console, Courier New, monospace;
-    height: 54px;
-    line-height: 54px;
-    background: #5a5e66;
+    height: @footer-height;
+    line-height: @footer-height;
+    background: @footer-color;
     color: #fff;
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-top: 40px;
 
     .outer {
       padding: 0 30px;

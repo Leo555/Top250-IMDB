@@ -4,21 +4,23 @@
     <keep-alive>
       <router-view :key="$route.path"/>
     </keep-alive>
+    <back-top></back-top>
     <m-footer></m-footer>
   </section>
 </template>
 <script>
-  import Header from 'components/Header.vue'
-  import Footer from 'components/Footer.vue'
+  import Header from 'components/page/Header.vue'
+  import Footer from 'components/page/Footer.vue'
+  import BackTop from 'components/page/BackTop.vue'
   export default {
     name: 'Movie',
-    components: {'m-header': Header, 'm-footer': Footer}
+    components: {'m-header': Header, 'm-footer': Footer, BackTop}
   }
 </script>
 <style lang="less">
   @import '~styles/index';
+  @import '~styles/components/container.less';
 
-  @font-family: 'Helvetica Neue', Helvetica, "PingFang SC", "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", SimSun, sans-serif;
   body {
     font-family: @font-family;
     font-size: 14px;

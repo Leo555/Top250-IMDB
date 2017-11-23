@@ -1,11 +1,15 @@
 <template>
-  <div class="movie-search">
-    <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
+  <div class="movie-container">
+    <div class="movie-search">
+      <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
+      <empty v-if="!movieList.length"></empty>
+    </div>
   </div>
 </template>
 <script>
   import { mapGetters } from 'vuex'
   import Movie from 'components/main/Movie'
+  import Empty from 'components/view/Empty'
 
   export default {
     name: 'search',
@@ -15,7 +19,7 @@
         movieList: []
       }
     },
-    components: {Movie},
+    components: {Movie, Empty},
     computed: {
       ...mapGetters(['movies'])
     },
@@ -36,8 +40,3 @@
     }
   }
 </script>
-<style lang="less" scoped>
-  .movie-search {
-    min-height: calc(~'100vh' - 148px);
-  }
-</style>

@@ -1,12 +1,11 @@
 <template>
-  <section id="not-found">
-    <h1>404</h1>
+  <section id="empty">
+    <h1>没有搜索结果</h1>
   </section>
 </template>
 
 <style lang="less" scoped>
-  #not-found {
-    min-height: calc(~'100vh' - 148px);
+  #empty {
     h1 {
       padding: 10% 0 0 0;
       text-align: center;
