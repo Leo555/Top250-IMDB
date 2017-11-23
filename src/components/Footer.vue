@@ -28,6 +28,7 @@
     position: absolute;
     width: 100%;
     text-align: center;
+    margin-top: 40px;
 
     .outer {
       padding: 0 30px;

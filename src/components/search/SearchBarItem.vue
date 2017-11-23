@@ -60,10 +60,6 @@
       &:last-child {
         text-align: right;
       }
-
-      span.hightlight {
-        background: @highlight-color;
-      }
     }
     &:hover {
       background: @dropdown-hover-color;

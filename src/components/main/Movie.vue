@@ -6,13 +6,17 @@
     <div class="movie-intro">
       <div class="name">
         <router-link :to="_to">
-          <h2>{{movie.order}}. {{movie.name}}</h2>
+          <h2>{{movie.order}}. <span v-html="highlighted"></span></h2>
           <h2 class="score">{{movie.score}}</h2>
         </router-link>
       </div>
       <div class="details">
-        <p>英文名：<i>{{movie.englishName}}</i></p>
-        <p>别名：<i>{{movie.nickName}}</i></p>
+        <p>英文名：
+          <i>{{movie.englishName}}</i>
+        </p>
+        <p>别名：
+          <i>{{movie.nickName}}</i>
+        </p>
         <p>导演：<i>{{movie.director}}</i></p>
         <p>主演：<i>{{movie.actors}}</i></p>
         <p>IMDB：<a :href="`http://www.imdb.cn/title${movie.imdb}`" target="_blank">{{name}}</a>
@@ -28,7 +32,7 @@
 
 <script>
   export default {
-    props: ['movie'],
+    props: ['movie', 'keyword'],
     data () {
       return {
         name: this.movie.name.split('（')[0]
@@ -37,11 +41,21 @@
     computed: {
       _to () {
         return {name: 'View', params: {name: this.movie.englishName}}
+      },
+      highlighted () {
+        if (!this.keyword) return this.movie.name
+        let key = this.keyword
+        let kw = key.replace(/[-\\/^$*+?.()|[\]{}]/g, '\\$&')
+        return this.movie.name
+          .replace(new RegExp(kw, 'ig'), function ($1, $2) {
+            return ('<span class="hightlight">' + $1 + '</span>')
+          })
       }
     }
   }
 </script>
 <style lang="less" scoped>
+
   .movie {
     width: 300px;
     overflow: hidden;
@@ -83,4 +97,5 @@
   a {
     color: #42b983;
   }
+
 </style>

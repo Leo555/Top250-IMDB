@@ -1,6 +1,6 @@
 <template>
   <div class="movie-search">
-    <movie v-for="m in movieList" :movie="m" :key="m.order"></movie>
+    <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
   </div>
 </template>
 <script>
@@ -15,14 +15,20 @@
         movieList: []
       }
     },
-    components: { Movie },
+    components: {Movie},
     computed: {
       ...mapGetters(['movies'])
     },
     methods: {
       init () {
-        this.keyword = this.$route.params.keyword
-        this.movieList = this.movies
+        this.keyword = decodeURIComponent(this.$route.params.keyword)
+        this.movieList = this.movies.filter(m => {
+          if (m.subject) {
+            return m.subject.title.includes(this.keyword) || m.subject.original_title.includes(this.keyword)
+          } else {
+            return m.name.includes(this.keyword)
+          }
+        })
       }
     },
     activated () {
@@ -31,5 +37,7 @@
   }
 </script>
 <style lang="less" scoped>
-
+  .movie-search {
+    min-height: calc(~'100vh' - 148px);
+  }
 </style>

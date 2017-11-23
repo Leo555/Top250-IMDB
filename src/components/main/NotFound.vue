@@ -6,7 +6,7 @@
 
 <style lang="less" scoped>
   #not-found {
-    height: calc(~'100vh - 108px');
+    min-height: calc(~'100vh' - 148px);
     h1 {
       padding: 10% 0 0 0;
       text-align: center;

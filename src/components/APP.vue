@@ -2,7 +2,7 @@
   <section id="app">
     <m-header></m-header>
     <keep-alive>
-      <router-view/>
+      <router-view :key="$route.path"/>
     </keep-alive>
     <m-footer></m-footer>
   </section>
@@ -16,6 +16,8 @@
   }
 </script>
 <style lang="less">
+  @import '~styles/index';
+
   @font-family: 'Helvetica Neue', Helvetica, "PingFang SC", "Hiragino Sans GB", "STHeitiSC-Light", "Microsoft YaHei", "微软雅黑", SimSun, sans-serif;
   body {
     font-family: @font-family;
@@ -47,5 +49,9 @@
   ol,
   ul {
     list-style: none;
+  }
+
+  span.hightlight {
+    background: @highlight-color;
   }
 </style>
