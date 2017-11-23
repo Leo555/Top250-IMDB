@@ -43,8 +43,21 @@ router.beforeEach((to, from, next) => {
   next()
 })
 
+const updateTitle = to => {
+  if (to.name === 'View') {
+    document.title = to.params.name
+  } else if (to.name === 'Search') {
+    document.title = `搜索：${to.params.keyword}- IMDB top250`
+  } else if (to.name === '404') {
+    document.title = `404 - IMDB top250`
+  } else {
+    document.title = `IMDB top250`
+  }
+}
+
 router.afterEach((to, from) => {
   NProgress.done()
+  updateTitle(to)
 })
 
 export default router

@@ -30,7 +30,6 @@
     data () {
       return {
         sMovies: [],
-        restaurants: 0,
         keyword: '',
         showItem: false,
         hash: {}
@@ -82,6 +81,8 @@
             name: item.englishName
           }
         })
+        this.showItem = false
+        this.keyword = ''
       }
     },
     created () {
