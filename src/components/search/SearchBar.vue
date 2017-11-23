@@ -64,7 +64,7 @@
           if (m.name.includes(keyword)) {
             files.push(m)
           }
-          if (files.length >= 5) {
+          if (files.length >= 10) {
             return true
           }
         })
