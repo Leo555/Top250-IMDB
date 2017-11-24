@@ -10,11 +10,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 const CnameWebpackPlugin = require('cname-webpack-plugin')
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
+
+const paths = utils.siteMapPath()
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -116,15 +119,12 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-
-    // prerender-spa-plugin
-    new PrerenderSpaPlugin(
-      // Absolute path to compiled SPA
-      path.join(__dirname, '../dist'),
-      // List of routes to prerender
-      ['/', '/view', '/search']
-    ),
-
+    // generate sitemap
+    new SitemapPlugin('https://movie.lz5z.com', paths, {
+      lastMod: true,
+      changeFreq: 'weekly',
+      priority: '0.4'
+    }),
     // cname
     new CnameWebpackPlugin({
       domain: 'movie.lz5z.com',

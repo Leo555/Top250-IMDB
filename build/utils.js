@@ -2,6 +2,7 @@
 const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const movies = require('../src/movies.json')
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -50,7 +51,7 @@ exports.cssLoaders = function (options) {
     css: generateLoaders(),
     postcss: generateLoaders(),
     less: generateLoaders('less'),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
+    sass: generateLoaders('sass', {indentedSyntax: true}),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),
     styl: generateLoaders('stylus')
@@ -69,4 +70,13 @@ exports.styleLoaders = function (options) {
     })
   }
   return output
+}
+
+// Generate all site map path
+exports.siteMapPath = () => {
+  let path = ['/']
+  movies.forEach(m => {
+    path.push(`/view/${encodeURIComponent(m.englishName)}`)
+  })
+  return path
 }
