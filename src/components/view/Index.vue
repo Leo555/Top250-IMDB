@@ -25,7 +25,7 @@
           </p>
           <p>上映时间：<i>{{movie.subject ? movie.subject.year : movie.name | getYear}}</i></p>
           <p>类型：<i>{{movie.subject ? movie.subject.genres.join(', ') : '剧情'}}</i></p>
-          <p>简介：<i class="short">{{movie.short || movie.synopsis}}</i></p>
+          <p>简介：<i class="short">{{movie.short}}</i></p>
         </div>
         <h3>演职员表</h3>
         <div v-if="movie.subject" class="actors-list">
