@@ -1,12 +1,14 @@
 <template>
   <div class="movie-container">
     <movie v-for="m in movies" :movie="m" :key="m.order"></movie>
+    <page-nav></page-nav>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
   import Movie from './Movie.vue'
+  import PageNav from 'components/page/PageNav.vue'
   export default {
     name: 'Main',
     methods: {
@@ -24,6 +26,6 @@
     computed: {
       ...mapGetters(['movies'])
     },
-    components: {Movie}
+    components: {Movie, PageNav}
   }
 </script>
