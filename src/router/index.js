@@ -20,6 +20,10 @@ const router = new Router({
       path: '',
       component: Main
     }, {
+      path: '/page/:p',
+      name: 'Page',
+      component: Main
+    }, {
       path: '/view/:name',
       name: 'View',
       component: View

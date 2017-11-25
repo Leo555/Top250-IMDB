@@ -7,6 +7,7 @@ import store from './store'
 import * as helpers from 'helpers'
 import * as stringHelper from 'helpers/string'
 import SearchBarItem from 'components/search/SearchBarItem'
+import NotFound from 'components/view/NotFound'
 import Icon from 'components/Icon'
 import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 import VueLazyload from 'vue-lazyload'
@@ -17,6 +18,7 @@ Vue.config.productionTip = false
 const components = [
   Button,
   SearchBarItem,
+  NotFound,
   Input,
   Row,
   Col,

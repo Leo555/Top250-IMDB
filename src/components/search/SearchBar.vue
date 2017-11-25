@@ -52,6 +52,7 @@
             }
           })
         }
+        this.keyword = ''
       },
       querySearch: debounce(async function (queryString, cb) {
         if (!queryString || queryString.trim().length === 0) {

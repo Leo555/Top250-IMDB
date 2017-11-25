@@ -1,31 +1,49 @@
 <template>
   <div class="movie-container">
-    <movie v-for="m in movies" :movie="m" :key="m.order"></movie>
-    <page-nav></page-nav>
+    <div v-if="current">
+      <movie v-for="m in current" :movie="m" :key="m.order"></movie>
+      <page-nav :count="pageCount" :page="page"></page-nav>
+    </div>
+    <div v-else>
+      <not-found></not-found>
+    </div>
   </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
+  import { SET_CURRENT_PAGE } from 'constants/actions'
   import Movie from './Movie.vue'
+  import { PAGE_NUM } from 'constants/index'
   import PageNav from 'components/page/PageNav.vue'
   export default {
     name: 'Main',
-    methods: {
-      backToTop () {
-        let time = setInterval(() => {
-          let osTop = document.documentElement.scrollTop || document.body.scrollTop
-          let speed = Math.floor(-osTop / 10)
-          document.documentElement.scrollTop = document.body.scrollTop = osTop + speed
-          if (osTop === 0) {
-            clearInterval(time)
-          }
-        }, 10)
+    computed: {
+      ...mapGetters(['current', 'movies', 'page']),
+      pageCount () {
+        return Math.ceil(this.movies.length / PAGE_NUM)
       }
     },
-    computed: {
-      ...mapGetters(['movies'])
+    components: {Movie, PageNav},
+    methods: {
+      load () {
+        this.$store.dispatch(SET_CURRENT_PAGE, this.$route)
+      }
     },
-    components: {Movie, PageNav}
+    beforeCreate () {
+      this.$store.dispatch(SET_CURRENT_PAGE, this.$route)
+    },
+    beforeRouteEnter: async function (to, from, next) {
+      let nx = vm => {
+        if (!vm.$isServer) {
+          vm.load()
+        }
+      }
+      next(nx)
+    },
+    beforeRouteUpdate: async function (to, from, next) {
+      await this.$store.dispatch(SET_CURRENT_PAGE, to)
+      next()
+    }
   }
 </script>
