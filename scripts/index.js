@@ -52,8 +52,7 @@ async function buildMovie (href, order) {
       movie[keyMap[key]] = value.substr(0, value.length - 1)
     }
   })
-  let synopsis = $(fk).find('.fk-4 .bdd').text()
-  movie['synopsis'] = synopsis.substr(0, 500).trim()
+  movie.id = movie.englishName.replace(/[^\w\-]/g, '_').toLowerCase()
   movies.push(movie)
   Promise.resolve()
 }

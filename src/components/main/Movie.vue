@@ -1,11 +1,11 @@
 <template>
-  <div class="movie" :href="movie.name">
-    <router-link :to="_to">
+  <div id="movie" :href="movie.id">
+    <router-link :to="_to()">
       <img v-lazy="`/static/img/${movie.src}`" :alt="movie.name">
     </router-link>
     <div class="movie-intro">
       <div class="name">
-        <router-link :to="_to">
+        <router-link :to="_to()">
           <h2>{{movie.order}}. <span v-html="highlighted"></span></h2>
           <h2 class="score">{{movie.score}}</h2>
         </router-link>
@@ -20,8 +20,8 @@
         <p>导演：<i>{{movie.director}}</i></p>
         <p>主演：<i>{{movie.actors}}</i></p>
         <p>IMDB：<a :href="`http://www.imdb.cn/title${movie.imdb}`" target="_blank">{{name}}</a>
-          <span v-if="movie.subject">
-            豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
+          <span>
+            豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject.id || '1292052'}/?from=showing/`"
                   target="_blank">{{name}}</a>
           </span>
         </p>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+  import mixin from 'mixins'
   export default {
     props: ['movie', 'keyword'],
     data () {
@@ -38,10 +39,8 @@
         name: this.movie.name.split('（')[0]
       }
     },
+    mixins: [mixin],
     computed: {
-      _to () {
-        return {name: 'View', params: {name: this.movie.englishName}}
-      },
       highlighted () {
         if (!this.keyword) return this.movie.name
         let key = this.keyword
@@ -56,7 +55,7 @@
 </script>
 <style lang="less" scoped>
 
-  .movie {
+  #movie {
     width: 300px;
     overflow: hidden;
     display: inline-block;

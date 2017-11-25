@@ -9,15 +9,11 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
-const SitemapPlugin = require('sitemap-webpack-plugin').default
 const CnameWebpackPlugin = require('cname-webpack-plugin')
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env
-
-const paths = utils.siteMapPath()
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -63,7 +59,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
-      inject: true,
+      inject: 'head',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -78,7 +74,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: '404.html',
       template: 'index.html',
-      inject: true,
+      inject: 'head',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -119,16 +115,11 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    // generate sitemap
-    new SitemapPlugin('https://movie.lz5z.com', paths, {
-      lastMod: true,
-      changeFreq: 'weekly',
-      priority: '0.4'
-    }),
     // cname
     new CnameWebpackPlugin({
       domain: 'movie.lz5z.com',
-    })
+    }),
+    ...utils.generateRenderPlugins()
   ]
 })
 

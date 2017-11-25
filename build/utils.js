@@ -1,7 +1,10 @@
 'use strict'
+const chunk = require('lodash.chunk')
 const path = require('path')
 const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 const movies = require('../src/movies.json')
 
 exports.assetsPath = function (_path) {
@@ -72,11 +75,47 @@ exports.styleLoaders = function (options) {
   return output
 }
 
-// Generate all site map path
-exports.siteMapPath = () => {
-  let path = ['/']
-  movies.forEach(m => {
-    path.push(`/view/${encodeURIComponent(m.englishName)}`)
+// Generate url list for pre-render
+exports.generateRenderPlugins = () => {
+  let staticPaths = ['/']
+  for (let i = 1; i <= 16; i++) {
+    staticPaths.push(`/page/${i}`)
+  }
+  let ajaxPaths = movies.map(m => `/view/${m.id}`)
+  let totalRoutes = ajaxPaths.length + staticPaths.length
+  let chunkSize = 20
+  let staticChunks = chunk(staticPaths, chunkSize)
+  let ajaxChunks =  chunk(ajaxPaths, chunkSize)
+  let plugins = []
+  let distPath = path.join(__dirname, '../dist')
+  let progress = 0
+  staticChunks.forEach(chunk => {
+    plugins.push(new PrerenderSpaPlugin(distPath, chunk, {
+        navigationLocked: true,
+        captureAfterTime: 2000,
+        postProcessHtml (context) {
+          console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
+          return context.html
+        }
+      }
+    ))
   })
-  return path
+  ajaxChunks.forEach(chunk => {
+    plugins.push(new PrerenderSpaPlugin(distPath, chunk, {
+        navigationLocked: true,
+        captureAfterElementExists: '#view-movie',
+        postProcessHtml (context) {
+          console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
+          return context.html
+        }
+      }
+    ))
+  })
+  // site map plugin
+  plugins.push(new SitemapPlugin('https://movie.lz5z.com', [].concat(staticPaths, ajaxPaths), {
+    lastMod: true,
+    priority: '0.4',
+    changeFreq: 'weekly'
+  }))
+  return plugins
 }

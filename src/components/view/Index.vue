@@ -2,7 +2,7 @@
   <div class="movie-container">
     <not-found v-if="!movie"></not-found>
     <div v-else>
-      <article class="movie" :href="movie.name">
+      <article id="view-movie" :href="movie.name">
         <div class="image-wrap">
           <img :src="`/static/img/${movie.src}`" :alt="movie.name">
         </div>
@@ -19,21 +19,21 @@
             <p>导演：<i>{{movie.director}}</i></p>
             <p>主演：<i>{{movie.actors}}</i></p>
             <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
-              <span v-if="movie.subject">
+              <span v-if="subject">
               豆瓣：<a
-                :href="`https://movie.douban.com/subject/${movie.subject?movie.subject.id:'1292052'}/?from=showing/`"
+                :href="`https://movie.douban.com/subject/${subject.id || '1292052'}/?from=showing/`"
                 target="_blank">{{name}}</a>
             </span>
             </p>
-            <p>上映时间：<i>{{movie.subject ? movie.subject.year : movie.name | getYear}}</i></p>
-            <p>类型：<i>{{movie.subject ? movie.subject.genres.join(', ') : '剧情'}}</i></p>
+            <p>上映时间：<i>{{subject.year}}</i></p>
+            <p>类型：<i>{{subject ? subject.genres.join(', ') : '剧情'}}</i></p>
             <p>简介：<i class="short">{{movie.short}}</i></p>
           </div>
           <h3>演职员表</h3>
-          <div v-if="movie.subject" class="actors-list">
+          <div v-if="subject" class="actors-list">
             <p>导演</p>
             <div class="items">
-              <div v-for="d in movie.subject.directors" class="item">
+              <div v-for="d in subject.directors" class="item">
                 <a class="director-name" :href="d.alt" target="_blank">
                   <p class="image-container">
                     <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
@@ -44,7 +44,7 @@
             </div>
             <p>主要演员</p>
             <div class="items">
-              <div v-for="d in movie.subject.casts" class="item">
+              <div v-for="d in subject.casts" class="item">
                 <a class="director-name" :href="d.alt" target="_blank">
                   <p class="image-container">
                     <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
@@ -60,11 +60,11 @@
         </div>
       </article>
       <nav class="movie-nav">
-        <router-link :to="{name: 'View', params: {name: preview.englishName}}"
+        <router-link :to="_to(preview)"
                      class="preview nav" v-if="preview && preview.name">
           <Icon type="circle-left"></Icon>
         </router-link>
-        <router-link :to="{name: 'View', params: {name: next.englishName}}"
+        <router-link :to="_to(next)"
                      class="next nav" v-if="next && next.name">
           <Icon type="circle-right"></Icon>
         </router-link>
@@ -73,10 +73,12 @@
   </div>
 </template>
 <script>
+  import mixin from 'mixins'
   import { mapGetters } from 'vuex'
 
   export default {
     name: 'movieView',
+    mixins: [mixin],
     computed: {
       ...mapGetters(['movies']),
       name () {
@@ -92,10 +94,8 @@
     },
     methods: {
       init () {
-        let name = this.$route.params.name
-        this.movie = this.movies.find(m => m.englishName === name)
-        if (!this.movie || !this.movie.name) {
-        }
+        let id = this.$route.params.id
+        this.movie = this.movies.find(m => m.id === id)
         this.preview = this.movies.find(m => m.order === (this.movie.order - 1))
         this.next = this.movies.find(m => m.order === (this.movie.order + 1))
       }
@@ -108,7 +108,7 @@
 <style lang="less" scoped>
   @import "~styles/index.less";
 
-  .movie {
+  #view-movie {
     position: relative;
     padding: 30px;
     width: 750px;

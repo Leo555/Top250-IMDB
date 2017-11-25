@@ -28,7 +28,7 @@
         this.keyword = decodeURIComponent(this.$route.params.keyword)
         this.movieList = this.movies.filter(m => {
           if (m.subject) {
-            return m.subject.title.includes(this.keyword) || m.subject.original_title.includes(this.keyword)
+            return m.subject.title.includes(this.keyword)
           } else {
             return m.name.includes(this.keyword)
           }

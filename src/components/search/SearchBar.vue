@@ -79,7 +79,7 @@
         this.$router.push({
           name: 'View',
           params: {
-            name: item.englishName
+            id: item.id
           }
         })
         this.showItem = false
@@ -88,14 +88,13 @@
     },
     created () {
       this.movies.map(m => {
-        if (m.subject) {
-          this.sMovies.push({englishName: m.englishName, name: m.subject.title, year: m.subject.year, order: m.order})
-        } else {
-          let name = m.name.split(/（|）/)[0]
-          let year = m.name.split(/（|）/)[1]
-          let order = m.order
-          this.sMovies.push({englishName: m.englishName, name, year, order})
-        }
+        this.sMovies.push({
+          id: m.id,
+          englishName: m.englishName,
+          name: m.subject.title,
+          year: m.subject.year,
+          order: m.order
+        })
       })
     }
   }
