@@ -1,7 +1,101 @@
-.ellis(){
-  white-space:nowrap;
+.ellis() {
+  white-space: nowrap;
   -o-text-overflow: ellipsis;
-  text-overflow:ellipsis;
-  overflow:hidden;
-  word-wrap:normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: normal;
+}
+
+.animation(@animation) {
+  -webkit-animation: @animation;
+  -o-animation: @animation;
+  animation: @animation;
+}
+
+.pulse {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  .animation(pulse .8s infinite linear);
+}
+
+@-webkit-keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.transform {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  .animation(transform 1.2s infinite linear);
+}
+
+@-webkit-keyframes transform {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes transform {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.spin {
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  .animation(spin .8s infinite linear);
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

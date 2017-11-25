@@ -62,6 +62,8 @@
   }
 </script>
 <style lang="less" scoped>
+  @import "~styles/utils.less";
+
   #page-nav {
     user-select: none;
     text-align: center;
@@ -74,6 +76,12 @@
     .extend > a {
       color: #4d4d4d;
       margin: 0 27px;
+      &:hover {
+        color: #5e5e5e;
+      }
+      &:active {
+        color: #6a6e76;
+      }
     }
     .page-number {
       width: 20px;
@@ -86,7 +94,7 @@
       margin: 0 5px 30px;
       border-radius: 2px;
       &:hover {
-        background: #5e5e5e;
+        .transform
       }
       &:active {
         background: #6a6e76;
