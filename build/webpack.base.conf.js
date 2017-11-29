@@ -10,7 +10,13 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    vendor: [
+      'es6-promise',
+      'vue',
+      'vue-router',
+      'vuex'
+    ]
   },
   output: {
     path: config.build.assetsRoot,
@@ -46,7 +52,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

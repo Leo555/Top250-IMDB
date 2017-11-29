@@ -10,10 +10,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
+const PrerenderSpaPlugin = require('prerender-spa-plugin')
 
-const env = process.env.NODE_ENV === 'testing'
-  ? require('../config/test.env')
-  : config.build.env
+const env = config.build.env
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -59,7 +58,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
-      inject: 'head',
+      inject: true,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -74,7 +73,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: '404.html',
       template: 'index.html',
-      inject: 'head',
+      inject: true,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -119,7 +118,16 @@ const webpackConfig = merge(baseWebpackConfig, {
     new CnameWebpackPlugin({
       domain: 'movie.lz5z.com',
     }),
-    ...utils.generateRenderPlugins()
+    new PrerenderSpaPlugin(path.join(__dirname, '../dist'), utils.generateRenderPaths(), {
+      maxAttempts: 5,
+      navigationLocked: true,
+      captureAfterTime: 2000,
+      postProcessHtml (context) {
+        console.log(`[PRE-RENDER] ${context.route}`)
+        return context.html
+      }
+    })
+    // ...utils.generateRenderPlugins()
   ]
 })
 
