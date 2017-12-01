@@ -121,6 +121,7 @@
   #view-movie {
     position: relative;
     padding: 30px;
+    max-width: 750px;
     margin: 0 auto;
     .image-wrap {
       background: #333;
@@ -205,6 +206,7 @@
     text-align: center;
     position: relative;
     padding: 0 30px;
+    max-width: 750px;
     bottom: 30px;
     margin: 0 auto;
     .nav {
