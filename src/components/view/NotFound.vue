@@ -4,8 +4,14 @@
   </section>
 </template>
 <script>
+  import { TITLE } from 'constants/index'
   export default {
-    name: 'NotFound'
+    name: 'NotFound',
+    metaInfo () {
+      return {
+        title: `404 - ${TITLE}`
+      }
+    }
   }
 </script>
 <style lang="less" scoped>

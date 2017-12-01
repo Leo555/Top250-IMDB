@@ -14,7 +14,7 @@ import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 import VueLazyload from 'vue-lazyload'
 import 'nprogress/nprogress.css'
 import 'styles/components/nprogress.less'
-import { KEYWORDS, DESCRIPTION } from 'constants/index'
+import { TITLE, KEYWORDS, DESCRIPTION } from 'constants/index'
 Vue.config.productionTip = false
 
 const components = [
@@ -50,6 +50,7 @@ new Vue({
   router,
   store,
   metaInfo: {
+    title: TITLE,
     meta: [
       {vmid: 'description', name: 'description', content: DESCRIPTION},
       {vmid: 'keywords', name: 'keywords', content: KEYWORDS}

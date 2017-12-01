@@ -74,7 +74,7 @@
 </template>
 <script>
   import mixin from 'mixins'
-  import { KEYWORDS } from 'constants/index'
+  import { TITLE, KEYWORDS } from 'constants/index'
   import { mapGetters } from 'vuex'
 
   export default {
@@ -95,7 +95,7 @@
     },
     metaInfo () {
       return {
-        title: this.title,
+        title: `${this.movie.name} - ${TITLE}`,
         meta: [
           {vmid: 'description', name: 'description', content: this.movie.short},
           {vmid: 'keywords', name: 'keywords', content: `${this.movie.name},${KEYWORDS}`}
@@ -121,7 +121,6 @@
   #view-movie {
     position: relative;
     padding: 30px;
-    width: 750px;
     margin: 0 auto;
     .image-wrap {
       background: #333;
@@ -207,7 +206,6 @@
     position: relative;
     padding: 0 30px;
     bottom: 30px;
-    width: 750px;
     margin: 0 auto;
     .nav {
       font-size: 30px;
@@ -231,5 +229,20 @@
 
   h3 {
     line-height: 2em;
+  }
+
+  @media screen and (max-width: 750px) {
+    #view-movie {
+      padding: 30px 0;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .image-wrap {
+      background: #333;
+      img {
+        width: 100vw;
+      }
+    }
   }
 </style>

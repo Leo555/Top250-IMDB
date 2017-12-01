@@ -8,8 +8,10 @@
 </template>
 <script>
   import { mapGetters } from 'vuex'
+  import { getKeywords } from 'helpers'
   import Movie from 'components/main/Movie'
   import Empty from 'components/view/Empty'
+  import { TITLE, KEYWORDS } from 'constants/index'
 
   export default {
     name: 'search',
@@ -22,6 +24,16 @@
     components: {Movie, Empty},
     computed: {
       ...mapGetters(['movies'])
+    },
+    metaInfo () {
+      return {
+        title: `搜索：${this.keyword} - ${TITLE}`,
+        meta: [{
+          vmid: 'keywords',
+          name: 'keywords',
+          content: getKeywords(this.movieList) + ',' + KEYWORDS
+        }]
+      }
     },
     methods: {
       init () {
