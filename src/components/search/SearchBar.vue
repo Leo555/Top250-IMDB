@@ -112,8 +112,9 @@
   }
 
   .searchbar {
+    width: 480px;
     .el-input {
-      width: 480px;
+      width: 100%;
       i {
         width: 14px;
         height: 14px;
@@ -187,6 +188,19 @@
           border: 0;
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 820px) {
+    .searchbar {
+      display: block;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .searchbar {
+      width: 90%;
     }
   }
 </style>

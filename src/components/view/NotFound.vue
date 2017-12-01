@@ -20,4 +20,10 @@
       font-size: 30px;
     }
   }
+
+  @media screen and (max-width: 820px) {
+    #not-found {
+      height: calc(~'100vh' - (@header-height + @header-height-mobile));
+    }
+  }
 </style>

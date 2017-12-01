@@ -1,10 +1,10 @@
 <template>
   <li class="search-bar-item" @click="handleClick">
     <el-row :gutter="20">
-      <el-col :span="2">
+      <el-col :span="3">
         <span>{{item.order}}</span>
       </el-col>
-      <el-col :span="16" v-html="highlighted"></el-col>
+      <el-col :span="15" v-html="highlighted"></el-col>
       <el-col :span="6"> {{item.year}}</el-col>
     </el-row>
   </li>

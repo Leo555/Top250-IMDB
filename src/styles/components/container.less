@@ -1,11 +1,16 @@
 @import "~styles/index.less";
 
 .movie-container {
-  min-width: 820px;
   overflow-x: auto;
   min-height: calc(~'100vh' - @header-height * 2);
   background: @background;
   .movie-search {
     padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .movie-container {
+    min-height: calc(~'100vh' - (@header-height + @header-height-mobile));
   }
 }

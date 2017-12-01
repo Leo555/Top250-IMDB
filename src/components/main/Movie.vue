@@ -97,4 +97,10 @@
     color: #42b983;
   }
 
+  @media screen and (max-width: 700px) {
+    #movie {
+      display: block;
+      margin: 40px auto;
+    }
+  }
 </style>
