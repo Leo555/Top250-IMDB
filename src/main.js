@@ -1,6 +1,7 @@
 import 'es6-promise/auto'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Meta from 'vue-meta'
 import App from 'components/App'
 import router from './router'
 import store from './store'
@@ -13,6 +14,7 @@ import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 import VueLazyload from 'vue-lazyload'
 import 'nprogress/nprogress.css'
 import 'styles/components/nprogress.less'
+import { KEYWORDS, DESCRIPTION } from 'constants/index'
 Vue.config.productionTip = false
 
 const components = [
@@ -29,7 +31,7 @@ const components = [
 components.forEach((item) => Vue.component(item.name, item))
 
 Vue.use(VueRouter)
-
+Vue.use(Meta)
 Vue.use(VueLazyload, {
   error: '/static/img/movie.png',
   loading: '/static/img/movie.png',
@@ -47,6 +49,12 @@ new Vue({
   el: '#app',
   router,
   store,
+  metaInfo: {
+    meta: [
+      {vmid: 'description', name: 'description', content: DESCRIPTION},
+      {vmid: 'keywords', name: 'keywords', content: KEYWORDS}
+    ]
+  },
   template: '<App/>',
   components: {App}
 })

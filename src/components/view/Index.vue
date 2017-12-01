@@ -74,6 +74,7 @@
 </template>
 <script>
   import mixin from 'mixins'
+  import { KEYWORDS } from 'constants/index'
   import { mapGetters } from 'vuex'
 
   export default {
@@ -90,6 +91,15 @@
         preview: {},
         next: {},
         movie: {name: '', imdb: '', href: '', src: ''}
+      }
+    },
+    metaInfo () {
+      return {
+        title: this.title,
+        meta: [
+          {vmid: 'description', name: 'description', content: this.movie.short},
+          {vmid: 'keywords', name: 'keywords', content: `${this.movie.name},${KEYWORDS}`}
+        ]
       }
     },
     methods: {

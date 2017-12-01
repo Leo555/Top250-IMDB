@@ -14,17 +14,29 @@
   import { mapGetters } from 'vuex'
   import { SET_CURRENT_PAGE } from 'constants/actions'
   import Movie from './Movie.vue'
-  import { PAGE_NUM } from 'constants/index'
+  import { PAGE_NUM, KEYWORDS } from 'constants/index'
   import PageNav from 'components/page/PageNav.vue'
   export default {
     name: 'Main',
     computed: {
       ...mapGetters(['current', 'movies', 'page']),
+      names () {
+        return this.current.reduce((a, b) => {
+          return a.concat([b.subject.title, b.subject.original_title])
+        }, []).join(',')
+      },
       pageCount () {
         return Math.ceil(this.movies.length / PAGE_NUM)
       }
     },
     components: {Movie, PageNav},
+    metaInfo () {
+      return {
+        meta: [
+          {vmid: 'keywords', name: 'keywords', content: this.names + ',' + KEYWORDS}
+        ]
+      }
+    },
     methods: {
       load () {
         this.$store.dispatch(SET_CURRENT_PAGE, this.$route)

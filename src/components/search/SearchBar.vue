@@ -140,7 +140,6 @@
       height: 32px;
       border-radius: 16px;
       border: 0;
-      font-size: 13px;
       padding-left: 0;
     }
   }
