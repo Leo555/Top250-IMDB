@@ -15,6 +15,8 @@ IMDB Top250 movies
 
 * 网页使用 vue + vuex + vue-router 创建，基于[vuejs-templates/webpack](https://github.com/vuejs-templates/webpack)
 * 静态页面，代码托管于 github pages 和 coding.net
+* 使用 [vue-meta](https://github.com/declandewet/vue-meta) + [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) 提供 网页 SEO
+* [prerender-spa-plugin](https://github.com/chrisvfritz/prerender-spa-plugin) 提高首屏渲染速度
 
 ## Build Setup
 
