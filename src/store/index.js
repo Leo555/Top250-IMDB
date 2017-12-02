@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import chunk from 'lodash.chunk'
 import { SET_MOVIES_DATA, INIT_MOVIES_DATA, SET_CURRENT_PAGE } from 'constants/actions'
 import { PAGE_NUM } from 'constants/index'
-let movies = require('movies.json')
+import movies from 'data/movies.json'
 movies.sort((a, b) => a.order - b.order)
 const movieChunks = chunk(movies, PAGE_NUM)
 

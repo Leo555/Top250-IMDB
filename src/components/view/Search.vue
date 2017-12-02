@@ -1,10 +1,8 @@
 <template>
-  <div class="movie-container">
-    <div class="movie-search">
-      <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
-      <empty v-if="!movieList.length"></empty>
-    </div>
-  </div>
+  <section class="movie-search">
+    <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
+    <empty v-if="!movieList.length"></empty>
+  </section>
 </template>
 <script>
   import { mapGetters } from 'vuex'

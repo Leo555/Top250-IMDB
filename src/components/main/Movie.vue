@@ -1,5 +1,5 @@
 <template>
-  <div id="movie" :href="movie.id">
+  <section id="movie" :href="movie.id">
     <router-link :to="_to()">
       <img v-lazy="`/static/img/${movie.src}`" :alt="movie.name">
     </router-link>
@@ -27,7 +27,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

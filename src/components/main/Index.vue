@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-container">
+  <section>
     <div v-if="current">
       <movie v-for="m in current" :movie="m" :key="m.order"></movie>
       <page-nav :count="pageCount" :page="page"></page-nav>
@@ -7,7 +7,7 @@
     <div v-else>
       <not-found></not-found>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

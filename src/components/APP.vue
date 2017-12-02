@@ -2,7 +2,7 @@
   <section id="app">
     <m-header></m-header>
     <keep-alive>
-      <router-view :key="$route.path"/>
+      <router-view class="movie-container" :key="$route.path"/>
     </keep-alive>
     <back-top></back-top>
     <m-footer></m-footer>

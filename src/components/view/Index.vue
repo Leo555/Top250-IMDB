@@ -1,5 +1,5 @@
 <template>
-  <div class="movie-container">
+  <section>
     <not-found v-if="!movie"></not-found>
     <div v-else>
       <article id="view-movie" :href="movie.name">
@@ -70,7 +70,7 @@
         </router-link>
       </nav>
     </div>
-  </div>
+  </section>
 </template>
 <script>
   import mixin from 'mixins'

@@ -2,6 +2,7 @@ import 'es6-promise/auto'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Meta from 'vue-meta'
+import VueLazyload from 'vue-lazyload'
 import App from 'components/App'
 import router from './router'
 import store from './store'
@@ -11,7 +12,6 @@ import SearchBarItem from 'components/search/SearchBarItem'
 import NotFound from 'components/view/NotFound'
 import Icon from 'components/Icon'
 import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
-import VueLazyload from 'vue-lazyload'
 import 'nprogress/nprogress.css'
 import 'styles/components/nprogress.less'
 import { TITLE, KEYWORDS, DESCRIPTION } from 'constants/index'
@@ -44,18 +44,21 @@ Object.keys(_filters).forEach(key => {
   Vue.filter(key, _filters[key])
 })
 
+const metaInfo = {
+  title: TITLE,
+  meta: [
+    {vmid: 'description', name: 'description', content: DESCRIPTION},
+    {vmid: 'keywords', name: 'keywords', content: KEYWORDS}
+  ]
+}
+
 /* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  metaInfo: {
-    title: TITLE,
-    meta: [
-      {vmid: 'description', name: 'description', content: DESCRIPTION},
-      {vmid: 'keywords', name: 'keywords', content: KEYWORDS}
-    ]
-  },
-  template: '<App/>',
-  components: {App}
+document.addEventListener('DOMContentLoaded', () => {
+  new Vue({
+    router,
+    store,
+    metaInfo,
+    template: '<App/>',
+    components: {App}
+  }).$mount('#app')
 })
