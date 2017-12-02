@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
-const PrerenderSpaPlugin = require('prerender-spa-plugin')
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 const env = config.build.env
 
@@ -34,8 +34,19 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     // UglifyJs do not support ES6+, you can also use babel-minify for better treeshaking: https://github.com/babel/minify
     new webpack.optimize.UglifyJsPlugin({
+      // 最紧凑的输出
+      beautify: false,
+      // 删除所有的注释
+      comments: false,
       compress: {
-        warnings: false
+        warnings: false,
+        // 删除所有的 `console` 语句
+        // 还可以兼容ie浏览器
+        drop_console: true,
+        // 内嵌定义了但是只用到一次的变量
+        collapse_vars: true,
+        // 提取出出现多次但是没有定义成变量去引用的静态值
+        reduce_vars: true,
       },
       sourceMap: true
     }),
@@ -58,7 +69,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
-      inject: true,
+      inject: 'head',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -73,7 +84,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: '404.html',
       template: 'index.html',
-      inject: true,
+      inject: 'head',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -114,20 +125,24 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      minFileSize: 10000,
+      optipng: {
+        optimizationLevel: 9
+      },
+      pngquant: {
+        quality: '95-100'
+      },
+      jpegtran: {
+        progressive: true
+      }
+    }),
     // cname
     new CnameWebpackPlugin({
       domain: 'movie.lz5z.com',
     }),
-    new PrerenderSpaPlugin(path.join(__dirname, '../dist'), utils.generateRenderPaths(), {
-      maxAttempts: 5,
-      navigationLocked: true,
-      captureAfterTime: 2000,
-      postProcessHtml (context) {
-        console.log(`[PRE-RENDER] ${context.route}`)
-        return context.html
-      }
-    })
-    // ...utils.generateRenderPlugins()
+    ...utils.generateRenderPlugins()
   ]
 })
 

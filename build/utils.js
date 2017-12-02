@@ -5,7 +5,8 @@ const config = require('../config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const PrerenderSpaPlugin = require('prerender-spa-plugin')
 const SitemapPlugin = require('sitemap-webpack-plugin').default
-const movies = require('../src/movies.json')
+const movies = require('../src/data/movies.json')
+const PAGE_NUM = 16
 
 exports.assetsPath = function (_path) {
   const assetsSubDirectory = process.env.NODE_ENV === 'production'
@@ -75,18 +76,10 @@ exports.styleLoaders = function (options) {
   return output
 }
 
-exports.generateRenderPaths = () => {
-  let path = ['/']
-  for (let i = 1; i <= Math.ceil(movies.length / 16); i++) {
-    path.push(`/page/${i}`)
-  }
-  return path
-}
-
 // Generate url list for pre-render
 exports.generateRenderPlugins = () => {
   let staticPaths = ['/']
-  for (let i = 1; i <= 16; i++) {
+  for (let i = 1; i <= Math.ceil(movies.length / PAGE_NUM); i++) {
     staticPaths.push(`/page/${i}`)
   }
   let ajaxPaths = movies.map(m => `/view/${m.id}`)
@@ -97,8 +90,8 @@ exports.generateRenderPlugins = () => {
   let plugins = []
   let distPath = path.join(__dirname, '../dist')
   let progress = 0
-  staticChunks.forEach(chunk => {
-    plugins.push(new PrerenderSpaPlugin(distPath, chunk, {
+  staticChunks.forEach(c => {
+    plugins.push(new PrerenderSpaPlugin(distPath, c, {
         maxAttempts: 5,
         navigationLocked: true,
         captureAfterTime: 2000,
@@ -109,17 +102,19 @@ exports.generateRenderPlugins = () => {
       }
     ))
   })
-  // ajaxChunks.forEach(chunk => {
-  //   plugins.push(new PrerenderSpaPlugin(distPath, chunk, {
-  //       navigationLocked: true,
-  //       captureAfterElementExists: '#view-movie',
-  //       postProcessHtml (context) {
-  //         console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
-  //         return context.html
-  //       }
-  //     }
-  //   ))
-  // })
+  ajaxChunks.forEach(p => {
+    plugins.push(new PrerenderSpaPlugin(distPath, p, {
+        maxAttempts: 5,
+        navigationLocked: true,
+        captureAfterTime: 2000,
+        captureAfterElementExists: '#view-movie',
+        postProcessHtml (context) {
+          console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
+          return context.html
+        }
+      }
+    ))
+  })
   // site map plugin
   plugins.push(new SitemapPlugin('https://movie.lz5z.com', [].concat(staticPaths, ajaxPaths), {
     lastMod: true,

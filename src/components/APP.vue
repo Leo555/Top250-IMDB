@@ -1,9 +1,11 @@
 <template>
   <section id="app">
     <m-header></m-header>
-    <keep-alive>
-      <router-view class="movie-container" :key="$route.path"/>
-    </keep-alive>
+    <article class="movie-container">
+      <keep-alive>
+        <router-view :key="$route.path"/>
+      </keep-alive>
+    </article>
     <back-top></back-top>
     <m-footer></m-footer>
   </section>
