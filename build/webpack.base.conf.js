@@ -1,8 +1,11 @@
 'use strict'
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const pkg = require('../config/pkg')
+const pkgs = Object.values(pkg)
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -83,5 +86,10 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    ...pkgs.reduce((pre, current) => {
+      return [...pre, new HtmlWebpackPlugin(current.params)]
+    }, []),
+  ]
 }
