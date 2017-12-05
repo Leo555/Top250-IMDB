@@ -14,6 +14,7 @@ const CnameWebpackPlugin = require('cname-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 const loadMinified = require('./load-minified')
+const ManifestPlugin = require('webpack-manifest-plugin')
 
 const env = config.build.env
 
@@ -151,6 +152,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/**/*.{js,html,css}'],
       minify: true,
       stripPrefix: 'dist/'
+    }),
+    new ManifestPlugin({
+      name: 'IMDB Top250'
     }),
     ...utils.generateRenderPlugins()
   ]
