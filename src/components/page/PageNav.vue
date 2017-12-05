@@ -107,4 +107,22 @@
       background: #88acdb;
     }
   }
+
+  @media only screen and (max-width: 450px) {
+    #page-nav .extend > a {
+      margin: 0 10px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    #page-nav .extend {
+      display: none;
+    }
+
+    #page-nav .page-number {
+      width: 22px;
+      height: 26px;
+      line-height: 26px;
+    }
+  }
 </style>

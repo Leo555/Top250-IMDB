@@ -99,3 +99,12 @@
     transform: rotate(0deg);
   }
 }
+
+.clear() {
+  zoom: 1;
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}

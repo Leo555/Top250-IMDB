@@ -1,7 +1,6 @@
 <template>
   <footer id="footer">
-    <div class="outer">
-      <div id="footer-info">
+    <div class="footer-info">
         <div class="footer-left">
           &copy; {{new Date() | year}} lizhen
         </div>
@@ -9,7 +8,6 @@
           <p>Hosted by <a href="https://pages.coding.me">Coding Pages</a></p>
         </div>
       </div>
-    </div>
   </footer>
 </template>
 <script>
@@ -18,6 +16,7 @@
   }
 </script>
 <style lang="less" scoped>
+  @import "~styles/utils.less";
   @import "~styles/index.less";
 
   #footer {
@@ -31,7 +30,8 @@
     width: 100%;
     text-align: center;
 
-    .outer {
+    .footer-info {
+      .clear();
       padding: 0 30px;
     }
     .footer-left {
@@ -50,5 +50,11 @@
       color: #08c;
     }
 
+  }
+
+  @media only screen and (max-width: 360px){
+    #footer > .footer-info {
+      padding: 0 10px;
+    }
   }
 </style>
