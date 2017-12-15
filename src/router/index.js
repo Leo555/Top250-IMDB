@@ -1,5 +1,6 @@
 import Router from 'vue-router'
 import NProgress from 'nprogress'
+import { buildBaiduAnalysis } from 'helpers'
 const Main = () => import('components/main/Index')
 const View = () => import('components/view/Index')
 const Search = () => import('components/view/Search')
@@ -43,6 +44,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   if (!(from.path === to.path && from.hash !== to.hash)) {
     NProgress.start()
+    buildBaiduAnalysis()
   }
   next()
 })

@@ -2,7 +2,7 @@
   <section>
     <not-found v-if="!movie"></not-found>
     <div v-else>
-      <article id="view-movie" :href="movie.name">
+      <article id="view-movie" :href="movie.name" rel="chapter">
         <div class="image-wrap">
           <img :src="`/static/img/${movie.src}`" :alt="movie.name">
         </div>
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="download">
-            下载地址：<a :href="movie.download">{{movie.name}}</a>
+            下载地址：<a :href="movie.download" rel="noopener">{{movie.name}}</a>
           </div>
         </div>
       </article>

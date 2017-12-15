@@ -1,5 +1,6 @@
 <template>
   <div class="searchbar">
+    <label></label>
     <el-autocomplete
       ref="input"
       class="searchbar"

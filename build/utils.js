@@ -90,31 +90,31 @@ exports.generateRenderPlugins = () => {
   let plugins = []
   let distPath = path.join(__dirname, '../dist')
   let progress = 0
-  // staticChunks.forEach(c => {
-  //   plugins.push(new PrerenderSpaPlugin(distPath, c, {
-  //       maxAttempts: 5,
-  //       navigationLocked: true,
-  //       captureAfterTime: 2000,
-  //       postProcessHtml (context) {
-  //         console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
-  //         return context.html
-  //       }
-  //     }
-  //   ))
-  // })
-  // ajaxChunks.forEach(p => {
-  //   plugins.push(new PrerenderSpaPlugin(distPath, p, {
-  //       maxAttempts: 5,
-  //       navigationLocked: true,
-  //       captureAfterTime: 2000,
-  //       captureAfterElementExists: '#view-movie',
-  //       postProcessHtml (context) {
-  //         console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
-  //         return context.html
-  //       }
-  //     }
-  //   ))
-  // })
+  staticChunks.forEach(c => {
+    plugins.push(new PrerenderSpaPlugin(distPath, c, {
+        maxAttempts: 5,
+        navigationLocked: true,
+        captureAfterTime: 2000,
+        postProcessHtml (context) {
+          console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
+          return context.html
+        }
+      }
+    ))
+  })
+  ajaxChunks.forEach(p => {
+    plugins.push(new PrerenderSpaPlugin(distPath, p, {
+        maxAttempts: 5,
+        navigationLocked: true,
+        captureAfterTime: 2000,
+        captureAfterElementExists: '#view-movie',
+        postProcessHtml (context) {
+          console.log(`[PRE-RENDER] (${++progress} / ${totalRoutes}) ${context.route}`)
+          return context.html
+        }
+      }
+    ))
+  })
   // site map plugin
   plugins.push(new SitemapPlugin('https://movie.lz5z.com', [].concat(staticPaths, ajaxPaths), {
     lastMod: true,

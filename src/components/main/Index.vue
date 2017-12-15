@@ -18,7 +18,7 @@
   import { PAGE_NUM, KEYWORDS } from 'constants/index'
   import PageNav from 'components/page/PageNav.vue'
   export default {
-    name: 'Main',
+    name: 'MainPage',
     computed: {
       ...mapGetters(['current', 'movies', 'page']),
       pageCount () {

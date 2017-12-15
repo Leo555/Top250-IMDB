@@ -4,6 +4,9 @@ const fs = require('fs')
 // 下载方法
 const download = (url, dir, filename) => {
   axios.get(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0'
+    },
     responseType: 'arraybuffer'
   }).then(response => {
     let stream = fs.createWriteStream(dir + '/' + filename)

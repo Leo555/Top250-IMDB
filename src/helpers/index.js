@@ -1,3 +1,5 @@
+import { BAIDU_KEYS } from 'constants/index'
+
 export function isFalse (val) {
   return val === false
 }
@@ -36,4 +38,11 @@ export function getKeywords (movies) {
   return movies.reduce((a, b) => {
     return a.concat([b.subject.title, b.subject.original_title])
   }, []).join(',')
+}
+
+export function buildBaiduAnalysis () {
+  let hm = document.createElement('script')
+  hm.src = `https://hm.baidu.com/hm.js?${BAIDU_KEYS}`
+  let s = document.getElementsByTagName('script')[0]
+  s.parentNode.insertBefore(hm, s)
 }

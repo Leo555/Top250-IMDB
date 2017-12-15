@@ -7,11 +7,12 @@ const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
-const ImageminPlugin = require('imagemin-webpack-plugin').default
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const loadMinified = require('./load-minified')
 
 const env = config.build.env
 
@@ -62,6 +63,37 @@ const webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
+    new HtmlWebpackPlugin({
+      filename: config.build.index,
+      template: 'index.html',
+      inject: 'head',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      },
+      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      chunksSortMode: 'dependency',
+      serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
+        './service-worker-prod.js'))}</script>`
+    }),
+    // 404
+    new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: 'index.html',
+      inject: 'head',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      },
+      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      chunksSortMode: 'dependency'
+    }),
     // keep module.id stable when vender modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // split vendor js into its own file
@@ -92,19 +124,6 @@ const webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ]),
-    new ImageminPlugin({
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      minFileSize: 10000,
-      optipng: {
-        optimizationLevel: 9
-      },
-      pngquant: {
-        quality: '95-100'
-      },
-      jpegtran: {
-        progressive: true
-      }
-    }),
     // cname
     new CnameWebpackPlugin({
       domain: 'movie.lz5z.com',
@@ -112,7 +131,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new SWPrecacheWebpackPlugin({
       cacheId: 'vue-pwa',
       filename: 'service-worker.js',
-      staticFileGlobs: ['dist/**/*.{js,html,css}'],
+      staticFileGlobs: ['dist/*.html', 'dist/**/*.{js,css,png,jpg,svg,ttf,woff,eot}'],
       minify: true,
       stripPrefix: 'dist/'
     }),

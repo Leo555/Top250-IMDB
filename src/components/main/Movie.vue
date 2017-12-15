@@ -1,5 +1,5 @@
 <template>
-  <section id="movie" :href="movie.id">
+  <section class="movie" :href="movie.id" rel="chapter">
     <router-link :to="_to()">
       <img v-lazy="`/static/img/${movie.src}`" :alt="movie.name">
     </router-link>
@@ -19,10 +19,10 @@
         </p>
         <p>导演：<i>{{movie.director}}</i></p>
         <p>主演：<i>{{movie.actors}}</i></p>
-        <p>IMDB：<a :href="`http://www.imdb.cn/title${movie.imdb}`" target="_blank">{{name}}</a>
+        <p>IMDB：<a :href="`http://www.imdb.cn/title${movie.imdb}`" target="_blank" rel="noopener">{{name}}</a>
           <span>
             豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject.id || '1292052'}/?from=showing/`"
-                  target="_blank">{{name}}</a>
+                  target="_blank" rel="noopener">{{name}}</a>
           </span>
         </p>
       </div>
@@ -55,7 +55,7 @@
 </script>
 <style lang="less" scoped>
 
-  #movie {
+  .movie {
     width: 300px;
     overflow: hidden;
     display: inline-block;
@@ -98,7 +98,7 @@
   }
 
   @media screen and (max-width: 700px) {
-    #movie {
+    .movie {
       display: block;
       margin: 40px auto;
     }
