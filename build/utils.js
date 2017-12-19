@@ -26,9 +26,13 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  const autoprefixerLoader = {
+    loader: 'autoprefixer-loader?{browsers:["last 2 version", "Firefox 15"]}'
+  }
+
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    const loaders = [cssLoader]
+    const loaders = [cssLoader, autoprefixerLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',

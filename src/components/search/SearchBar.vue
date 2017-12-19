@@ -106,8 +106,6 @@
   .searchbar {
     display: inline-block;
     .components-icons:hover {
-      -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
       transform: scale(1.2);
     }
   }

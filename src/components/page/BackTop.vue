@@ -18,7 +18,7 @@
     }
   }
 </script>
-<style scoped>
+<style lang="less" scoped>
   button {
     position: fixed;
     bottom: 20px;
