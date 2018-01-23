@@ -1,0 +1,23 @@
+language: node_js
+node_js: stable
+sudo: false
+dist: trusty
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+install:
+  - yarn install
+
+script:
+  - npm run build
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: dist
+    target_branch: gh-pages
+    on:
+      branch: master
