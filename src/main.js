@@ -2,7 +2,6 @@ import 'es6-promise/auto'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Meta from 'vue-meta'
-import VueLazyload from 'vue-lazyload'
 import App from 'components/App'
 import router from './router'
 import store from './store'
@@ -32,11 +31,6 @@ components.forEach((item) => Vue.component(item.name, item))
 
 Vue.use(VueRouter)
 Vue.use(Meta)
-Vue.use(VueLazyload, {
-  error: '/static/img/movie.png',
-  loading: '/static/img/movie.png',
-  attempt: 1
-})
 
 // register global utility filters.
 let _filters = Object.assign(helpers, stringHelper)

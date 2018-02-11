@@ -1,7 +1,7 @@
 <template>
   <section class="movie" :href="movie.id" rel="chapter">
     <router-link :to="_to()">
-      <img v-lazy="`/static/img/${movie.src}`" :alt="movie.name">
+      <img :src="`/static/img/${movie.src}`" :alt="movie.name">
     </router-link>
     <div class="movie-intro">
       <div class="name">
