@@ -12,7 +12,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-const loadMinified = require('./load-minified')
 
 const env = config.build.env
 
@@ -75,9 +74,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency',
-      serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
-        './service-worker-prod.js'))}</script>`
+      chunksSortMode: 'dependency'
     }),
     // 404
     new HtmlWebpackPlugin({
