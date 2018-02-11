@@ -8,15 +8,18 @@
     </article>
     <back-top></back-top>
     <m-footer></m-footer>
+    <corner></corner>
   </section>
 </template>
 <script>
   import Header from 'components/page/Header.vue'
   import Footer from 'components/page/Footer.vue'
   import BackTop from 'components/page/BackTop.vue'
+  import Corner from 'components/page/Corner.vue'
+
   export default {
     name: 'Movie',
-    components: {'m-header': Header, 'm-footer': Footer, BackTop}
+    components: {'m-header': Header, 'm-footer': Footer, BackTop, Corner}
   }
 </script>
 <style lang="less">

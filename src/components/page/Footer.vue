@@ -5,7 +5,7 @@
           &copy; {{new Date() | year}} lizhen
         </div>
         <div class="footer-right">
-          <p>Hosted by <a href="https://pages.coding.me">Coding Pages</a></p>
+          <p>Contact me<a href="https://lz5z.com">lizhen's blog</a></p>
         </div>
       </div>
   </footer>
