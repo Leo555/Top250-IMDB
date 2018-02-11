@@ -21,7 +21,7 @@
 <style lang="less" scoped>
   button {
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 30px;
     z-index: 99;
     border: none;
