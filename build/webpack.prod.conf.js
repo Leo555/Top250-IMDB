@@ -60,7 +60,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
-        safe: true
+        cssProcessor: require('cssnano'),
+        cssProcessorOptions: {
+          discardComments: {removeAll: true},
+          reduceIdents: false,
+          safe: true
+        },
+        canPrint: false
       }
     }),
     new HtmlWebpackPlugin({
@@ -134,8 +140,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ['dist/*.html', 'dist/**/*.{js,css,png,jpg,svg,ttf,woff,eot}'],
       minify: true,
       stripPrefix: 'dist/'
-    }),
-    ...utils.generateRenderPlugins()
+    })
+    // ...utils.generateRenderPlugins()
   ]
 })
 
