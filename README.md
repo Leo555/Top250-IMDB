@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/Leo555/Top250-IMDB.png)](hhttps://travis-ci.org/Leo555/Top250-IMDB)
+
 # Top250-IMDB
 IMDB Top250 movies 
 
