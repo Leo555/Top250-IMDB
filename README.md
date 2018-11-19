@@ -1,5 +1,7 @@
 [![Build Status](https://api.travis-ci.org/Leo555/Top250-IMDB.png)](hhttps://travis-ci.org/Leo555/Top250-IMDB)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Leo555/Top250-IMDB/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Leo555/Top250-IMDB/pulls)
+
 
 # Top250-IMDB
 IMDB Top250 movies 
