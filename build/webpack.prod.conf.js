@@ -11,8 +11,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const CnameWebpackPlugin = require('cname-webpack-plugin')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
-const loadMinified = require('./load-minified')
 
 const env = config.build.env
 
@@ -81,9 +79,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency',
-      serviceWorkerLoader: `<script>${loadMinified(path.join(__dirname,
-        './service-worker-prod.js'))}</script>`
+      chunksSortMode: 'dependency'
     }),
     // 404
     new HtmlWebpackPlugin({
@@ -133,13 +129,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     // cname
     new CnameWebpackPlugin({
       domain: 'movie.lz5z.com',
-    }),
-    new SWPrecacheWebpackPlugin({
-      cacheId: 'vue-pwa',
-      filename: 'service-worker.js',
-      staticFileGlobs: ['dist/*.html', 'dist/**/*.{js,css,png,jpg,svg,ttf,woff,eot}'],
-      minify: true,
-      stripPrefix: 'dist/'
     })
     // ...utils.generateRenderPlugins()
   ]
