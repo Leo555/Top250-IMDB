@@ -13,6 +13,9 @@ import { Button, Input, Autocomplete, Row, Col } from 'element-ui'
 import 'nprogress/nprogress.css'
 import 'styles/components/nprogress.less'
 import { TITLE, KEYWORDS, DESCRIPTION } from 'constants/index'
+import { INIT_MOVIES_DATA } from 'constants/actions'
+import lazyload from 'directives/lazyload'
+
 Vue.config.productionTip = false
 
 const components = [
@@ -30,6 +33,7 @@ components.forEach((item) => Vue.component(item.name, item))
 
 Vue.use(VueRouter)
 Vue.use(Meta)
+Vue.directive('lazy', lazyload)
 
 // register global utility filters.
 let _filters = Object.assign({}, helpers)
@@ -54,4 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     template: '<App/>',
     components: {App}
   }).$mount('#app')
+
+  // 异步加载电影数据，不阻塞首屏渲染
+  store.dispatch(INIT_MOVIES_DATA)
 })

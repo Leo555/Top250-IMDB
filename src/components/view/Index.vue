@@ -1,10 +1,13 @@
 <template>
   <section>
-    <not-found v-if="!movie"></not-found>
+    <div v-if="!loaded" class="loading-wrap">
+      <p>加载中...</p>
+    </div>
+    <not-found v-else-if="!movie"></not-found>
     <div v-else>
       <article id="view-movie" :href="movie.name" rel="chapter">
         <div class="image-wrap">
-          <img :src="`/static/img/${movie.src}`" :alt="movie.name">
+          <img v-lazy="`/static/img/${movie.src}`" :alt="movie.name">
         </div>
         <div class="movie-score">
           <p> {{movie.score}}</p>
@@ -34,9 +37,9 @@
             <p>导演</p>
             <div class="items">
               <div v-for="d in subject.directors" class="item">
-                <a class="director-name" :href="d.alt" target="_blank">
+                <a class="director-name" :href="d.alt" target="_blank" rel="noopener noreferrer">
                   <p class="image-container">
-                    <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                    <img v-lazy="`/static/img/avatars/${d.avatars}`" :alt="d.name">
                   </p>
                   <span>{{d.name}}</span>
                 </a>
@@ -45,9 +48,9 @@
             <p>主要演员</p>
             <div class="items">
               <div v-for="d in subject.casts" class="item">
-                <a class="director-name" :href="d.alt" target="_blank">
+                <a class="director-name" :href="d.alt" target="_blank" rel="noopener noreferrer">
                   <p class="image-container">
-                    <img :src="`/static/img/avatars/${d.avatars}`" :alt="d.name">
+                    <img v-lazy="`/static/img/avatars/${d.avatars}`" :alt="d.name">
                   </p>
                   <span>{{d.name}}</span>
                 </a>
@@ -81,7 +84,7 @@
     name: 'movieView',
     mixins: [mixin],
     computed: {
-      ...mapGetters(['movies']),
+      ...mapGetters(['movies', 'loaded', 'movieById', 'movieByOrder']),
       name () {
         return this.movie.name.split('（')[0]
       }
@@ -105,13 +108,21 @@
     methods: {
       init () {
         let id = this.$route.params.id
-        this.movie = this.movies.find(m => m.id === id)
-        this.preview = this.movies.find(m => m.order === (this.movie.order - 1))
-        this.next = this.movies.find(m => m.order === (this.movie.order + 1))
+        // O(1) 查找替代 O(n) 的 Array.find
+        this.movie = this.movieById[id]
+        if (this.movie) {
+          this.preview = this.movieByOrder[this.movie.order - 1] || {}
+          this.next = this.movieByOrder[this.movie.order + 1] || {}
+        }
+      }
+    },
+    watch: {
+      loaded (val) {
+        if (val) this.init()
       }
     },
     activated () {
-      this.init()
+      if (this.loaded) this.init()
     }
   }
 </script>

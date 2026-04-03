@@ -1,6 +1,9 @@
 <template>
   <section>
-    <div v-if="current">
+    <div v-if="!loaded" class="loading-wrap">
+      <p>加载中...</p>
+    </div>
+    <div v-else-if="current">
       <movie v-for="m in current" :movie="m" :key="m.order"></movie>
       <page-nav :count="pageCount" :page="page"></page-nav>
     </div>
@@ -20,7 +23,7 @@
   export default {
     name: 'MainPage',
     computed: {
-      ...mapGetters(['current', 'movies', 'page']),
+      ...mapGetters(['current', 'movies', 'page', 'loaded']),
       pageCount () {
         return Math.ceil(this.movies.length / PAGE_NUM)
       }
@@ -31,7 +34,7 @@
         meta: [{
           vmid: 'keywords',
           name: 'keywords',
-          content: getKeywords(this.current) + ',' + KEYWORDS
+          content: this.current ? (getKeywords(this.current) + ',' + KEYWORDS) : KEYWORDS
         }]
       }
     },
@@ -40,12 +43,19 @@
         this.$store.dispatch(SET_CURRENT_PAGE, this.$route)
       }
     },
+    watch: {
+      loaded (val) {
+        if (val) this.load()
+      }
+    },
     beforeCreate () {
-      this.$store.dispatch(SET_CURRENT_PAGE, this.$route)
+      if (this.$store.getters.loaded) {
+        this.$store.dispatch(SET_CURRENT_PAGE, this.$route)
+      }
     },
     beforeRouteEnter: async function (to, from, next) {
       let nx = vm => {
-        if (!vm.$isServer) {
+        if (!vm.$isServer && vm.loaded) {
           vm.load()
         }
       }
@@ -57,3 +67,13 @@
     }
   }
 </script>
+<style scoped>
+  .loading-wrap {
+    text-align: center;
+    padding: 100px 0;
+  }
+  .loading-wrap p {
+    font-size: 18px;
+    color: #999;
+  }
+</style>

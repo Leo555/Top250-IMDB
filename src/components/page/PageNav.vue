@@ -2,9 +2,10 @@
   <nav id="page-nav">
     <ul class="pagination">
       <li class="prev extend">
-        <router-link :class="{'disabled': page === 1}" :to="{name: 'Page', params: {p: page - 1}}">
+        <router-link v-if="page > 1" :to="{name: 'Page', params: {p: page - 1}}">
           « Prev
         </router-link>
+        <span v-else class="disabled">« Prev</span>
       </li>
       <li v-for="p in pageArray">
         <router-link v-if="showPage(p)" class="page-number" :class="{'current': page == p}"

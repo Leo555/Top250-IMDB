@@ -1,7 +1,12 @@
 <template>
   <section class="movie-search">
-    <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
-    <empty v-if="!movieList.length"></empty>
+    <div v-if="!loaded" class="loading-wrap">
+      <p>加载中...</p>
+    </div>
+    <template v-else>
+      <movie v-for="m in movieList" :movie="m" :key="m.order" :keyword="keyword"></movie>
+      <empty v-if="!movieList.length"></empty>
+    </template>
   </section>
 </template>
 <script>
@@ -21,7 +26,7 @@
     },
     components: {Movie, Empty},
     computed: {
-      ...mapGetters(['movies'])
+      ...mapGetters(['movies', 'loaded'])
     },
     metaInfo () {
       return {
@@ -29,7 +34,7 @@
         meta: [{
           vmid: 'keywords',
           name: 'keywords',
-          content: getKeywords(this.movieList) + ',' + KEYWORDS
+          content: this.movieList.length ? (getKeywords(this.movieList) + ',' + KEYWORDS) : KEYWORDS
         }]
       }
     },
@@ -47,8 +52,23 @@
         })
       }
     },
+    watch: {
+      loaded (val) {
+        if (val) this.init()
+      }
+    },
     activated () {
-      this.init()
+      if (this.loaded) this.init()
     }
   }
 </script>
+<style scoped>
+  .loading-wrap {
+    text-align: center;
+    padding: 100px 0;
+  }
+  .loading-wrap p {
+    font-size: 18px;
+    color: #999;
+  }
+</style>

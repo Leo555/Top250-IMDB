@@ -37,7 +37,7 @@
       }
     },
     computed: {
-      ...mapGetters(['movies'])
+      ...mapGetters(['movies', 'loaded'])
     },
     methods: {
       submit (e) {
@@ -75,7 +75,7 @@
         })
         if (files.length) this.showItem = true
         cb(files)
-      }, 50),
+      }, 200),
       handleSelect (item) {
         this.$router.push({
           name: 'View',
@@ -85,18 +85,26 @@
         })
         this.showItem = false
         this.keyword = ''
-      }
-    },
-    created () {
-      this.movies.forEach(m => {
-        this.sMovies.push({
+      },
+      buildSearchList () {
+        this.sMovies = this.movies.map(m => ({
           id: m.id,
           englishName: m.englishName,
           name: m.subject.title,
           year: m.subject.year,
           order: m.order
-        })
-      })
+        }))
+      }
+    },
+    created () {
+      if (this.loaded) {
+        this.buildSearchList()
+      }
+    },
+    watch: {
+      loaded (val) {
+        if (val) this.buildSearchList()
+      }
     }
   }
 </script>

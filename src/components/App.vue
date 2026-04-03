@@ -2,7 +2,7 @@
   <section id="app">
     <m-header></m-header>
     <article class="movie-container">
-      <keep-alive>
+      <keep-alive :max="10">
         <router-view :key="$route.path"/>
       </keep-alive>
     </article>
@@ -18,7 +18,7 @@
   import Corner from 'components/page/Corner.vue'
 
   export default {
-    name: 'Movie',
+    name: 'App',
     components: {'m-header': Header, 'm-footer': Footer, BackTop, Corner}
   }
 </script>
