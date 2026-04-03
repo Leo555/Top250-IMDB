@@ -18,11 +18,11 @@
             <p>别名：<i>{{movie.nickName}}</i></p>
             <p>导演：<i>{{movie.director}}</i></p>
             <p>主演：<i>{{movie.actors}}</i></p>
-            <p>IMDB：<a :href="`http://www.imdb.cn/title/${movie.imdb}`" target="_blank">{{name}}</a>
+            <p>IMDB：<a :href="`https://www.imdb.cn/title/${movie.imdb}`" target="_blank" rel="noopener noreferrer">{{name}}</a>
               <span v-if="subject">
               豆瓣：<a
                 :href="`https://movie.douban.com/subject/${subject.id || '1292052'}/?from=showing/`"
-                target="_blank">{{name}}</a>
+                target="_blank" rel="noopener noreferrer">{{name}}</a>
             </span>
             </p>
             <p>上映时间：<i>{{subject.year}}</i></p>

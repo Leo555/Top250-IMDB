@@ -88,7 +88,7 @@
       }
     },
     created () {
-      this.movies.map(m => {
+      this.movies.forEach(m => {
         this.sMovies.push({
           id: m.id,
           englishName: m.englishName,

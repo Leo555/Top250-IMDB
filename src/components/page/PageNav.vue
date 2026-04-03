@@ -13,9 +13,10 @@
         <span v-else-if="showPage(p-1)" class="space">…</span>
       </li>
       <li class="next extend">
-        <router-link :class="{'disabled': page === pageArray.length}" :to="{name: 'Page', params: {p: page + 1}}">
+        <router-link v-if="page < count" :to="{name: 'Page', params: {p: page + 1}}">
           Next »
         </router-link>
+        <span v-else class="disabled">Next »</span>
       </li>
     </ul>
   </nav>

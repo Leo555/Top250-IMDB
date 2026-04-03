@@ -6,7 +6,6 @@ import App from 'components/App'
 import router from './router'
 import store from './store'
 import * as helpers from 'helpers'
-import * as stringHelper from 'helpers/string'
 import SearchBarItem from 'components/search/SearchBarItem'
 import NotFound from 'components/view/NotFound'
 import Icon from 'components/Icon'
@@ -33,7 +32,7 @@ Vue.use(VueRouter)
 Vue.use(Meta)
 
 // register global utility filters.
-let _filters = Object.assign(helpers, stringHelper)
+let _filters = Object.assign({}, helpers)
 Object.keys(_filters).forEach(key => {
   Vue.filter(key, _filters[key])
 })

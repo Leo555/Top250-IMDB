@@ -13,7 +13,7 @@ const getUrl = keyword => {
 
 const headers = {
   Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-  Cookie: 'PHPSESSID=5c57np7i8dpmm371pnq3f09vn4',
+  Cookie: process.env.ZIMUZU_COOKIE || '',
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36'
 }
 

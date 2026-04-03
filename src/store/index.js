@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import chunk from 'lodash.chunk'
-import { SET_MOVIES_DATA, INIT_MOVIES_DATA, SET_CURRENT_PAGE } from 'constants/actions'
+import { SET_MOVIES_DATA, SET_CURRENT_PAGE_MUTATION, INIT_MOVIES_DATA, SET_CURRENT_PAGE } from 'constants/actions'
 import { PAGE_NUM } from 'constants/index'
 import movies from 'data/movies.json'
 movies.sort((a, b) => a.order - b.order)
@@ -35,15 +35,19 @@ export default new Vuex.Store({
     [INIT_MOVIES_DATA]: ({commit}, movies) => {
       commit(SET_MOVIES_DATA, movies)
     },
-    [SET_CURRENT_PAGE]: ({state}, to = {}) => {
-      state.page = parseInt(to.params.p || 1)
-      return state.page
+    [SET_CURRENT_PAGE]: ({commit}, to = {}) => {
+      let page = parseInt(to.params.p || 1)
+      commit(SET_CURRENT_PAGE_MUTATION, page)
+      return page
     }
   },
 
   mutations: {
     [SET_MOVIES_DATA]: (state, movies) => {
       state.movies = movies
+    },
+    [SET_CURRENT_PAGE_MUTATION]: (state, page) => {
+      state.page = page
     }
   }
 })

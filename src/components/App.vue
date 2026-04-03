@@ -58,7 +58,7 @@
     list-style: none;
   }
 
-  span.hightlight {
+  span.highlight {
     background: @highlight-color;
   }
 </style>

@@ -1,20 +1,29 @@
 <template>
-  <button @click="backToTop">Top</button>
+  <transition name="fade">
+    <button v-show="visible" @click="backToTop">Top</button>
+  </transition>
 </template>
 <script>
   export default {
     name: 'BackTop',
+    data () {
+      return {
+        visible: false
+      }
+    },
     methods: {
       backToTop () {
-        let time = setInterval(() => {
-          let osTop = document.documentElement.scrollTop || document.body.scrollTop
-          let speed = Math.floor(-osTop / 10)
-          document.documentElement.scrollTop = document.body.scrollTop = osTop + speed
-          if (osTop === 0) {
-            clearInterval(time)
-          }
-        }, 10)
+        window.scrollTo({top: 0, behavior: 'smooth'})
+      },
+      handleScroll () {
+        this.visible = (document.documentElement.scrollTop || document.body.scrollTop) > 300
       }
+    },
+    mounted () {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    beforeDestroy () {
+      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 </script>
@@ -32,5 +41,15 @@
     cursor: pointer;
     padding: 15px;
     border-radius: 10px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity 0.3s;
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>

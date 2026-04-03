@@ -37,11 +37,13 @@
       init () {
         this.keyword = decodeURIComponent(this.$route.params.keyword)
         this.movieList = this.movies.filter(m => {
-          if (m.subject) {
-            return m.subject.title.includes(this.keyword)
-          } else {
-            return m.name.includes(this.keyword)
-          }
+          let keyword = this.keyword.toLowerCase()
+          let title = m.subject ? m.subject.title : m.name
+          let name = m.name || ''
+          let englishName = (m.englishName || '').toLowerCase()
+          return title.toLowerCase().includes(keyword) ||
+            name.toLowerCase().includes(keyword) ||
+            englishName.includes(keyword)
         })
       }
     },

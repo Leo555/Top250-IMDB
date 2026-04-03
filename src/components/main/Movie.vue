@@ -6,7 +6,7 @@
     <div class="movie-intro">
       <div class="name">
         <router-link :to="_to()">
-          <h2>{{movie.order}}. <span v-html="highlighted"></span></h2>
+          <h2>{{movie.order}}. <template v-for="(part, i) in highlightedParts"><mark v-if="part.highlight" :key="i" class="highlight">{{part.text}}</mark><template v-else>{{part.text}}</template></template></h2>
           <h2 class="score">{{movie.score}}</h2>
         </router-link>
       </div>
@@ -19,10 +19,10 @@
         </p>
         <p>导演：<i>{{movie.director}}</i></p>
         <p>主演：<i>{{movie.actors}}</i></p>
-        <p>IMDB：<a :href="`http://www.imdb.cn/title${movie.imdb}`" target="_blank" rel="noopener">{{name}}</a>
+        <p>IMDB：<a :href="`https://www.imdb.cn/title${movie.imdb}`" target="_blank" rel="noopener noreferrer">{{name}}</a>
           <span>
             豆瓣：<a :href="`https://movie.douban.com/subject/${movie.subject.id || '1292052'}/?from=showing/`"
-                  target="_blank" rel="noopener">{{name}}</a>
+                  target="_blank" rel="noopener noreferrer">{{name}}</a>
           </span>
         </p>
       </div>
@@ -32,6 +32,7 @@
 
 <script>
   import mixin from 'mixins'
+  import { highlightKeyword } from 'helpers'
   export default {
     props: ['movie', 'keyword'],
     data () {
@@ -41,14 +42,8 @@
     },
     mixins: [mixin],
     computed: {
-      highlighted () {
-        if (!this.keyword) return this.movie.name
-        let key = this.keyword
-        let kw = key.replace(/[-\\/^$*+?.()|[\]{}]/g, '\\$&')
-        return this.movie.name
-          .replace(new RegExp(kw, 'ig'), function ($1, $2) {
-            return ('<span class="hightlight">' + $1 + '</span>')
-          })
+      highlightedParts () {
+        return highlightKeyword(this.movie.name, this.keyword)
       }
     }
   }

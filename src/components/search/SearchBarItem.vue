@@ -4,7 +4,7 @@
       <el-col :span="3">
         <span>{{item.order}}</span>
       </el-col>
-      <el-col :span="15" v-html="highlighted"></el-col>
+      <el-col :span="15"><template v-for="(part, i) in highlightedParts"><mark v-if="part.highlight" :key="i" class="highlight">{{part.text}}</mark><template v-else>{{part.text}}</template></template></el-col>
       <el-col :span="6"> {{item.year}}</el-col>
     </el-row>
   </li>
@@ -12,6 +12,7 @@
 
 <script>
   import Emitter from 'element-ui/lib/mixins/emitter'
+  import { highlightKeyword } from 'helpers'
   export default {
     name: 'search-bar-item',
     mixins: [Emitter],
@@ -19,13 +20,8 @@
       item: {type: Object, required: true}
     },
     computed: {
-      highlighted () {
-        let key = this.item.keyword
-        let kw = key.replace(/[-\\/^$*+?.()|[\]{}]/g, '\\$&')
-        return this.item.name
-          .replace(new RegExp(kw, 'ig'), function ($1, $2) {
-            return ('<span class="hightlight">' + $1 + '</span>')
-          })
+      highlightedParts () {
+        return highlightKeyword(this.item.name, this.item.keyword)
       }
     },
     methods: {
