@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-200 text-gray-300 font-sans antialiased;
+  }
+
+  a {
+    @apply outline-none no-underline transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-primary hover:bg-red-700 text-white px-6 py-2 rounded transition-colors duration-200;
+  }
+
+  .card {
+    @apply bg-dark-100 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105;
+  }
+}
+
+/* NProgress 自定义样式 */
+#nprogress .bar {
+  background: #e50914 !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #e50914, 0 0 5px #e50914 !important;
+}
