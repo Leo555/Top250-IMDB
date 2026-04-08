@@ -23,8 +23,13 @@ const movie = computed(() => movieStore.movieByImdb[movieId.value])
 
 useTitle(computed(() => movie.value ? `${movie.value.name} - IMDB Top250` : '加载中...'))
 
-function getImageUrl(src: string) {
-  return src.startsWith('http') ? src : `/static/img/${src}`
+function getImageUrl(src: string, isAvatar: boolean = false) {
+  if (src.startsWith('http')) return src
+  // 演员和导演头像在 avatars 子目录下
+  if (isAvatar) {
+    return `/static/img/avatars/${src}`
+  }
+  return `/static/img/${src}`
 }
 
 function goBack() {
@@ -50,6 +55,61 @@ function formatVotes(votes?: number | string) {
   }
   return num.toString()
 }
+
+// 解析演员列表（从 actors 字符串中提取更多演员）
+function parseActors(actorsStr?: string) {
+  if (!actorsStr) return []
+  
+  // 匹配格式：名字 空格 英文名
+  // 例如："蒂姆·罗宾斯 Tim Robbins 摩根·弗里曼 Morgan Freeman"
+  const actors: Array<{name: string, englishName: string}> = []
+  const regex = /(\S+?)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/g
+  let match
+  
+  while ((match = regex.exec(actorsStr)) !== null) {
+    actors.push({
+      name: match[1],
+      englishName: match[2]
+    })
+  }
+  
+  return actors
+}
+
+// 合并主演信息（优先使用 subject.casts，补充 actors 字符串中的演员）
+const allActors = computed(() => {
+  if (!movie.value) return []
+  
+  const casts = movie.value.subject?.casts || []
+  const additionalActors = parseActors(movie.value.actors)
+  
+  // 如果 subject.casts 已有数据，直接返回
+  if (casts.length > 0) {
+    // 补充额外的演员（没有头像的）
+    const castNames = new Set(casts.map(c => c.name))
+    const extra = additionalActors.filter(a => !castNames.has(a.name))
+    
+    return [
+      ...casts,
+      ...extra.slice(0, 5).map(actor => ({
+        name: actor.name,
+        englishName: actor.englishName,
+        id: `extra-${actor.name}`,
+        alt: '',
+        avatars: ''
+      }))
+    ]
+  }
+  
+  // 否则使用解析出的演员列表
+  return additionalActors.slice(0, 8).map(actor => ({
+    name: actor.name,
+    englishName: actor.englishName,
+    id: `actor-${actor.name}`,
+    alt: '',
+    avatars: ''
+  }))
+})
 </script>
 
 <template>
@@ -219,34 +279,31 @@ function formatVotes(votes?: number | string) {
               <a
                 :href="`https://www.imdb.com/title${movie.imdb}`"
                 target="_blank"
-                class="text-primary hover:underline flex items-center"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/10 text-yellow-500 rounded-lg hover:bg-yellow-500/20 transition-colors"
               >
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.31 9.588v.005c-.077-.048-.227-.07-.42-.07v4.967c.27 0 .44-.05.5-.134.062-.084.093-.313.093-.69v-3.46c0-.27-.008-.443-.023-.52-.016-.076-.05-.13-.1-.148zM22.416 0H1.62C.732.014.011.729 0 1.617v20.766c.011.888.732 1.603 1.62 1.617h20.796c.9-.004 1.627-.737 1.584-1.638V1.617C24.043.721 23.316-.013 22.416 0zM4.225 17.5H2.09V6.5h2.135v11zm6.46 0H8.618v-7.16l-1.59 7.16H4.99l-1.65-7.16V17.5H1.3V6.5h3.18c.18.77.37 1.56.55 2.34.18.78.37 1.57.56 2.37l.33 1.43 1.59-6.14h3.155v11zm6.46-3.76c0 .83-.04 1.44-.12 1.83-.08.39-.25.7-.51.94-.26.24-.6.42-1.02.54-.42.12-.97.18-1.66.18H11.2V6.5h2.77c.86 0 1.52.06 1.98.18.46.12.82.3 1.07.55.25.25.41.55.48.9.07.35.11.94.11 1.77v3.84zm6.49-.16c0 .77-.05 1.34-.14 1.72-.09.38-.28.68-.57.9-.29.22-.7.33-1.22.33-.5 0-.9-.1-1.18-.3-.28-.2-.45-.48-.51-.84-.06-.36-.09-.97-.09-1.81v-1.39h2.13v.27c0 .6.01 1 .04 1.2.03.2.1.3.21.3.12 0 .2-.06.22-.19.02-.13.04-.47.04-1.03v-3.5c0-.42-.02-.68-.06-.78-.04-.1-.13-.15-.27-.15-.14 0-.24.06-.28.17-.04.11-.06.38-.06.79v.7h-2.13v-.9c0-.7.05-1.21.15-1.54.1-.33.31-.6.64-.81.33-.21.78-.31 1.37-.31.62 0 1.1.1 1.43.31.33.21.54.48.64.81.1.33.15.87.15 1.62v4.04z"/>
-                </svg>
-                IMDB 主页
+                <span class="font-bold text-sm">IMDb</span>
               </a>
               <a
                 v-if="movie.subject?.alt"
                 :href="movie.subject.alt"
                 target="_blank"
-                class="text-primary hover:underline flex items-center"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 text-green-500 rounded-lg hover:bg-green-500/20 transition-colors"
               >
-                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13.5 2c-5.621 0-10.211 4.443-10.475 10h-3.025l5 6.625 5-6.625h-2.975c.257-3.351 3.021-6 6.475-6 3.584 0 6.5 2.916 6.5 6.5s-2.916 6.5-6.5 6.5c-1.863 0-3.542-.793-4.728-2.053l-2.427 3.216c1.877 1.754 4.389 2.837 7.155 2.837 5.79 0 10.5-4.71 10.5-10.5s-4.71-10.5-10.5-10.5z"/>
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
-                豆瓣主页
+                <span class="font-medium text-sm">豆瓣</span>
               </a>
               <a
                 v-if="movie.website"
                 :href="movie.website"
                 target="_blank"
-                class="text-primary hover:underline flex items-center"
+                class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors"
               >
-                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
                 </svg>
-                官方网站
+                <span class="font-medium text-sm">官方网站</span>
               </a>
             </div>
 
@@ -263,21 +320,31 @@ function formatVotes(votes?: number | string) {
           </div>
 
           <!-- Cast Section -->
-          <div v-if="movie.subject?.casts?.length" class="mt-8 pt-6 border-t border-gray-700">
+          <div v-if="allActors.length > 0" class="mt-8 pt-6 border-t border-gray-700">
             <h3 class="text-xl font-bold text-white mb-4">主演</h3>
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
               <div
-                v-for="cast in movie.subject.casts"
-                :key="cast.id"
+                v-for="actor in allActors"
+                :key="actor.id"
                 class="text-center"
               >
                 <img
-                  :src="getImageUrl(cast.avatars)"
-                  :alt="cast.name"
+                  v-if="actor.avatars"
+                  :src="getImageUrl(actor.avatars, true)"
+                  :alt="actor.name"
                   class="w-20 h-20 rounded-full mx-auto mb-2 object-cover bg-dark-300"
                   loading="lazy"
                 />
-                <p class="text-sm text-gray-300">{{ cast.name }}</p>
+                <div
+                  v-else
+                  class="w-20 h-20 rounded-full mx-auto mb-2 bg-dark-300 flex items-center justify-center text-gray-500"
+                >
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                  </svg>
+                </div>
+                <p class="text-sm text-gray-300 font-medium">{{ actor.name }}</p>
+                <p v-if="actor.englishName" class="text-xs text-gray-500 mt-0.5">{{ actor.englishName }}</p>
               </div>
             </div>
           </div>
@@ -292,7 +359,7 @@ function formatVotes(votes?: number | string) {
                 class="text-center"
               >
                 <img
-                  :src="getImageUrl(director.avatars)"
+                  :src="getImageUrl(director.avatars, true)"
                   :alt="director.name"
                   class="w-20 h-20 rounded-full mx-auto mb-2 object-cover bg-dark-300"
                   loading="lazy"

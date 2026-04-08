@@ -179,5 +179,28 @@
 - 配置 CI/CD
 - 添加 PWA 支持
 - 优化性能（Lighthouse 评分）
-- 定期更新电影数据（每月运行 npm run fetch）
-- 补充缺失的电影海报图片
+
+## 数据维护记录
+
+### 2026-04-07 数据完整性与海报补充
+- ✅ 修复所有250部电影的导演和演员信息
+- ✅ 成功下载249张电影海报
+- ✅ 为《肖申克的救赎》创建占位海报
+- ✅ 数据完整性检查全部通过
+
+**修复内容：**
+1. 改进 `fetch-imdb-puppeteer.mjs`，自动访问电影详情页补充导演和演员数据
+2. 创建 `download-images.mjs` 批量下载海报图片
+3. 创建 `check-data.mjs` 数据完整性检查工具
+
+**维护命令：**
+```bash
+# 检查数据完整性
+node scripts/check-data.mjs
+
+# 重新抓取电影数据（每月运行）
+npm run fetch
+
+# 下载缺失的海报图片
+node scripts/download-images.mjs
+```
