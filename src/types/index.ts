@@ -3,6 +3,7 @@ export interface Cast {
   avatars: string
   name: string
   id: string
+  englishName?: string
 }
 
 export interface Director {
