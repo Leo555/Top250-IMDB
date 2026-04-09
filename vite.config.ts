@@ -38,13 +38,15 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
+        globPatterns: ['**/*.{js,css,html,ico,woff2}'],
+        globIgnores: ['static/img/**'],
+        navigateFallback: 'index.html',
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/.*\.(?:png|jpg|jpeg|svg|gif|webp)$/i,
+            urlPattern: /\/static\/img\/.*\.(?:png|jpg|jpeg|svg|gif|webp|ico)$/i,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'images-cache',
+              cacheName: 'poster-images',
               expiration: {
                 maxEntries: 300,
                 maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
@@ -60,6 +62,7 @@ export default defineConfig({
       '@': resolve(__dirname, 'src'),
     },
   },
+  publicDir: 'public',
   server: {
     port: 3000,
     open: true,
