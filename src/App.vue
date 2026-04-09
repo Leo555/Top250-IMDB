@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
   <div id="app" class="min-h-screen flex flex-col">
     <Header />
-    <main class="flex-1 container py-8">
+    <main class="flex-1 container py-4 sm:py-8">
       <router-view v-slot="{ Component }">
         <keep-alive :max="10">
           <component :is="Component" />

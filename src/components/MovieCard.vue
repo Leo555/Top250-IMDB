@@ -52,16 +52,16 @@ function getImageUrl(src: string) {
     </div>
 
     <!-- Info -->
-    <div class="p-4">
-      <h3 class="text-white font-bold mb-2 truncate">{{ movie.name }}</h3>
-      <p class="text-sm text-gray-500 mb-2 truncate">{{ movie.englishName }}</p>
-      <div class="flex items-center justify-between text-sm">
+    <div class="p-2.5 sm:p-4">
+      <h3 class="text-white font-bold mb-1 sm:mb-2 truncate text-sm sm:text-base">{{ movie.name }}</h3>
+      <p class="text-xs sm:text-sm text-gray-500 mb-1.5 sm:mb-2 truncate">{{ movie.englishName }}</p>
+      <div class="flex items-center justify-between text-xs sm:text-sm">
         <span v-if="movie.subject?.year" class="text-gray-400">{{ movie.subject.year }}</span>
         <div v-if="movie.subject?.genres?.length" class="flex gap-1">
           <span
             v-for="genre in movie.subject.genres.slice(0, 2)"
             :key="genre"
-            class="px-2 py-0.5 bg-dark-300 rounded text-xs"
+            class="px-1.5 sm:px-2 py-0.5 bg-dark-300 rounded text-xs"
           >
             {{ genre }}
           </span>

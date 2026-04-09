@@ -116,7 +116,7 @@ const allActors = computed(() => {
   <div v-if="movie" class="max-w-5xl mx-auto">
     <!-- Back Button -->
     <button
-      class="mb-6 flex items-center text-gray-400 hover:text-white transition-colors"
+      class="mb-4 sm:mb-6 flex items-center text-gray-400 hover:text-white transition-colors min-h-[44px]"
       @click="goBack"
     >
       <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +130,7 @@ const allActors = computed(() => {
       <div class="md:flex">
         <!-- Poster -->
         <div class="md:w-1/3">
-          <div class="relative aspect-[2/3] bg-dark-300">
+          <div class="relative aspect-[2/3] max-h-[50vh] md:max-h-none bg-dark-300">
             <img
               v-if="isVisible"
               ref="imgRef"
@@ -141,24 +141,24 @@ const allActors = computed(() => {
             <div v-else ref="imgRef" class="w-full h-full animate-pulse bg-dark-300"></div>
 
             <!-- Rank Badge -->
-            <div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 rounded-lg text-lg font-bold">
+            <div class="absolute top-3 left-3 sm:top-4 sm:left-4 bg-primary text-white px-2.5 py-1 sm:px-3 rounded-lg text-base sm:text-lg font-bold">
               #{{ movie.order }}
             </div>
           </div>
         </div>
 
         <!-- Info -->
-        <div class="md:w-2/3 p-6">
-          <h1 class="text-3xl font-bold text-white mb-2">{{ movie.name }}</h1>
-          <p class="text-lg text-gray-400 mb-4">{{ movie.englishName }}</p>
+        <div class="md:w-2/3 p-4 sm:p-6">
+          <h1 class="text-xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">{{ movie.name }}</h1>
+          <p class="text-sm sm:text-lg text-gray-400 mb-3 sm:mb-4">{{ movie.englishName }}</p>
 
           <!-- Ratings Section -->
-          <div class="mb-6 p-4 bg-dark-300 rounded-lg">
-            <h3 class="text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider">评分</h3>
-            <div class="grid grid-cols-3 gap-4">
+          <div class="mb-4 sm:mb-6 p-3 sm:p-4 bg-dark-300 rounded-lg">
+            <h3 class="text-xs sm:text-sm font-bold text-gray-500 mb-2 sm:mb-3 uppercase tracking-wider">评分</h3>
+            <div class="grid grid-cols-3 gap-2 sm:gap-4">
               <!-- IMDB Rating -->
               <div v-if="movie.imdbRating || movie.score" class="text-center">
-                <div class="text-3xl font-bold text-yellow-500 mb-1">
+                <div class="text-2xl sm:text-3xl font-bold text-yellow-500 mb-1">
                   {{ movie.imdbRating || movie.score }}
                 </div>
                 <div class="text-xs text-gray-500">IMDB</div>
@@ -169,7 +169,7 @@ const allActors = computed(() => {
 
               <!-- Douban Rating -->
               <div v-if="movie.doubanRating || movie.subject?.average" class="text-center">
-                <div class="text-3xl font-bold text-green-500 mb-1">
+                <div class="text-2xl sm:text-3xl font-bold text-green-500 mb-1">
                   {{ movie.doubanRating || movie.subject?.average?.toFixed(1) }}
                 </div>
                 <div class="text-xs text-gray-500">豆瓣</div>
@@ -189,7 +189,7 @@ const allActors = computed(() => {
           </div>
 
           <!-- Basic Info Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
             <div v-if="movie.subject?.year || movie.releaseDate" class="p-3 bg-dark-300 rounded">
               <div class="text-xs text-gray-500 mb-1">年份</div>
               <div class="text-white">{{ movie.releaseDate?.split('-')[0] || movie.subject?.year }}</div>

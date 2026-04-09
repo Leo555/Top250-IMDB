@@ -12,7 +12,7 @@ function scrollToTop() {
   <transition name="fade">
     <button
       v-if="y > 300"
-      class="fixed bottom-8 right-8 w-12 h-12 bg-primary hover:bg-red-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-50"
+      class="fixed bottom-20 right-4 sm:bottom-8 sm:right-8 w-11 h-11 sm:w-12 sm:h-12 bg-primary hover:bg-red-700 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-50"
       aria-label="返回顶部"
       @click="scrollToTop"
     >

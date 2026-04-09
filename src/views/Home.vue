@@ -28,7 +28,7 @@ watch(
 <template>
   <div v-if="movieStore.loaded">
     <!-- Movie Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-6">
       <MovieCard
         v-for="movie in movieStore.currentMovies"
         :key="movie.imdb"

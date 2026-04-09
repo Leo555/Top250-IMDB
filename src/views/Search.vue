@@ -29,17 +29,17 @@ function goBack() {
 <template>
   <div class="max-w-7xl mx-auto">
     <!-- Search Info -->
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold text-white mb-2">
+    <div class="mb-6 sm:mb-8">
+      <h1 class="text-xl sm:text-3xl font-bold text-white mb-2">
         搜索 "{{ keyword }}"
       </h1>
-      <p class="text-gray-400">
+      <p class="text-gray-400 text-sm sm:text-base">
         找到 {{ movieStore.searchResults.length }} 部电影
       </p>
     </div>
 
     <!-- Results -->
-    <div v-if="movieStore.searchResults.length > 0" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+    <div v-if="movieStore.searchResults.length > 0" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-6">
       <MovieCard
         v-for="movie in movieStore.searchResults"
         :key="movie.imdb"
