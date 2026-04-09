@@ -9,7 +9,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['static/favicon.ico', 'static/apple-touch-icon.png'],
+      includeAssets: ['static/img/favicon.ico', 'static/img/apple-touch-icon.png'],
       manifest: {
         name: 'IMDB Top250 - 全球最佳电影排行榜',
         short_name: 'IMDB Top250',
@@ -20,17 +20,17 @@ export default defineConfig({
         start_url: '/',
         icons: [
           {
-            src: '/static/pwa-192x192.png',
+            src: '/static/img/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/static/pwa-512x512.png',
+            src: '/static/img/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/static/pwa-512x512.png',
+            src: '/static/img/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable',
