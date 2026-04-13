@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+
   body {
-    @apply bg-dark-200 text-gray-300 font-sans antialiased;
+    @apply bg-dark-200 text-gray-300 font-sans antialiased overflow-x-hidden;
   }
 
   a {
@@ -22,7 +26,7 @@
   }
 
   .card {
-    @apply bg-dark-100 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105;
+    @apply bg-dark-100 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 sm:hover:scale-105;
   }
 }
 

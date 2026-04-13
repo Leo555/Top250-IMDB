@@ -28,9 +28,9 @@ function toggleSearch() {
 </script>
 
 <template>
-  <header class="bg-dark-300 shadow-md sticky top-0 z-50">
+  <header class="bg-dark-300 shadow-md sticky top-0 z-50 overflow-x-hidden">
     <div class="container">
-      <div class="flex items-center justify-between h-14 sm:h-16">
+      <div class="flex items-center justify-between h-14 sm:h-16 gap-2">
         <!-- Logo -->
         <router-link to="/" class="flex items-center space-x-2 shrink-0">
           <svg class="w-7 h-7 sm:w-8 sm:h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
