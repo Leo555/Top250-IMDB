@@ -16,6 +16,7 @@
     "fetch:axios": "node scripts/fetch-imdb-top250.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
