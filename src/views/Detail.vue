@@ -222,7 +222,7 @@ const allActors = computed(() => {
           </div>
 
           <!-- Detailed Info -->
-          <div class="space-y-4 text-gray-300">
+          <div class="space-y-4 text-gray-300 break-words overflow-hidden">
             <p v-if="movie.nickName">
               <span class="text-gray-500">别名：</span>
               <span>{{ movie.nickName }}</span>

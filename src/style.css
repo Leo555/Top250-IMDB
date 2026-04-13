@@ -2,13 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply overflow-x-hidden;
-  }
+/* 全局防止水平溢出 */
+html,
+body,
+#app {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 
+@layer base {
   body {
-    @apply bg-dark-200 text-gray-300 font-sans antialiased overflow-x-hidden;
+    @apply bg-dark-200 text-gray-300 font-sans antialiased;
   }
 
   a {
@@ -19,6 +23,8 @@
 @layer components {
   .container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    box-sizing: border-box;
+    max-width: min(80rem, 100%);
   }
 
   .btn-primary {
