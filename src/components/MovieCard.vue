@@ -21,6 +21,11 @@ useIntersectionObserver(imgRef, ([{ isIntersecting }]) => {
 function getImageUrl(src: string) {
   return src.startsWith('http') ? src : `/static/img/${src}`
 }
+
+function getWebpUrl(src: string) {
+  if (src.startsWith('http')) return ''
+  return `/static/img/${src.replace('.png', '.webp')}`
+}
 </script>
 
 <template>
@@ -30,14 +35,16 @@ function getImageUrl(src: string) {
   >
     <!-- Poster -->
     <div class="relative aspect-[2/3] bg-dark-300">
-      <img
-        v-if="isVisible"
-        ref="imgRef"
-        :src="getImageUrl(movie.src)"
-        :alt="movie.name"
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
+      <picture v-if="isVisible" ref="imgRef">
+        <source v-if="getWebpUrl(movie.src)" :srcset="getWebpUrl(movie.src)" type="image/webp" />
+        <img
+          :src="getImageUrl(movie.src)"
+          :alt="movie.name"
+          class="w-full h-full object-cover"
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
       <div v-else ref="imgRef" class="w-full h-full animate-pulse bg-dark-300"></div>
 
       <!-- Rating Badge -->

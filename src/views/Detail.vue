@@ -25,11 +25,15 @@ useTitle(computed(() => movie.value ? `${movie.value.name} - IMDB Top250` : '加
 
 function getImageUrl(src: string, isAvatar: boolean = false) {
   if (src.startsWith('http')) return src
-  // 演员和导演头像在 avatars 子目录下
   if (isAvatar) {
     return `/static/img/avatars/${src}`
   }
   return `/static/img/${src}`
+}
+
+function getWebpUrl(src: string) {
+  if (src.startsWith('http')) return ''
+  return `/static/img/${src.replace('.png', '.webp')}`
 }
 
 function goBack() {
@@ -131,13 +135,15 @@ const allActors = computed(() => {
         <!-- Poster -->
         <div class="md:w-1/3">
           <div class="relative aspect-[2/3] max-h-[50vh] md:max-h-none bg-dark-300">
-            <img
-              v-if="isVisible"
-              ref="imgRef"
-              :src="getImageUrl(movie.src)"
-              :alt="movie.name"
-              class="w-full h-full object-cover"
-            />
+            <picture v-if="isVisible" ref="imgRef">
+              <source v-if="getWebpUrl(movie.src)" :srcset="getWebpUrl(movie.src)" type="image/webp" />
+              <img
+                :src="getImageUrl(movie.src)"
+                :alt="movie.name"
+                class="w-full h-full object-cover"
+                decoding="async"
+              />
+            </picture>
             <div v-else ref="imgRef" class="w-full h-full animate-pulse bg-dark-300"></div>
 
             <!-- Rank Badge -->
