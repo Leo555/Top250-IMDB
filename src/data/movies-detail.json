@@ -218,6 +218,13 @@
           "avatars": "黛安_基顿.png",
           "name": "黛安·基顿",
           "id": "1053568"
+        },
+        {
+          "alt": "",
+          "avatars": "Robert_De_Niro.png",
+          "name": "罗伯特·德尼罗",
+          "id": "nm0000134",
+          "englishName": "Robert De Niro"
         }
       ],
       "original_title": "The Godfather: Part Ⅱ",
@@ -279,6 +286,13 @@
           "avatars": "约翰_菲德勒.png",
           "name": "约翰·菲德勒",
           "id": "1007076"
+        },
+        {
+          "alt": "",
+          "avatars": "李_科布.png",
+          "name": "李·科布",
+          "id": "extra-Lee-J.-Cobb",
+          "englishName": "Lee J. Cobb"
         }
       ],
       "original_title": "12 Angry Men",
@@ -486,6 +500,20 @@
           "avatars": "阿曼达_普拉莫.png",
           "name": "阿曼达·普拉莫",
           "id": "1000150"
+        },
+        {
+          "alt": "",
+          "avatars": "Samuel_L._Jackson.png",
+          "name": "塞缪尔·杰克逊",
+          "id": "extra-Samuel-L.-Jackson",
+          "englishName": "Samuel L. Jackson"
+        },
+        {
+          "alt": "",
+          "avatars": "蒂姆_罗斯.png",
+          "name": "蒂姆·罗斯",
+          "id": "extra-Tim-Roth",
+          "englishName": "Tim Roth"
         }
       ],
       "original_title": "Pulp Fiction",
@@ -724,6 +752,13 @@
           "avatars": "艾伦_佩吉.png",
           "name": "艾伦·佩吉",
           "id": "1012520"
+        },
+        {
+          "alt": "",
+          "avatars": "Tom_Hardy.png",
+          "name": "汤姆·哈迪",
+          "id": "extra-Tom-Hardy",
+          "englishName": "Tom Hardy"
         }
       ],
       "original_title": "Inception",
@@ -819,6 +854,13 @@
           "avatars": "劳伦斯_菲什伯恩.png",
           "name": "劳伦斯·菲什伯恩",
           "id": "1022596"
+        },
+        {
+          "alt": "",
+          "avatars": "雨果_维文.png",
+          "name": "雨果·维文",
+          "id": "extra-Hugo-Weaving",
+          "englishName": "Hugo Weaving"
         }
       ],
       "original_title": "The Matrix",
@@ -1081,6 +1123,13 @@
           "avatars": "莱昂纳尔_巴里摩尔.png",
           "name": "莱昂纳尔·巴里摩尔",
           "id": "1048220"
+        },
+        {
+          "alt": "",
+          "avatars": "托马斯_米切尔.png",
+          "name": "托马斯·米切尔",
+          "id": "extra-Thomas-Mitchell",
+          "englishName": "Thomas Mitchell"
         }
       ],
       "original_title": "It's a Wonderful Life",
@@ -1661,6 +1710,13 @@
           "avatars": "康妮_尼尔森.png",
           "name": "康妮·尼尔森",
           "id": "1009298"
+        },
+        {
+          "alt": "",
+          "avatars": "Joaquin_Phoenix.png",
+          "name": "杰昆·菲尼克斯/华金·菲尼克斯",
+          "id": "extra-Joaquin-Phoenix",
+          "englishName": "Joaquin Phoenix"
         }
       ],
       "original_title": "Gladiator",
@@ -2346,6 +2402,13 @@
           "avatars": "保罗_亨雷德.png",
           "name": "保罗·亨雷德",
           "id": "1014082"
+        },
+        {
+          "alt": "",
+          "avatars": "克劳德_雷恩斯.png",
+          "name": "克劳德·雷恩斯",
+          "id": "extra-Claude-Rains",
+          "englishName": "Claude Rains"
         }
       ],
       "original_title": "Casablanca",
@@ -3425,6 +3488,13 @@
           "avatars": "克里斯托弗_沃尔兹.png",
           "name": "克里斯托弗·沃尔兹",
           "id": "1054405"
+        },
+        {
+          "alt": "",
+          "avatars": "Christoph_Waltz.png",
+          "name": "克里斯托弗·瓦尔兹",
+          "id": "extra-Christoph-Waltz",
+          "englishName": "Christoph Waltz"
         }
       ],
       "original_title": "Inglourious Basterds",
@@ -3968,6 +4038,13 @@
           "avatars": "James_Ortiz.png",
           "name": "James Ortiz",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": "James_Ortiz.png",
+          "name": "Hüller",
+          "id": "extra-James-Ortiz",
+          "englishName": "James Ortiz"
         }
       ],
       "original_title": "Project Hail Mary",
@@ -4978,6 +5055,13 @@
           "avatars": "安东尼_奎恩.png",
           "name": "安东尼·奎恩",
           "id": "1048161"
+        },
+        {
+          "alt": "",
+          "avatars": "杰克_霍金斯.png",
+          "name": "杰克·霍金斯",
+          "id": "extra-Jack-Hawkins",
+          "englishName": "Jack Hawkins"
         }
       ],
       "original_title": "Lawrence of Arabia",
@@ -5985,6 +6069,13 @@
           "avatars": "Daniel_Mays.png",
           "name": "Daniel Mays",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": "Daniel_Mays.png",
+          "name": "Kay",
+          "id": "extra-Daniel-Mays",
+          "englishName": "Daniel Mays"
         }
       ],
       "original_title": "1917",
@@ -6465,6 +6556,13 @@
           "avatars": "本_金斯利.png",
           "name": "本·金斯利",
           "id": "1054393"
+        },
+        {
+          "alt": "",
+          "avatars": "Mark_Ruffalo.png",
+          "name": "马克·路法罗",
+          "id": "extra-Mark-Ruffalo",
+          "englishName": "Mark Ruffalo"
         }
       ],
       "original_title": "Shutter Island",
@@ -6702,6 +6800,13 @@
           "avatars": "杰夫_高布伦.png",
           "name": "杰夫·高布伦",
           "id": "1025109"
+        },
+        {
+          "alt": "",
+          "avatars": "理查德_阿滕伯勒.png",
+          "name": "理查德·阿滕伯勒",
+          "id": "extra-Richard-Attenborough",
+          "englishName": "Richard Attenborough"
         }
       ],
       "original_title": "Jurassic Park",
@@ -7169,6 +7274,13 @@
           "avatars": "乔_佩西.png",
           "name": "乔·佩西",
           "id": "1004598"
+        },
+        {
+          "alt": "",
+          "avatars": "詹姆斯_伍兹.png",
+          "name": "詹姆斯·伍兹",
+          "id": "extra-James-Woods",
+          "englishName": "James Woods"
         }
       ],
       "original_title": "Casino",
@@ -7217,6 +7329,13 @@
           "avatars": "乔什_布洛林.png",
           "name": "乔什·布洛林",
           "id": "1004568"
+        },
+        {
+          "alt": "",
+          "avatars": "Woody_Harrelson.png",
+          "name": "伍迪·哈里森",
+          "id": "extra-Woody-Harrelson",
+          "englishName": "Woody Harrelson"
         }
       ],
       "original_title": "No Country for Old Men",
@@ -7616,6 +7735,13 @@
           "avatars": "艾德_哈里斯.png",
           "name": "艾德·哈里斯",
           "id": "1048024"
+        },
+        {
+          "alt": "",
+          "avatars": "Christopher_Plummer.png",
+          "name": "克里斯托弗·普卢默",
+          "id": "extra-Christopher-Plummer",
+          "englishName": "Christopher Plummer"
         }
       ],
       "original_title": "A Beautiful Mind",
@@ -7760,6 +7886,20 @@
           "avatars": "亚历山大_古尔德.png",
           "name": "亚历山大·古尔德",
           "id": "1044885"
+        },
+        {
+          "alt": "",
+          "avatars": "艾伦_德杰尼勒斯.png",
+          "name": "艾伦·德杰尼勒斯",
+          "id": "extra-Ellen-De",
+          "englishName": "Ellen De"
+        },
+        {
+          "alt": "",
+          "avatars": "威廉_达福.png",
+          "name": "威廉·达福",
+          "id": "extra-Willem-Dafoe",
+          "englishName": "Willem Dafoe"
         }
       ],
       "original_title": "Finding Nemo",
@@ -8334,6 +8474,13 @@
           "avatars": "尼克_莫兰.png",
           "name": "尼克·莫兰",
           "id": "1014074"
+        },
+        {
+          "alt": "",
+          "avatars": "杰森_斯坦森.png",
+          "name": "杰森·斯坦森",
+          "id": "extra-Jason-Statham",
+          "englishName": "Jason Statham"
         }
       ],
       "original_title": "Lock, Stock and Two Smoking Barrels",
@@ -8580,6 +8727,13 @@
           "avatars": "京町子.png",
           "name": "京町子",
           "id": "1000844"
+        },
+        {
+          "alt": "",
+          "avatars": "志村乔.png",
+          "name": "志村乔",
+          "id": "extra-Takashi-Shimura",
+          "englishName": "Takashi Shimura"
         }
       ],
       "original_title": "羅生門",
@@ -8771,6 +8925,13 @@
           "avatars": "鲁伯特_格林特.png",
           "name": "鲁伯特·格林特",
           "id": "1012517"
+        },
+        {
+          "alt": "",
+          "avatars": "Ralph_Fiennes.png",
+          "name": "拉尔夫·费因斯",
+          "id": "extra-Ralph-Fiennes",
+          "englishName": "Ralph Fiennes"
         }
       ],
       "original_title": "Harry Potter and the Deathly Hallows: Part 2",
@@ -9111,6 +9272,13 @@
           "avatars": "摩根_弗里曼.png",
           "name": "摩根·弗里曼",
           "id": "1054534"
+        },
+        {
+          "alt": "",
+          "avatars": "杰伊_巴鲁切尔.png",
+          "name": "杰伊·巴鲁切尔",
+          "id": "extra-Jay-Baruchel",
+          "englishName": "Jay Baruchel"
         }
       ],
       "original_title": "Million Dollar Baby",
@@ -10197,6 +10365,13 @@
           "avatars": "乔治亚_黑尔.png",
           "name": "乔治亚·黑尔",
           "id": "1096599"
+        },
+        {
+          "alt": "",
+          "avatars": "亨利_伯格曼.png",
+          "name": "亨利·伯格曼",
+          "id": "extra-Henry-Bergman",
+          "englishName": "Henry Bergman"
         }
       ],
       "original_title": "The Gold Rush",
@@ -10292,6 +10467,13 @@
           "avatars": "Joe_Keaton.png",
           "name": "Joe Keaton",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": "Joe_Keaton.png",
+          "name": "Guire",
+          "id": "extra-Joe-Keaton",
+          "englishName": "Joe Keaton"
         }
       ],
       "original_title": "Sherlock Jr.",
@@ -10339,6 +10521,13 @@
           "avatars": "罗伯特_德尼罗.png",
           "name": "罗伯特·德尼罗",
           "id": "1054445"
+        },
+        {
+          "alt": "",
+          "avatars": "Christopher_Walken.png",
+          "name": "克里斯托弗·沃肯",
+          "id": "extra-Christopher-Walken",
+          "englishName": "Christopher Walken"
         }
       ],
       "original_title": "The Deer Hunter",
@@ -10689,6 +10878,13 @@
           "avatars": "Sô_Yamamura.png",
           "name": "Sô Yamamura",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": "Chieko_Higashiyama.png",
+          "name": "û",
+          "id": "extra-Chieko-Higashiyama",
+          "englishName": "Chieko Higashiyama"
         }
       ],
       "original_title": "Tôkyô monogatari",
@@ -12158,6 +12354,13 @@
           "avatars": "彼得_芬奇.png",
           "name": "彼得·芬奇",
           "id": "1027350"
+        },
+        {
+          "alt": "",
+          "avatars": "罗伯特_杜瓦尔.png",
+          "name": "罗伯特·杜瓦尔",
+          "id": "extra-Robert-Duvall",
+          "englishName": "Robert Duvall"
         }
       ],
       "original_title": "Network",
