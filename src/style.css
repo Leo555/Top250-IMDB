@@ -32,7 +32,12 @@ body,
   }
 
   .card {
-    @apply bg-dark-100 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 sm:hover:scale-105;
+    @apply bg-dark-100 rounded-lg overflow-hidden shadow-lg transition-all duration-300;
+  }
+
+  .card:hover {
+    @apply shadow-xl shadow-black/30;
+    transform: translateY(-2px);
   }
 }
 

@@ -31,44 +31,49 @@ function getWebpUrl(src: string) {
 <template>
   <router-link
     :to="{ name: 'Detail', params: { id: movie.imdb.replace('/', '') } }"
-    class="card block"
+    class="card block group"
   >
     <!-- Poster -->
-    <div class="relative aspect-[2/3] bg-dark-300">
+    <div class="relative aspect-[2/3] bg-dark-300 overflow-hidden">
       <picture v-if="isVisible" ref="imgRef">
         <source v-if="getWebpUrl(movie.src)" :srcset="getWebpUrl(movie.src)" type="image/webp" />
         <img
           :src="getImageUrl(movie.src)"
           :alt="movie.name"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
           decoding="async"
         />
       </picture>
       <div v-else ref="imgRef" class="w-full h-full animate-pulse bg-dark-300"></div>
 
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+
       <!-- Rating Badge -->
-      <div class="absolute top-2 right-2 bg-primary text-white px-2 py-1 rounded text-sm font-bold">
+      <div class="absolute top-2 right-2 bg-primary/90 backdrop-blur-sm text-white px-2 py-0.5 rounded-md text-sm font-bold shadow-lg">
         {{ movie.score }}
       </div>
 
       <!-- Rank Badge -->
-      <div class="absolute top-2 left-2 bg-dark-100 bg-opacity-80 text-white px-2 py-1 rounded text-sm">
+      <div class="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-white px-2 py-0.5 rounded-md text-sm font-medium">
         #{{ movie.order }}
       </div>
     </div>
 
     <!-- Info -->
-    <div class="p-2.5 sm:p-4">
-      <h3 class="text-white font-bold mb-1 sm:mb-2 truncate text-sm sm:text-base">{{ movie.name }}</h3>
-      <p class="text-xs sm:text-sm text-gray-500 mb-1.5 sm:mb-2 truncate">{{ movie.englishName }}</p>
-      <div class="flex items-center justify-between text-xs sm:text-sm">
+    <div class="p-2.5 sm:p-3">
+      <h3 class="text-white font-bold mb-0.5 sm:mb-1 truncate text-sm sm:text-base group-hover:text-primary transition-colors">
+        {{ movie.name }}
+      </h3>
+      <p class="text-xs text-gray-500 mb-1.5 sm:mb-2 truncate">{{ movie.englishName }}</p>
+      <div class="flex items-center justify-between text-xs">
         <span v-if="movie.subject?.year" class="text-gray-400">{{ movie.subject.year }}</span>
         <div v-if="movie.subject?.genres?.length" class="flex gap-1">
           <span
             v-for="genre in movie.subject.genres.slice(0, 2)"
             :key="genre"
-            class="px-1.5 sm:px-2 py-0.5 bg-dark-300 rounded text-xs"
+            class="px-1.5 py-0.5 bg-gray-800 text-gray-400 rounded text-xs"
           >
             {{ genre }}
           </span>

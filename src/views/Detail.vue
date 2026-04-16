@@ -167,76 +167,87 @@ const allActors = computed(() => {
           <p class="text-sm sm:text-lg text-gray-400 mb-3 sm:mb-4">{{ movie.englishName }}</p>
 
           <!-- Ratings Section -->
-          <div class="mb-4 sm:mb-6 p-3 sm:p-4 bg-dark-300 rounded-lg">
-            <h3 class="text-xs sm:text-sm font-bold text-gray-500 mb-2 sm:mb-3 uppercase tracking-wider">评分</h3>
+          <div class="mb-4 sm:mb-6 p-3 sm:p-4 bg-dark-300/50 rounded-xl border border-gray-800/50">
+            <h3 class="text-xs sm:text-sm font-bold text-gray-500 mb-3 uppercase tracking-wider flex items-center gap-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              评分
+            </h3>
             <div class="grid grid-cols-3 gap-2 sm:gap-4">
               <!-- IMDB Rating -->
-              <div v-if="movie.imdbRating || movie.score" class="text-center">
-                <div class="text-2xl sm:text-3xl font-bold text-yellow-500 mb-1">
+              <div v-if="movie.imdbRating || movie.score" class="text-center p-2 sm:p-3 bg-dark-300 rounded-lg">
+                <div class="text-2xl sm:text-3xl font-bold text-yellow-500 mb-0.5">
                   {{ movie.imdbRating || movie.score }}
                 </div>
-                <div class="text-xs text-gray-500">IMDB</div>
+                <div class="text-xs text-yellow-500/70 font-medium">IMDB</div>
                 <div v-if="movie.imdbVotes" class="text-xs text-gray-600 mt-1">
                   {{ formatVotes(movie.imdbVotes) }} 票
                 </div>
               </div>
 
               <!-- Douban Rating -->
-              <div v-if="movie.doubanRating || movie.subject?.average" class="text-center">
-                <div class="text-2xl sm:text-3xl font-bold text-green-500 mb-1">
+              <div v-if="movie.doubanRating || movie.subject?.average" class="text-center p-2 sm:p-3 bg-dark-300 rounded-lg">
+                <div class="text-2xl sm:text-3xl font-bold text-green-500 mb-0.5">
                   {{ movie.doubanRating || movie.subject?.average?.toFixed(1) }}
                 </div>
-                <div class="text-xs text-gray-500">豆瓣</div>
+                <div class="text-xs text-green-500/70 font-medium">豆瓣</div>
                 <div v-if="movie.doubanVotes || movie.subject?.ratings_count" class="text-xs text-gray-600 mt-1">
                   {{ formatVotes(movie.doubanVotes || movie.subject?.ratings_count) }} 票
                 </div>
               </div>
 
               <!-- Metascore -->
-              <div v-if="movie.metascore" class="text-center">
-                <div class="text-3xl font-bold text-blue-500 mb-1">
+              <div v-if="movie.metascore" class="text-center p-2 sm:p-3 bg-dark-300 rounded-lg">
+                <div class="text-2xl sm:text-3xl font-bold text-blue-500 mb-0.5">
                   {{ movie.metascore }}
                 </div>
-                <div class="text-xs text-gray-500">Metascore</div>
+                <div class="text-xs text-blue-500/70 font-medium">Metascore</div>
               </div>
             </div>
           </div>
 
           <!-- Basic Info Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6">
-            <div v-if="movie.subject?.year || movie.releaseDate" class="p-3 bg-dark-300 rounded">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
+            <div v-if="movie.subject?.year || movie.releaseDate" class="p-3 bg-dark-300/50 rounded-lg border border-gray-800/30">
               <div class="text-xs text-gray-500 mb-1">年份</div>
-              <div class="text-white">{{ movie.releaseDate?.split('-')[0] || movie.subject?.year }}</div>
+              <div class="text-white font-medium">{{ movie.releaseDate?.split('-')[0] || movie.subject?.year }}</div>
             </div>
 
-            <div v-if="movie.runtime" class="p-3 bg-dark-300 rounded">
+            <div v-if="movie.runtime" class="p-3 bg-dark-300/50 rounded-lg border border-gray-800/30">
               <div class="text-xs text-gray-500 mb-1">片长</div>
-              <div class="text-white">{{ formatRuntime(movie.runtime) }}</div>
+              <div class="text-white font-medium">{{ formatRuntime(movie.runtime) }}</div>
             </div>
 
-            <div v-if="movie.rated" class="p-3 bg-dark-300 rounded">
+            <div v-if="movie.rated" class="p-3 bg-dark-300/50 rounded-lg border border-gray-800/30">
               <div class="text-xs text-gray-500 mb-1">分级</div>
-              <div class="text-white">{{ movie.rated }}</div>
+              <div class="text-white font-medium">{{ movie.rated }}</div>
             </div>
 
-            <div v-if="movie.country" class="p-3 bg-dark-300 rounded">
+            <div v-if="movie.country" class="p-3 bg-dark-300/50 rounded-lg border border-gray-800/30">
               <div class="text-xs text-gray-500 mb-1">国家/地区</div>
               <div class="text-white text-sm">{{ movie.country }}</div>
             </div>
 
-            <div v-if="movie.language" class="p-3 bg-dark-300 rounded">
+            <div v-if="movie.language" class="p-3 bg-dark-300/50 rounded-lg border border-gray-800/30">
               <div class="text-xs text-gray-500 mb-1">语言</div>
               <div class="text-white text-sm">{{ movie.language }}</div>
             </div>
 
-            <div v-if="movie.subject?.genres?.length" class="p-3 bg-dark-300 rounded">
+            <div v-if="movie.subject?.genres?.length" class="p-3 bg-dark-300/50 rounded-lg border border-gray-800/30">
               <div class="text-xs text-gray-500 mb-1">类型</div>
-              <div class="text-white text-sm">{{ movie.subject.genres.join(' / ') }}</div>
+              <div class="flex flex-wrap gap-1">
+                <span
+                  v-for="genre in movie.subject.genres"
+                  :key="genre"
+                  class="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full"
+                >{{ genre }}</span>
+              </div>
             </div>
           </div>
 
           <!-- Detailed Info -->
-          <div class="space-y-4 text-gray-300 break-words overflow-hidden">
+          <div class="space-y-3 text-sm text-gray-300 break-words overflow-hidden">
             <p v-if="movie.nickName">
               <span class="text-gray-500">别名：</span>
               <span>{{ movie.nickName }}</span>
@@ -283,13 +294,18 @@ const allActors = computed(() => {
             </p>
 
             <!-- Synopsis -->
-            <div v-if="movie.short" class="pt-4 border-t border-gray-700">
-              <h3 class="text-gray-500 font-bold mb-2">剧情简介</h3>
-              <p class="leading-relaxed text-gray-300">{{ movie.short }}</p>
+            <div v-if="movie.short" class="pt-5 mt-5 border-t border-gray-800/50">
+              <h3 class="text-white font-bold mb-3 flex items-center gap-2">
+                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                </svg>
+                剧情简介
+              </h3>
+              <p class="leading-relaxed text-gray-400">{{ movie.short }}</p>
             </div>
 
             <!-- External Links -->
-            <div class="pt-4 border-t border-gray-700 flex flex-wrap gap-4">
+            <div class="pt-5 mt-5 border-t border-gray-800/50 flex flex-wrap gap-3">
               <a
                 :href="`https://www.imdb.com/title${movie.imdb}`"
                 target="_blank"
