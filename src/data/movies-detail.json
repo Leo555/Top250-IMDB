@@ -28,6 +28,13 @@
           "avatars": "鲍勃_冈顿.png",
           "name": "鲍勃·冈顿",
           "id": "1041179"
+        },
+        {
+          "alt": "",
+          "avatars": "William_Sadler.png",
+          "name": "威廉·桑德勒",
+          "id": "nm0006669",
+          "englishName": "William Sadler"
         }
       ],
       "original_title": "The Shawshank Redemption",
@@ -92,6 +99,20 @@
           "avatars": "詹姆斯_肯恩.png",
           "name": "詹姆斯·肯恩",
           "id": "1000050"
+        },
+        {
+          "alt": "",
+          "avatars": "James_Caan.png",
+          "name": "詹姆斯·凯恩",
+          "id": "nm0001001",
+          "englishName": "James Caan"
+        },
+        {
+          "alt": "",
+          "avatars": "Richard_S._Castellano.png",
+          "name": "理查德·卡斯特尔诺",
+          "id": "nm0144710",
+          "englishName": "Richard S. Castellano"
         }
       ],
       "original_title": "The Godfather",
@@ -293,6 +314,13 @@
           "name": "李·科布",
           "id": "extra-Lee-J.-Cobb",
           "englishName": "Lee J. Cobb"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Fiedler.png",
+          "name": "约翰·费德勒",
+          "id": "nm0275835",
+          "englishName": "John Fiedler"
         }
       ],
       "original_title": "12 Angry Men",
@@ -356,6 +384,13 @@
           "avatars": "西恩_奥斯汀.png",
           "name": "西恩·奥斯汀",
           "id": "1031818"
+        },
+        {
+          "alt": "",
+          "avatars": "Sean_Astin_David_Aston.png",
+          "name": "肖恩·奥斯汀",
+          "id": "nm0000276",
+          "englishName": "Sean Astin David Aston"
         }
       ],
       "original_title": "The Lord of the Rings: The Return of the King",
@@ -404,6 +439,20 @@
           "avatars": "拉尔夫_费因斯.png",
           "name": "拉尔夫·费因斯",
           "id": "1006956"
+        },
+        {
+          "alt": "",
+          "avatars": "Liam_Neeson.png",
+          "name": "利亚姆·尼森",
+          "id": "nm0000553",
+          "englishName": "Liam Neeson"
+        },
+        {
+          "alt": "",
+          "avatars": "Caroline_Goodall.png",
+          "name": "卡洛林·古德尔",
+          "id": "nm0328751",
+          "englishName": "Caroline Goodall"
         }
       ],
       "original_title": "Schindler's List",
@@ -452,6 +501,20 @@
           "avatars": "伊恩_麦克莱恩.png",
           "name": "伊恩·麦克莱恩",
           "id": "1054410"
+        },
+        {
+          "alt": "",
+          "avatars": "Alan_Howard.png",
+          "name": "阿兰·霍华德",
+          "id": "nm0397102",
+          "englishName": "Alan Howard"
+        },
+        {
+          "alt": "",
+          "avatars": "Sean_Astin.png",
+          "name": "肖恩·奥斯汀",
+          "id": "nm0000276",
+          "englishName": "Sean Astin"
         }
       ],
       "original_title": "The Lord of the Rings: The Fellowship of the Ring",
@@ -561,6 +624,20 @@
           "avatars": "李_范_克里夫.png",
           "name": "李·范·克里夫",
           "id": "1013853"
+        },
+        {
+          "alt": "",
+          "avatars": "Eli_Wallach.png",
+          "name": "伊莱·沃勒克",
+          "id": "nm0908919",
+          "englishName": "Eli Wallach"
+        },
+        {
+          "alt": "",
+          "avatars": "Aldo_Giuffrè.png",
+          "name": "阿尔多·久弗瑞",
+          "id": "nm0321294",
+          "englishName": "Aldo Giuffrè"
         }
       ],
       "original_title": "Il buono, il brutto, il cattivo.",
@@ -609,6 +686,34 @@
           "avatars": "伊恩_麦克莱恩.png",
           "name": "伊恩·麦克莱恩",
           "id": "1054410"
+        },
+        {
+          "alt": "",
+          "avatars": "Sean_Astin.png",
+          "name": "肖恩·奥斯汀",
+          "id": "nm0000276",
+          "englishName": "Sean Astin"
+        },
+        {
+          "alt": "",
+          "avatars": "Bruce_Allpress.png",
+          "name": "布鲁克·奥佩斯",
+          "id": "nm0021600",
+          "englishName": "Bruce Allpress"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Bach.png",
+          "name": "约翰·巴赫",
+          "id": "nm0045324",
+          "englishName": "John Bach"
+        },
+        {
+          "alt": "",
+          "avatars": "Sala_Baker.png",
+          "name": "萨拉·贝克",
+          "id": "nm1019674",
+          "englishName": "Sala Baker"
         }
       ],
       "original_title": "The Lord of the Rings: The Two Towers",
@@ -656,6 +761,27 @@
           "avatars": "加里_西尼斯.png",
           "name": "加里·西尼斯",
           "id": "1031848"
+        },
+        {
+          "alt": "",
+          "avatars": "Robin_Wright_Penn.png",
+          "name": "罗宾·莱特·潘",
+          "id": "nm0000705",
+          "englishName": "Robin Wright Penn"
+        },
+        {
+          "alt": "",
+          "avatars": "Gary_Sinise.png",
+          "name": "加利·西尼斯",
+          "id": "nm0000641",
+          "englishName": "Gary Sinise"
+        },
+        {
+          "alt": "",
+          "avatars": "Mykelti_Williamson.png",
+          "name": "迈克尔蒂·威廉森",
+          "id": "nm0932112",
+          "englishName": "Mykelti Williamson"
         }
       ],
       "original_title": "Forrest Gump",
@@ -704,6 +830,13 @@
           "avatars": "海伦娜_伯翰_卡特.png",
           "name": "海伦娜·伯翰·卡特",
           "id": "1016680"
+        },
+        {
+          "alt": "",
+          "avatars": "Meat_Loaf.png",
+          "name": "密特·劳弗",
+          "id": "nm0001533",
+          "englishName": "Meat Loaf"
         }
       ],
       "original_title": "Fight Club",
@@ -759,6 +892,20 @@
           "name": "汤姆·哈迪",
           "id": "extra-Tom-Hardy",
           "englishName": "Tom Hardy"
+        },
+        {
+          "alt": "",
+          "avatars": "Joseph_Gordon-Levitt.png",
+          "name": "约瑟夫·高登·莱维特",
+          "id": "nm0330687",
+          "englishName": "Joseph Gordon-Levitt"
+        },
+        {
+          "alt": "",
+          "avatars": "Ellen_Page.png",
+          "name": "艾伦·佩姬",
+          "id": "nm0706437",
+          "englishName": "Ellen Page"
         }
       ],
       "original_title": "Inception",
@@ -807,6 +954,20 @@
           "avatars": "凯丽_费雪.png",
           "name": "凯丽·费雪",
           "id": "1027813"
+        },
+        {
+          "alt": "",
+          "avatars": "Carrie_Fisher.png",
+          "name": "卡里·费什尔",
+          "id": "nm0000402",
+          "englishName": "Carrie Fisher"
+        },
+        {
+          "alt": "",
+          "avatars": "Billy_Dee_Williams.png",
+          "name": "比利·迪·威廉斯",
+          "id": "nm0001850",
+          "englishName": "Billy Dee Williams"
         }
       ],
       "original_title": "Star Wars: Episode V - The Empire Strikes Back",
@@ -861,6 +1022,13 @@
           "name": "雨果·维文",
           "id": "extra-Hugo-Weaving",
           "englishName": "Hugo Weaving"
+        },
+        {
+          "alt": "",
+          "avatars": "Carrie-Anne_Moss.png",
+          "name": "凯瑞-安妮·莫斯",
+          "id": "nm0005251",
+          "englishName": "Carrie-Anne Moss"
         }
       ],
       "original_title": "The Matrix",
@@ -915,6 +1083,20 @@
           "avatars": "乔_佩西.png",
           "name": "乔·佩西",
           "id": "1004598"
+        },
+        {
+          "alt": "",
+          "avatars": "Joe_Pesci.png",
+          "name": "乔·派西",
+          "id": "nm0000582",
+          "englishName": "Joe Pesci"
+        },
+        {
+          "alt": "",
+          "avatars": "Lorraine_Bracco.png",
+          "name": "罗兰妮·布拉科",
+          "id": "nm0000966",
+          "englishName": "Lorraine Bracco"
         }
       ],
       "original_title": "Goodfellas",
@@ -1027,6 +1209,13 @@
           "avatars": "克里斯托弗_洛伊德.png",
           "name": "克里斯托弗·洛伊德",
           "id": "1027163"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "迈克尔·贝里曼",
+          "id": null,
+          "englishName": "Michael Berryman Peter Brocco Dean R. Brooks Alonzo Brown"
         }
       ],
       "original_title": "One Flew Over the Cuckoo's Nest",
@@ -1075,6 +1264,13 @@
           "avatars": "凯文_史派西.png",
           "name": "凯文·史派西",
           "id": "1054432"
+        },
+        {
+          "alt": "",
+          "avatars": "Gwyneth_Paltrow_R·李·艾尔米_R._Lee_Ermey.png",
+          "name": "格温妮丝·帕特洛",
+          "id": "nm0000388",
+          "englishName": "Gwyneth Paltrow R·李·艾尔米 R. Lee Ermey"
         }
       ],
       "original_title": "Se7en",
@@ -1130,6 +1326,13 @@
           "name": "托马斯·米切尔",
           "id": "extra-Thomas-Mitchell",
           "englishName": "Thomas Mitchell"
+        },
+        {
+          "alt": "",
+          "avatars": "Lionel_Barrymore.png",
+          "name": "莱昂内尔·巴里莫尔",
+          "id": "nm0000859",
+          "englishName": "Lionel Barrymore"
         }
       ],
       "original_title": "It's a Wonderful Life",
@@ -1178,6 +1381,13 @@
           "avatars": "斯科特_格伦.png",
           "name": "斯科特·格伦",
           "id": "1007019"
+        },
+        {
+          "alt": "",
+          "avatars": "Ted_Levine.png",
+          "name": "泰德·莱韦尼",
+          "id": "nm0505971",
+          "englishName": "Ted Levine"
         }
       ],
       "original_title": "The Silence of the Lambs",
@@ -1226,6 +1436,20 @@
           "avatars": "稻叶义男.png",
           "name": "稻叶义男",
           "id": "1010452"
+        },
+        {
+          "alt": "",
+          "avatars": "Keiko_Tsushima.png",
+          "name": "津岛惠子",
+          "id": "nm0875477",
+          "englishName": "Keiko Tsushima"
+        },
+        {
+          "alt": "",
+          "avatars": "Yukiko_Shimazaki.png",
+          "name": "岛崎雪子",
+          "id": "nm0793616",
+          "englishName": "Yukiko Shimazaki"
         }
       ],
       "original_title": "七人の侍",
@@ -1274,6 +1498,20 @@
           "avatars": "爱德华_伯恩斯.png",
           "name": "爱德华·伯恩斯",
           "id": "1075587"
+        },
+        {
+          "alt": "",
+          "avatars": "Tom_Sizemore.png",
+          "name": "汤姆·西斯摩尔",
+          "id": "nm0001744",
+          "englishName": "Tom Sizemore"
+        },
+        {
+          "alt": "",
+          "avatars": "Barry_Pepper.png",
+          "name": "巴里·佩珀",
+          "id": "nm0001608",
+          "englishName": "Barry Pepper"
         }
       ],
       "original_title": "Saving Private Ryan",
@@ -1322,6 +1560,20 @@
           "avatars": "迈克_克拉克_邓肯.png",
           "name": "迈克·克拉克·邓肯",
           "id": "1036346"
+        },
+        {
+          "alt": "",
+          "avatars": "Bonnie_Hunt.png",
+          "name": "邦妮·亨特",
+          "id": "nm0001372",
+          "englishName": "Bonnie Hunt"
+        },
+        {
+          "alt": "",
+          "avatars": "Michael_Clarke_Duncan.png",
+          "name": "迈克尔·克拉克·邓肯",
+          "id": "nm0003817",
+          "englishName": "Michael Clarke Duncan"
         }
       ],
       "original_title": "The Green Mile",
@@ -1369,6 +1621,34 @@
           "avatars": "菲利佩_哈根森.png",
           "name": "菲利佩·哈根森",
           "id": "1305085"
+        },
+        {
+          "alt": "",
+          "avatars": "Alexandre_Rodrigues.png",
+          "name": "亚历山大·罗德里格斯",
+          "id": "nm1179105",
+          "englishName": "Alexandre Rodrigues"
+        },
+        {
+          "alt": "",
+          "avatars": "Leandro_Firmino.png",
+          "name": "里安德罗·弗米诺",
+          "id": "nm1129884",
+          "englishName": "Leandro Firmino"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "菲力浦·哈杰森",
+          "id": null,
+          "englishName": "Phellipe Haagensen"
+        },
+        {
+          "alt": "",
+          "avatars": "Douglas_Silva.png",
+          "name": "道格拉斯·西尔瓦",
+          "id": "nm1179683",
+          "englishName": "Douglas Silva"
         }
       ],
       "original_title": "Cidade de Deus",
@@ -1423,6 +1703,13 @@
           "avatars": "乔治_坎塔里尼.png",
           "name": "乔治·坎塔里尼",
           "id": "1000368"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "尼科莱塔·布拉斯基",
+          "id": null,
+          "englishName": "Nicoletta Braschi Giorgio Cantarini Giustino Durano"
         }
       ],
       "original_title": "La vita è bella",
@@ -1470,6 +1757,27 @@
           "avatars": "爱德华_福隆.png",
           "name": "爱德华·福隆",
           "id": "1022600"
+        },
+        {
+          "alt": "",
+          "avatars": "Arnold_Schwarzenegger.png",
+          "name": "阿诺德·施瓦辛格",
+          "id": "nm0000216",
+          "englishName": "Arnold Schwarzenegger"
+        },
+        {
+          "alt": "",
+          "avatars": "Edward_Furlong.png",
+          "name": "爱德华·弗朗",
+          "id": "nm0000411",
+          "englishName": "Edward Furlong"
+        },
+        {
+          "alt": "",
+          "avatars": "Robert_Patrick.png",
+          "name": "罗伯特·帕特里克",
+          "id": "nm0001598",
+          "englishName": "Robert Patrick"
         }
       ],
       "original_title": "Terminator 2: Judgment Day",
@@ -1518,6 +1826,20 @@
           "avatars": "凯丽_费雪.png",
           "name": "凯丽·费雪",
           "id": "1027813"
+        },
+        {
+          "alt": "",
+          "avatars": "Carrie_Fisher.png",
+          "name": "卡里·费什尔",
+          "id": "nm0000402",
+          "englishName": "Carrie Fisher"
+        },
+        {
+          "alt": "",
+          "avatars": "Peter_Cushing.png",
+          "name": "彼得·库欣",
+          "id": "nm0001088",
+          "englishName": "Peter Cushing"
         }
       ],
       "original_title": "Star Wars",
@@ -1566,6 +1888,27 @@
           "avatars": "莉_汤普森.png",
           "name": "莉·汤普森",
           "id": "1019014"
+        },
+        {
+          "alt": "",
+          "avatars": "Michael_J._Fox.png",
+          "name": "迈克尔·福克斯",
+          "id": "nm0000150",
+          "englishName": "Michael J. Fox"
+        },
+        {
+          "alt": "",
+          "avatars": "Christopher_Lloyd.png",
+          "name": "克里斯托弗·劳埃德",
+          "id": "nm0000502",
+          "englishName": "Christopher Lloyd"
+        },
+        {
+          "alt": "",
+          "avatars": "Crispin_Glover.png",
+          "name": "克里斯品·格拉夫",
+          "id": "nm0000417",
+          "englishName": "Crispin Glover"
         }
       ],
       "original_title": "Back to the Future",
@@ -1614,6 +1957,13 @@
           "avatars": "夏木真理.png",
           "name": "夏木真理",
           "id": "1045797"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "内藤刚志",
+          "id": null,
+          "englishName": "Takashi Naitô"
         }
       ],
       "original_title": "千と千尋の神隠し",
@@ -1662,6 +2012,34 @@
           "avatars": "艾米莉娅_福克斯.png",
           "name": "艾米莉娅·福克斯",
           "id": "1022647"
+        },
+        {
+          "alt": "",
+          "avatars": "Adrien_Brody.png",
+          "name": "阿德里安·布罗迪",
+          "id": "nm0004778",
+          "englishName": "Adrien Brody"
+        },
+        {
+          "alt": "",
+          "avatars": "Emilia_Fox.png",
+          "name": "艾米丽雅·福克斯",
+          "id": "nm0288976",
+          "englishName": "Emilia Fox"
+        },
+        {
+          "alt": "",
+          "avatars": "Michal_Zebrowski.png",
+          "name": "米切尔·热布罗夫斯基",
+          "id": "nm0954076",
+          "englishName": "Michal Zebrowski"
+        },
+        {
+          "alt": "",
+          "avatars": "Ed_Stoppard.png",
+          "name": "埃德·斯托帕德",
+          "id": "nm0832380",
+          "englishName": "Ed Stoppard"
         }
       ],
       "original_title": "The Pianist",
@@ -1717,6 +2095,20 @@
           "name": "杰昆·菲尼克斯/华金·菲尼克斯",
           "id": "extra-Joaquin-Phoenix",
           "englishName": "Joaquin Phoenix"
+        },
+        {
+          "alt": "",
+          "avatars": "Russell_Crowe.png",
+          "name": "拉塞尔·克罗",
+          "id": "nm0000128",
+          "englishName": "Russell Crowe"
+        },
+        {
+          "alt": "",
+          "avatars": "Oliver_Reed.png",
+          "name": "奥利弗·里德",
+          "id": "nm0001657",
+          "englishName": "Oliver Reed"
         }
       ],
       "original_title": "Gladiator",
@@ -1812,6 +2204,27 @@
           "avatars": null,
           "name": "志乃原良子",
           "id": null
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "辰已努",
+          "id": null,
+          "englishName": "Tsutomu Tatsumi"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "白石綾乃",
+          "id": null,
+          "englishName": "Ayano Shiraishi"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "山口朱美",
+          "id": null,
+          "englishName": "Akemi Yamaguchi"
         }
       ],
       "original_title": "火垂るの墓",
@@ -1860,6 +2273,27 @@
           "avatars": "维拉_迈尔斯.png",
           "name": "维拉·迈尔斯",
           "id": "1049722"
+        },
+        {
+          "alt": "",
+          "avatars": "Anthony_Perkins.png",
+          "name": "安东尼·帕金斯",
+          "id": "nm0000578",
+          "englishName": "Anthony Perkins"
+        },
+        {
+          "alt": "",
+          "avatars": "Vera_Miles.png",
+          "name": "薇拉·迈尔斯",
+          "id": "nm0587256",
+          "englishName": "Vera Miles"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Gavin.png",
+          "name": "约翰·加文",
+          "id": "nm0001260",
+          "englishName": "John Gavin"
         }
       ],
       "original_title": "Psycho",
@@ -1908,6 +2342,20 @@
           "avatars": "杰瑞米_艾恩斯.png",
           "name": "杰瑞米·艾恩斯",
           "id": "1031216"
+        },
+        {
+          "alt": "",
+          "avatars": "Matthew_Broderick.png",
+          "name": "马修·布鲁德里克",
+          "id": "nm0000111",
+          "englishName": "Matthew Broderick"
+        },
+        {
+          "alt": "",
+          "avatars": "James_Earl_Jones.png",
+          "name": "詹姆斯·厄尔·琼斯",
+          "id": "nm0000469",
+          "englishName": "James Earl Jones"
         }
       ],
       "original_title": "The Lion King",
@@ -2009,6 +2457,13 @@
           "avatars": "杰克_尼科尔森.png",
           "name": "杰克·尼科尔森",
           "id": "1054528"
+        },
+        {
+          "alt": "",
+          "avatars": "Mark_Wahlberg.png",
+          "name": "马克·沃尔伯格",
+          "id": "nm0000242",
+          "englishName": "Mark Wahlberg"
         }
       ],
       "original_title": "The Departed",
@@ -2152,6 +2607,13 @@
           "avatars": "迈克尔_凯恩.png",
           "name": "迈克尔·凯恩",
           "id": "1054509"
+        },
+        {
+          "alt": "",
+          "avatars": "Piper_Perabo.png",
+          "name": "派珀·佩拉博",
+          "id": "nm0005305",
+          "englishName": "Piper Perabo"
         }
       ],
       "original_title": "The Prestige",
@@ -2199,6 +2661,27 @@
           "avatars": "比佛莉_德安姬罗.png",
           "name": "比佛莉·德安姬罗",
           "id": "1041134"
+        },
+        {
+          "alt": "",
+          "avatars": "Edward_Furlong.png",
+          "name": "爱德华·弗朗",
+          "id": "nm0000411",
+          "englishName": "Edward Furlong"
+        },
+        {
+          "alt": "",
+          "avatars": "Edward_Norton.png",
+          "name": "爱德华-诺顿",
+          "id": "nm0001570",
+          "englishName": "Edward Norton"
+        },
+        {
+          "alt": "",
+          "avatars": "Jennifer_Lien.png",
+          "name": "詹尼弗·丽恩",
+          "id": "nm0000497",
+          "englishName": "Jennifer Lien"
         }
       ],
       "original_title": "American History X",
@@ -2247,6 +2730,20 @@
           "avatars": "加里_奥德曼.png",
           "name": "加里·奥德曼",
           "id": "1010507"
+        },
+        {
+          "alt": "",
+          "avatars": "Natalie_Portman.png",
+          "name": "娜塔丽·波特曼",
+          "id": "nm0000204",
+          "englishName": "Natalie Portman"
+        },
+        {
+          "alt": "",
+          "avatars": "Danny_Aiello.png",
+          "name": "丹尼·艾洛",
+          "id": "nm0000732",
+          "englishName": "Danny Aiello"
         }
       ],
       "original_title": "Léon",
@@ -2354,6 +2851,27 @@
           "avatars": "艾萨_丹尼埃利.png",
           "name": "艾萨·丹尼埃利",
           "id": "1074920"
+        },
+        {
+          "alt": "",
+          "avatars": "Antonella_Attili.png",
+          "name": "安顿尼拉·阿提利",
+          "id": "nm0041066",
+          "englishName": "Antonella Attili"
+        },
+        {
+          "alt": "",
+          "avatars": "Enzo_Cannavale.png",
+          "name": "恩泽·卡纳维尔",
+          "id": "nm0134073",
+          "englishName": "Enzo Cannavale"
+        },
+        {
+          "alt": "",
+          "avatars": "Leo_Gullotta.png",
+          "name": "雷奥·古罗塔",
+          "id": "nm0347842",
+          "englishName": "Leo Gullotta"
         }
       ],
       "original_title": "Nuovo Cinema Paradiso",
@@ -2409,6 +2927,13 @@
           "name": "克劳德·雷恩斯",
           "id": "extra-Claude-Rains",
           "englishName": "Claude Rains"
+        },
+        {
+          "alt": "",
+          "avatars": "Paul_Henreid.png",
+          "name": "保罗·亨里德",
+          "id": "nm0002134",
+          "englishName": "Paul Henreid"
         }
       ],
       "original_title": "Casablanca",
@@ -2510,6 +3035,34 @@
           "avatars": "本尼西奥_德尔_托罗.png",
           "name": "本尼西奥·德尔·托罗",
           "id": "1041005"
+        },
+        {
+          "alt": "",
+          "avatars": "Stephen_Baldwin.png",
+          "name": "史蒂芬·鲍德文",
+          "id": "nm0000286",
+          "englishName": "Stephen Baldwin"
+        },
+        {
+          "alt": "",
+          "avatars": "Gabriel_Byrne.png",
+          "name": "加布里埃尔·拜恩",
+          "id": "nm0000321",
+          "englishName": "Gabriel Byrne"
+        },
+        {
+          "alt": "",
+          "avatars": "Benicio_Del_Toro.png",
+          "name": "本尼西奥·德·托罗",
+          "id": "nm0001125",
+          "englishName": "Benicio Del Toro"
+        },
+        {
+          "alt": "",
+          "avatars": "Kevin_Pollak.png",
+          "name": "凯文·波拉克",
+          "id": "nm0001629",
+          "englishName": "Kevin Pollak"
         }
       ],
       "original_title": "The Usual Suspects",
@@ -2557,6 +3110,34 @@
           "avatars": "维罗尼卡_卡维特.png",
           "name": "维罗尼卡·卡维特",
           "id": "1002749"
+        },
+        {
+          "alt": "",
+          "avatars": "Tom_Skerritt.png",
+          "name": "汤姆·斯克里特",
+          "id": "nm0000643",
+          "englishName": "Tom Skerritt"
+        },
+        {
+          "alt": "",
+          "avatars": "Sigourney_Weaver.png",
+          "name": "西格妮·薇佛",
+          "id": "nm0000244",
+          "englishName": "Sigourney Weaver"
+        },
+        {
+          "alt": "",
+          "avatars": "Veronica_Cartwright.png",
+          "name": "维罗尼卡·卡特莱特",
+          "id": "nm0001021",
+          "englishName": "Veronica Cartwright"
+        },
+        {
+          "alt": "",
+          "avatars": "Harry_Dean_Stanton.png",
+          "name": "哈利·戴恩·斯坦通",
+          "id": "nm0001765",
+          "englishName": "Harry Dean Stanton"
         }
       ],
       "original_title": "Alien",
@@ -2651,6 +3232,20 @@
           "avatars": "温戴尔_柯瑞.png",
           "name": "温戴尔·柯瑞",
           "id": "1032296"
+        },
+        {
+          "alt": "",
+          "avatars": "Wendell_Corey.png",
+          "name": "温德尔·科里",
+          "id": "nm0179819",
+          "englishName": "Wendell Corey"
+        },
+        {
+          "alt": "",
+          "avatars": "Thelma_Ritter.png",
+          "name": "塞尔马·里特",
+          "id": "nm0728812",
+          "englishName": "Thelma Ritter"
         }
       ],
       "original_title": "Rear Window",
@@ -2699,6 +3294,13 @@
           "avatars": "亨利_伯格曼.png",
           "name": "亨利·伯格曼",
           "id": "1033054"
+        },
+        {
+          "alt": "",
+          "avatars": "Charles_Chaplin.png",
+          "name": "查尔斯·卓别林",
+          "id": "nm0000122",
+          "englishName": "Charles Chaplin"
         }
       ],
       "original_title": "Modern Times",
@@ -2747,6 +3349,20 @@
           "avatars": "克劳迪娅_卡汀娜.png",
           "name": "克劳迪娅·卡汀娜",
           "id": "1004514"
+        },
+        {
+          "alt": "",
+          "avatars": "Claudia_Cardinale.png",
+          "name": "克劳迪亚·卡汀娜",
+          "id": "nm0001012",
+          "englishName": "Claudia Cardinale"
+        },
+        {
+          "alt": "",
+          "avatars": "Jason_Robards.png",
+          "name": "贾森·罗巴兹",
+          "id": "nm0001673",
+          "englishName": "Jason Robards"
         }
       ],
       "original_title": "C'era una volta il West",
@@ -2842,6 +3458,20 @@
           "avatars": "罗伯特_杜瓦尔.png",
           "name": "罗伯特·杜瓦尔",
           "id": "1013776"
+        },
+        {
+          "alt": "",
+          "avatars": "Martin_Sheen.png",
+          "name": "马丁·西恩",
+          "id": "nm0000640",
+          "englishName": "Martin Sheen"
+        },
+        {
+          "alt": "",
+          "avatars": "Frederic_Forrest.png",
+          "name": "弗雷德里克·福瑞斯特",
+          "id": "nm0002078",
+          "englishName": "Frederic Forrest"
         }
       ],
       "original_title": "Apocalypse Now",
@@ -2890,6 +3520,13 @@
           "avatars": "杰夫_格尔林.png",
           "name": "杰夫·格尔林",
           "id": "1018022"
+        },
+        {
+          "alt": "",
+          "avatars": "Fred_Willard.png",
+          "name": "佛莱德·威拉德",
+          "id": "nm0929609",
+          "englishName": "Fred Willard"
         }
       ],
       "original_title": "WALL·E",
@@ -2938,6 +3575,20 @@
           "avatars": "乔_潘托里亚诺.png",
           "name": "乔·潘托里亚诺",
           "id": "1049557"
+        },
+        {
+          "alt": "",
+          "avatars": "Carrie-Anne_Moss.png",
+          "name": "凯瑞-安妮·莫斯",
+          "id": "nm0005251",
+          "englishName": "Carrie-Anne Moss"
+        },
+        {
+          "alt": "",
+          "avatars": "Mark_Boone_Junior.png",
+          "name": "小马克·布恩",
+          "id": "nm0095478",
+          "englishName": "Mark Boone Junior"
         }
       ],
       "original_title": "Memento",
@@ -3141,6 +3792,27 @@
           "avatars": "塞巴斯蒂安_科赫.png",
           "name": "塞巴斯蒂安·科赫",
           "id": "1019130"
+        },
+        {
+          "alt": "",
+          "avatars": "Martina_Gedeck.png",
+          "name": "马蒂娜·戈黛克",
+          "id": "nm0311476",
+          "englishName": "Martina Gedeck"
+        },
+        {
+          "alt": "",
+          "avatars": "Sebastian_Koch.png",
+          "name": "塞巴斯蒂安·考奇",
+          "id": "nm0462407",
+          "englishName": "Sebastian Koch"
+        },
+        {
+          "alt": "",
+          "avatars": "Ulrich_Tukur.png",
+          "name": "乌尔里希·图科",
+          "id": "nm0876300",
+          "englishName": "Ulrich Tukur"
         }
       ],
       "original_title": "Das Leben der Anderen",
@@ -3248,6 +3920,27 @@
           "avatars": "埃里克_冯_施特罗海姆.png",
           "name": "埃里克·冯·施特罗海姆",
           "id": "1050049"
+        },
+        {
+          "alt": "",
+          "avatars": "Gloria_Swanson.png",
+          "name": "葛罗莉亚·史旺逊",
+          "id": "nm0841797",
+          "englishName": "Gloria Swanson"
+        },
+        {
+          "alt": "",
+          "avatars": "Erich.png",
+          "name": "埃立克·冯·斯特劳亨",
+          "id": "nm2706992",
+          "englishName": "Erich"
+        },
+        {
+          "alt": "",
+          "avatars": "Nancy_Olson.png",
+          "name": "南希·奥尔森",
+          "id": "nm0647970",
+          "englishName": "Nancy Olson"
         }
       ],
       "original_title": "Sunset Blvd.",
@@ -3297,6 +3990,20 @@
           "avatars": "查尔斯_劳顿.png",
           "name": "查尔斯·劳顿",
           "id": "1010665"
+        },
+        {
+          "alt": "",
+          "avatars": "Tyrone_Power.png",
+          "name": "泰龙·鲍华",
+          "id": "nm0000061",
+          "englishName": "Tyrone Power"
+        },
+        {
+          "alt": "",
+          "avatars": "Elsa_Lanchester.png",
+          "name": "埃尔莎·兰彻斯特",
+          "id": "nm0006471",
+          "englishName": "Elsa Lanchester"
         }
       ],
       "original_title": "Witness for the Prosecution",
@@ -3345,6 +4052,13 @@
           "avatars": "阿道夫_门吉欧.png",
           "name": "阿道夫·门吉欧",
           "id": "1007131"
+        },
+        {
+          "alt": "",
+          "avatars": "George_Macready.png",
+          "name": "乔治·麦克里迪",
+          "id": "nm0534317",
+          "englishName": "George Macready"
         }
       ],
       "original_title": "Paths of Glory",
@@ -3393,6 +4107,20 @@
           "avatars": "丹尼_劳埃德.png",
           "name": "丹尼·劳埃德",
           "id": "1123465"
+        },
+        {
+          "alt": "",
+          "avatars": "Shelley_Duvall.png",
+          "name": "雪莉·杜瓦尔",
+          "id": "nm0001167",
+          "englishName": "Shelley Duvall"
+        },
+        {
+          "alt": "",
+          "avatars": "Scatman_Crothers.png",
+          "name": "斯卡曼·克罗瑟斯",
+          "id": "nm0001079",
+          "englishName": "Scatman Crothers"
         }
       ],
       "original_title": "The Shining",
@@ -3441,6 +4169,27 @@
           "avatars": "杰克_奥克.png",
           "name": "杰克·奥克",
           "id": "1041556"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "查尔斯·卓别林",
+          "id": null,
+          "englishName": "Charles Chaplin Jack Oakie"
+        },
+        {
+          "alt": "",
+          "avatars": "Reginald_Gardiner.png",
+          "name": "雷金纳德·加德纳",
+          "id": "nm0306786",
+          "englishName": "Reginald Gardiner"
+        },
+        {
+          "alt": "",
+          "avatars": "Henry_Daniell.png",
+          "name": "亨利·丹尼尔",
+          "id": "nm0199787",
+          "englishName": "Henry Daniell"
         }
       ],
       "original_title": "The Great Dictator",
@@ -3495,6 +4244,13 @@
           "name": "克里斯托弗·瓦尔兹",
           "id": "extra-Christoph-Waltz",
           "englishName": "Christoph Waltz"
+        },
+        {
+          "alt": "",
+          "avatars": "Eli_Roth.png",
+          "name": "艾利·罗斯",
+          "id": "nm0744834",
+          "englishName": "Eli Roth"
         }
       ],
       "original_title": "Inglourious Basterds",
@@ -3590,6 +4346,27 @@
           "avatars": "迈克尔_比恩.png",
           "name": "迈克尔·比恩",
           "id": "1025190"
+        },
+        {
+          "alt": "",
+          "avatars": "Sigourney_Weaver.png",
+          "name": "西格妮·薇佛",
+          "id": "nm0000244",
+          "englishName": "Sigourney Weaver"
+        },
+        {
+          "alt": "",
+          "avatars": "Carrie_Henn.png",
+          "name": "卡利·汉尼",
+          "id": "nm0001343",
+          "englishName": "Carrie Henn"
+        },
+        {
+          "alt": "",
+          "avatars": "Lance_Henriksen.png",
+          "name": "兰斯·亨利克森",
+          "id": "nm0000448",
+          "englishName": "Lance Henriksen"
         }
       ],
       "original_title": "Alien",
@@ -3684,6 +4461,13 @@
           "avatars": "本_阿弗莱克.png",
           "name": "本·阿弗莱克",
           "id": "1054417"
+        },
+        {
+          "alt": "",
+          "avatars": "Stellan_Skarsgård.png",
+          "name": "斯特兰·斯卡斯加德",
+          "id": "nm0001745",
+          "englishName": "Stellan Skarsgård"
         }
       ],
       "original_title": "Good Will Hunting",
@@ -3903,6 +4687,27 @@
           "avatars": "罗伊_多特里斯.png",
           "name": "罗伊·多特里斯",
           "id": "1019181"
+        },
+        {
+          "alt": "",
+          "avatars": "F._Murray_Abraham.png",
+          "name": "默里·亚伯拉罕",
+          "id": null,
+          "englishName": "F. Murray Abraham"
+        },
+        {
+          "alt": "",
+          "avatars": "Tom_Hulce.png",
+          "name": "汤姆·休斯",
+          "id": "nm0001371",
+          "englishName": "Tom Hulce"
+        },
+        {
+          "alt": "",
+          "avatars": "Simon_Callow.png",
+          "name": "西蒙·卡洛",
+          "id": "nm0001003",
+          "englishName": "Simon Callow"
         }
       ],
       "year": "1984",
@@ -3942,6 +4747,13 @@
           "avatars": "唐_里克斯.png",
           "name": "唐·里克斯",
           "id": "1044706"
+        },
+        {
+          "alt": "",
+          "avatars": "Jim_Varney.png",
+          "name": "吉姆·瓦利",
+          "id": "nm0001815",
+          "englishName": "Jim Varney"
         }
       ],
       "original_title": "Toy Story",
@@ -4099,6 +4911,13 @@
           "avatars": "KlausWennemann.png",
           "name": "Klaus Wennemann",
           "id": null
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "乔根·普罗斯诺",
+          "id": null,
+          "englishName": "Jürgen Prochnow Herbert Grönemeyer Klaus Wennemann Hubertus Bengsch"
         }
       ],
       "original_title": "Das Boot",
@@ -4147,6 +4966,27 @@
           "avatars": "刘智泰.png",
           "name": "刘智泰",
           "id": "1167498"
+        },
+        {
+          "alt": "",
+          "avatars": "Min-sik_Choi.png",
+          "name": "崔岷植/崔民植",
+          "id": "nm0158856",
+          "englishName": "Min-sik Choi"
+        },
+        {
+          "alt": "",
+          "avatars": "Hye-jeong_Kang.png",
+          "name": "姜惠珍",
+          "id": "nm1367246",
+          "englishName": "Hye-jeong Kang"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "池大韩",
+          "id": null,
+          "englishName": "Dae-han Ji"
         }
       ],
       "original_title": "올드보이",
@@ -4195,6 +5035,27 @@
           "avatars": "布莱恩_考克斯.png",
           "name": "布莱恩·考克斯",
           "id": "1019027"
+        },
+        {
+          "alt": "",
+          "avatars": "James_Robinson.png",
+          "name": "詹姆斯·罗宾逊",
+          "id": "nm0732703",
+          "englishName": "James Robinson"
+        },
+        {
+          "alt": "",
+          "avatars": "Sean_Lawlor.png",
+          "name": "西恩·洛罗",
+          "id": "nm0492566",
+          "englishName": "Sean Lawlor"
+        },
+        {
+          "alt": "",
+          "avatars": "Sandy_Nelson.png",
+          "name": "山迪·内尔森",
+          "id": "nm0625729",
+          "englishName": "Sandy Nelson"
         }
       ],
       "original_title": "Braveheart",
@@ -4243,6 +5104,13 @@
           "avatars": "田中裕子.png",
           "name": "田中裕子",
           "id": "1045811"
+        },
+        {
+          "alt": "",
+          "avatars": "Kaoru_Kobayashi.png",
+          "name": "小林薰",
+          "id": "nm0462006",
+          "englishName": "Kaoru Kobayashi"
         }
       ],
       "original_title": "もののけ姫",
@@ -4290,6 +5158,20 @@
           "avatars": "斯特林_海登.png",
           "name": "斯特林·海登",
           "id": "1002760"
+        },
+        {
+          "alt": "",
+          "avatars": "George_C._Scott.png",
+          "name": "乔治·斯科特",
+          "id": "nm0001715",
+          "englishName": "George C. Scott"
+        },
+        {
+          "alt": "",
+          "avatars": "Keenan_Wynn.png",
+          "name": "基南·温",
+          "id": "nm0943978",
+          "englishName": "Keenan Wynn"
         }
       ],
       "original_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
@@ -4338,6 +5220,13 @@
           "avatars": "马达范.png",
           "name": "马达范",
           "id": "1018290"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "卡瑞娜·卡普尔",
+          "id": null,
+          "englishName": "Kareena Kapoor Sharman Joshi Madhavan"
         }
       ],
       "original_title": "3 Idiots",
@@ -4386,6 +5275,20 @@
           "avatars": "索拉_伯奇.png",
           "name": "索拉·伯奇",
           "id": "1031804"
+        },
+        {
+          "alt": "",
+          "avatars": "Thora_Birch.png",
+          "name": "莎拉·布姬",
+          "id": "nm0000301",
+          "englishName": "Thora Birch"
+        },
+        {
+          "alt": "",
+          "avatars": "Wes_Bentley.png",
+          "name": "威斯·本特利",
+          "id": "nm0004747",
+          "englishName": "Wes Bentley"
         }
       ],
       "original_title": "American Beauty",
@@ -4480,6 +5383,34 @@
           "avatars": "黛比_雷诺斯.png",
           "name": "黛比·雷诺斯",
           "id": "1000160"
+        },
+        {
+          "alt": "",
+          "avatars": "Gene_Kelly.png",
+          "name": "金·凯利",
+          "id": "nm0000037",
+          "englishName": "Gene Kelly"
+        },
+        {
+          "alt": "",
+          "avatars": "Donald_O'Connor.png",
+          "name": "唐纳德·奥卡农",
+          "id": "nm0640307",
+          "englishName": "Donald O'Connor"
+        },
+        {
+          "alt": "",
+          "avatars": "Debbie_Reynolds.png",
+          "name": "戴比·雷诺兹",
+          "id": "nm0001666",
+          "englishName": "Debbie Reynolds"
+        },
+        {
+          "alt": "",
+          "avatars": "Jean_Hagen.png",
+          "name": "琼·哈根",
+          "id": "nm0353405",
+          "englishName": "Jean Hagen"
         }
       ],
       "original_title": "Singin' in the Rain",
@@ -4581,6 +5512,13 @@
           "avatars": "伊丽莎白_麦戈文.png",
           "name": "伊丽莎白·麦戈文",
           "id": "1010588"
+        },
+        {
+          "alt": "",
+          "avatars": "Joe_Pesci.png",
+          "name": "乔·派西",
+          "id": "nm0000582",
+          "englishName": "Joe Pesci"
         }
       ],
       "original_title": "Once Upon a Time in America",
@@ -4677,6 +5615,20 @@
           "avatars": "安东尼_丹尼尔斯.png",
           "name": "安东尼·丹尼尔斯",
           "id": "1032150"
+        },
+        {
+          "alt": "",
+          "avatars": "Carrie_Fisher.png",
+          "name": "卡里·费什尔",
+          "id": "nm0000402",
+          "englishName": "Carrie Fisher"
+        },
+        {
+          "alt": "",
+          "avatars": "Billy_Dee_Williams.png",
+          "name": "比利·迪·威廉斯",
+          "id": "nm0001850",
+          "englishName": "Billy Dee Williams"
         }
       ],
       "original_title": "Star Wars: Episode VI - Return of the Jedi",
@@ -4723,6 +5675,27 @@
           "avatars": "詹妮弗_康纳利.png",
           "name": "詹妮弗·康纳利",
           "id": "1016673"
+        },
+        {
+          "alt": "",
+          "avatars": "Ellen_Burstyn.png",
+          "name": "艾伦·波士汀",
+          "id": "nm0000995",
+          "englishName": "Ellen Burstyn"
+        },
+        {
+          "alt": "",
+          "avatars": "Jared_Leto.png",
+          "name": "贾德·莱托",
+          "id": "nm0001467",
+          "englishName": "Jared Leto"
+        },
+        {
+          "alt": "",
+          "avatars": "Marlon_Wayans.png",
+          "name": "马龙·韦恩斯",
+          "id": "nm0005541",
+          "englishName": "Marlon Wayans"
         }
       ],
       "original_title": "Requiem for a Dream",
@@ -4771,6 +5744,13 @@
           "avatars": "琼_库萨克.png",
           "name": "琼·库萨克",
           "id": "1027139"
+        },
+        {
+          "alt": "",
+          "avatars": "Ned_Beatty.png",
+          "name": "尼德·巴蒂",
+          "id": "nm0000885",
+          "englishName": "Ned Beatty"
         }
       ],
       "original_title": "Toy Story 3",
@@ -4959,6 +5939,13 @@
           "avatars": "伊利亚_伍德.png",
           "name": "伊利亚·伍德",
           "id": "1054395"
+        },
+        {
+          "alt": "",
+          "avatars": "Kate_Winslet_Gerry_Robert_Byrne.png",
+          "name": "凯特·温斯莱特",
+          "id": "nm0004423",
+          "englishName": "Kate Winslet Gerry Robert Byrne"
         }
       ],
       "original_title": "Eternal Sunshine of the Spotless Mind",
@@ -5007,6 +5994,34 @@
           "avatars": "弗莱德_麦克莫瑞.png",
           "name": "弗莱德·麦克莫瑞",
           "id": "1049778"
+        },
+        {
+          "alt": "",
+          "avatars": "Jack_Lemmon.png",
+          "name": "杰克·勒蒙",
+          "id": "nm0000493",
+          "englishName": "Jack Lemmon"
+        },
+        {
+          "alt": "",
+          "avatars": "Shirley_MacLaine.png",
+          "name": "雪莉·麦克雷恩/莎莉·麦莲",
+          "id": "nm0000511",
+          "englishName": "Shirley MacLaine"
+        },
+        {
+          "alt": "",
+          "avatars": "Fred_MacMurray.png",
+          "name": "弗雷德·麦克默里",
+          "id": "nm0534045",
+          "englishName": "Fred MacMurray"
+        },
+        {
+          "alt": "",
+          "avatars": "Ray_Walston.png",
+          "name": "雷·沃尔斯顿",
+          "id": "nm0001827",
+          "englishName": "Ray Walston"
         }
       ],
       "original_title": "The Apartment",
@@ -5062,6 +6077,13 @@
           "name": "杰克·霍金斯",
           "id": "extra-Jack-Hawkins",
           "englishName": "Jack Hawkins"
+        },
+        {
+          "alt": "",
+          "avatars": "Peter_O'Toole.png",
+          "name": "彼得·奥图尔/彼得·奥图",
+          "id": "nm0000564",
+          "englishName": "Peter O'Toole"
         }
       ],
       "original_title": "Lawrence of Arabia",
@@ -5110,6 +6132,20 @@
           "avatars": "方_基默.png",
           "name": "方·基默",
           "id": "1013761"
+        },
+        {
+          "alt": "",
+          "avatars": "Val_Kilmer.png",
+          "name": "瓦尔·基尔默",
+          "id": "nm0000174",
+          "englishName": "Val Kilmer"
+        },
+        {
+          "alt": "",
+          "avatars": "Jon_Voight.png",
+          "name": "乔恩·沃伊特/强·沃特/庄·威",
+          "id": "nm0000685",
+          "englishName": "Jon Voight"
         }
       ],
       "original_title": "Heat",
@@ -5158,6 +6194,20 @@
           "avatars": "威廉姆_西尔维斯特.png",
           "name": "威廉姆·西尔维斯特",
           "id": "1150470"
+        },
+        {
+          "alt": "",
+          "avatars": "Keir_Dullea.png",
+          "name": "克尔·杜利",
+          "id": "nm0001158",
+          "englishName": "Keir Dullea"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "威廉·希尔维斯特",
+          "id": null,
+          "englishName": "William Sylvester Daniel Richter"
         }
       ],
       "original_title": "2001: A Space Odyssey",
@@ -5206,6 +6256,27 @@
           "avatars": "米歇尔_菲佛.png",
           "name": "米歇尔·菲佛",
           "id": "1035642"
+        },
+        {
+          "alt": "",
+          "avatars": "Steven_Bauer.png",
+          "name": "史蒂文·鲍尔",
+          "id": "nm0000874",
+          "englishName": "Steven Bauer"
+        },
+        {
+          "alt": "",
+          "avatars": "Michelle_Pfeiffer.png",
+          "name": "米歇尔·菲佛/米雪·菲花",
+          "id": "nm0000201",
+          "englishName": "Michelle Pfeiffer"
+        },
+        {
+          "alt": "",
+          "avatars": "Mary_Elizabeth_Mast.png",
+          "name": "玛丽·伊丽莎白·马斯特兰托尼奥",
+          "id": "nm0001512",
+          "englishName": "Mary Elizabeth Mast"
         }
       ],
       "original_title": "Scarface",
@@ -5253,6 +6324,27 @@
           "avatars": "迈克尔_马德森.png",
           "name": "迈克尔·马德森",
           "id": "1027816"
+        },
+        {
+          "alt": "",
+          "avatars": "Harvey_Keitel.png",
+          "name": "哈威·凯尔",
+          "id": "nm0000172",
+          "englishName": "Harvey Keitel"
+        },
+        {
+          "alt": "",
+          "avatars": "Michael_Madsen.png",
+          "name": "迈克尔·麦德逊",
+          "id": "nm0000514",
+          "englishName": "Michael Madsen"
+        },
+        {
+          "alt": "",
+          "avatars": "Chris_Penn.png",
+          "name": "克里斯·潘",
+          "id": "nm0001606",
+          "englishName": "Chris Penn"
         }
       ],
       "original_title": "Reservoir Dogs",
@@ -5301,6 +6393,13 @@
           "avatars": "乔丹_长井.png",
           "name": "乔丹·长井",
           "id": "1004683"
+        },
+        {
+          "alt": "",
+          "avatars": "Bob_Peterson.png",
+          "name": "鲍勃·皮特森",
+          "id": "nm0677037",
+          "englishName": "Bob Peterson"
         }
       ],
       "original_title": "Up",
@@ -5355,6 +6454,20 @@
           "avatars": "爱德华_罗宾逊.png",
           "name": "爱德华·罗宾逊",
           "id": "1036586"
+        },
+        {
+          "alt": "",
+          "avatars": "Fred_MacMurray.png",
+          "name": "弗雷德·麦克默里",
+          "id": "nm0534045",
+          "englishName": "Fred MacMurray"
+        },
+        {
+          "alt": "",
+          "avatars": "Porter_Hall.png",
+          "name": "波特·哈尔",
+          "id": "nm0356004",
+          "englishName": "Porter Hall"
         }
       ],
       "original_title": "Double Indemnity",
@@ -5403,6 +6516,20 @@
           "avatars": "詹姆斯_梅森.png",
           "name": "詹姆斯·梅森",
           "id": "1048155"
+        },
+        {
+          "alt": "",
+          "avatars": "Eva_Marie_Saint.png",
+          "name": "伊娃·玛丽·赛恩特",
+          "id": "nm0001693",
+          "englishName": "Eva Marie Saint"
+        },
+        {
+          "alt": "",
+          "avatars": "Jessie_Royce_Landis.png",
+          "name": "杰西·罗伊斯·兰迪斯",
+          "id": "nm0484829",
+          "englishName": "Jessie Royce Landis"
         }
       ],
       "original_title": "North by Northwest",
@@ -5498,6 +6625,27 @@
           "avatars": "文森特_多诺费奥.png",
           "name": "文森特·多诺费奥",
           "id": "1010546"
+        },
+        {
+          "alt": "",
+          "avatars": "Matthew_Modine.png",
+          "name": "马修·摩丁",
+          "id": "nm0000546",
+          "englishName": "Matthew Modine"
+        },
+        {
+          "alt": "",
+          "avatars": "Adam_Baldwin.png",
+          "name": "亚当·鲍德文",
+          "id": "nm0000284",
+          "englishName": "Adam Baldwin"
+        },
+        {
+          "alt": "",
+          "avatars": "Vincent_D'Onofrio_R·李·艾尔米_R._Lee_Ermey.png",
+          "name": "文森特·德奥诺费奥",
+          "id": "nm0000388",
+          "englishName": "Vincent D'Onofrio R·李·艾尔米 R. Lee Ermey"
         }
       ],
       "original_title": "Full Metal Jacket",
@@ -5593,6 +6741,13 @@
           "avatars": "吕菲斯.png",
           "name": "吕菲斯",
           "id": "1142111"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "罗瑞娜·克拉沃塔",
+          "id": null,
+          "englishName": "Lorella Cravotta"
         }
       ],
       "original_title": "Le fabuleux destin d'Amélie Poulain",
@@ -5641,6 +6796,13 @@
           "avatars": "芭芭拉_贝尔_戈迪斯.png",
           "name": "芭芭拉·贝尔·戈迪斯",
           "id": "1040768"
+        },
+        {
+          "alt": "",
+          "avatars": "Barbara_Bel_Geddes_Tom_Helmore.png",
+          "name": "巴巴拉·贝尔·格迪斯",
+          "id": "nm0000895",
+          "englishName": "Barbara Bel Geddes Tom Helmore"
         }
       ],
       "original_title": "Vertigo",
@@ -5688,6 +6850,20 @@
           "avatars": "多萝西_康明戈尔.png",
           "name": "多萝西·康明戈尔",
           "id": "1050405"
+        },
+        {
+          "alt": "",
+          "avatars": "Agnes_Moorehead.png",
+          "name": "阿格尼丝·穆尔黑德",
+          "id": "nm0001547",
+          "englishName": "Agnes Moorehead"
+        },
+        {
+          "alt": "",
+          "avatars": "Ruth_Warrick.png",
+          "name": "鲁思·沃里克",
+          "id": "nm0913095",
+          "englishName": "Ruth Warrick"
         }
       ],
       "original_title": "Citizen Kane",
@@ -5783,6 +6959,13 @@
           "avatars": "邦妮_比蒂丽娅.png",
           "name": "邦妮·比蒂丽娅 ",
           "id": "1000149"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "邦尼·彼地丽娅",
+          "id": null,
+          "englishName": "Bonnie Bedelia Reginald VelJohnson Paul Gleason"
         }
       ],
       "original_title": "Die Hard",
@@ -5831,6 +7014,20 @@
           "avatars": "弗兰克_奥弗顿.png",
           "name": "弗兰克·奥弗顿",
           "id": "1133049"
+        },
+        {
+          "alt": "",
+          "avatars": "Gregory_Peck.png",
+          "name": "格里高利·派克",
+          "id": "nm0000060",
+          "englishName": "Gregory Peck"
+        },
+        {
+          "alt": "",
+          "avatars": "Rosemary_Murphy.png",
+          "name": "罗斯玛丽·墨菲",
+          "id": "nm0614677",
+          "englishName": "Rosemary Murphy"
         }
       ],
       "original_title": "To Kill a Mockingbird",
@@ -5878,6 +7075,20 @@
           "avatars": "丹霍姆_艾略特.png",
           "name": "丹霍姆·艾略特",
           "id": "1019108"
+        },
+        {
+          "alt": "",
+          "avatars": "Denholm_Elliott.png",
+          "name": "德诺姆·埃利奥特",
+          "id": "nm0001186",
+          "englishName": "Denholm Elliott"
+        },
+        {
+          "alt": "",
+          "avatars": "Alison_Doody.png",
+          "name": "艾利森·杜迪",
+          "id": "nm0233145",
+          "englishName": "Alison Doody"
         }
       ],
       "original_title": "Indiana Jones and the Last Crusade",
@@ -5926,6 +7137,13 @@
           "avatars": "罗伯特_肖.png",
           "name": "罗伯特·肖",
           "id": "1055263"
+        },
+        {
+          "alt": "",
+          "avatars": "Charles_Durning.png",
+          "name": "查尔斯·邓宁",
+          "id": "nm0001164",
+          "englishName": "Charles Durning"
         }
       ],
       "original_title": "The Sting",
@@ -5974,6 +7192,27 @@
           "avatars": "迈克尔_贝茨.png",
           "name": "迈克尔·贝茨",
           "id": "1066549"
+        },
+        {
+          "alt": "",
+          "avatars": "Malcolm_McDowell.png",
+          "name": "马尔科姆·麦克道尔",
+          "id": "nm0000532",
+          "englishName": "Malcolm McDowell"
+        },
+        {
+          "alt": "",
+          "avatars": "Patrick_Magee.png",
+          "name": "帕特里克·马吉",
+          "id": "nm0535861",
+          "englishName": "Patrick Magee"
+        },
+        {
+          "alt": "",
+          "avatars": "Warren_Clarke.png",
+          "name": "沃伦·克拉克",
+          "id": "nm0165049",
+          "englishName": "Warren Clarke"
         }
       ],
       "original_title": "A Clockwork Orange",
@@ -6021,6 +7260,27 @@
           "avatars": "布里吉特_赫尔姆.png",
           "name": "布里吉特·赫尔姆",
           "id": "1032366"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "艾尔弗雷德·埃布尔",
+          "id": null,
+          "englishName": "Alfred Abel Gustav Fröhlich"
+        },
+        {
+          "alt": "",
+          "avatars": "Rudolf_Klein-Rogge.png",
+          "name": "卢度·格连罗格",
+          "id": "nm0459030",
+          "englishName": "Rudolf Klein-Rogge"
+        },
+        {
+          "alt": "",
+          "avatars": "Fritz_Rasp.png",
+          "name": "弗里茨·拉斯普",
+          "id": "nm0003248",
+          "englishName": "Fritz Rasp"
         }
       ],
       "original_title": "Metropolis",
@@ -6123,6 +7383,20 @@
           "avatars": "杰森_斯坦森.png",
           "name": "杰森·斯坦森",
           "id": "1049484"
+        },
+        {
+          "alt": "",
+          "avatars": "Benicio_Del_Toro.png",
+          "name": "本尼西奥·德·托罗",
+          "id": "nm0001125",
+          "englishName": "Benicio Del Toro"
+        },
+        {
+          "alt": "",
+          "avatars": "Alan_Ford.png",
+          "name": "艾伦·福特",
+          "id": "nm0285495",
+          "englishName": "Alan Ford"
         }
       ],
       "original_title": "Snatch",
@@ -6220,6 +7494,20 @@
           "avatars": "盖_皮尔斯.png",
           "name": "盖·皮尔斯",
           "id": "1035672"
+        },
+        {
+          "alt": "",
+          "avatars": "Russell_Crowe.png",
+          "name": "拉塞尔·克罗",
+          "id": "nm0000128",
+          "englishName": "Russell Crowe"
+        },
+        {
+          "alt": "",
+          "avatars": "James_Cromwell.png",
+          "name": "詹姆斯·克伦威尔",
+          "id": "nm0000342",
+          "englishName": "James Cromwell"
         }
       ],
       "original_title": "L.A. Confidential",
@@ -6269,6 +7557,20 @@
           "avatars": "乌尔里希_马特斯.png",
           "name": "乌尔里希·马特斯",
           "id": "1045346"
+        },
+        {
+          "alt": "",
+          "avatars": "Bruno_Ganz.png",
+          "name": "布鲁诺·冈茨",
+          "id": "nm0004486",
+          "englishName": "Bruno Ganz"
+        },
+        {
+          "alt": "",
+          "avatars": "Alexandra_Maria_Lara_Corinna_Harfouch_Ulrich_Matthes.png",
+          "name": "亚历山德拉·玛利亚·拉拉",
+          "id": "nm0487884",
+          "englishName": "Alexandra Maria Lara Corinna Harfouch Ulrich Matthes"
         }
       ],
       "original_title": "Der Untergang",
@@ -6365,6 +7667,20 @@
           "avatars": "艾德_哈里斯.png",
           "name": "艾德·哈里斯",
           "id": "1048024"
+        },
+        {
+          "alt": "",
+          "avatars": "Noah_Emmerich.png",
+          "name": "诺亚·艾姆雷克",
+          "id": "nm0001187",
+          "englishName": "Noah Emmerich"
+        },
+        {
+          "alt": "",
+          "avatars": "Natascha_McElhone.png",
+          "name": "娜塔莎·麦克艾霍恩",
+          "id": "nm0001523",
+          "englishName": "Natascha McElhone"
         }
       ],
       "original_title": "The Truman Show",
@@ -6412,6 +7728,20 @@
           "avatars": "莉安拉_卡雷尔.png",
           "name": "莉安拉·卡雷尔",
           "id": "1046025"
+        },
+        {
+          "alt": "",
+          "avatars": "Lamberto_Maggiorani.png",
+          "name": "兰贝尔托·马吉奥拉尼",
+          "id": "nm0536009",
+          "englishName": "Lamberto Maggiorani"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "恩佐·斯塔尤拉",
+          "id": null,
+          "englishName": "Enzo Staiola Lianella Carell Gino Saltamerenda"
         }
       ],
       "original_title": "Ladri di biciclette",
@@ -6563,6 +7893,13 @@
           "name": "马克·路法罗",
           "id": "extra-Mark-Ruffalo",
           "englishName": "Mark Ruffalo"
+        },
+        {
+          "alt": "",
+          "avatars": "Michelle_Williams.png",
+          "name": "米切尔·威廉姆斯",
+          "id": "nm0931329",
+          "englishName": "Michelle Williams"
         }
       ],
       "original_title": "Shutter Island",
@@ -6659,6 +7996,20 @@
           "avatars": "连姆_尼森.png",
           "name": "连姆·尼森",
           "id": "1031220"
+        },
+        {
+          "alt": "",
+          "avatars": "Liam_Neeson.png",
+          "name": "利亚姆·尼森",
+          "id": "nm0000553",
+          "englishName": "Liam Neeson"
+        },
+        {
+          "alt": "",
+          "avatars": "Katie_Holmes.png",
+          "name": "凯蒂·赫尔姆斯",
+          "id": "nm0005017",
+          "englishName": "Katie Holmes"
         }
       ],
       "original_title": "Batman Begins",
@@ -6753,6 +8104,13 @@
           "avatars": "吉安_玛丽亚_沃隆特.png",
           "name": "吉安·玛丽亚·沃隆特",
           "id": "1000353"
+        },
+        {
+          "alt": "",
+          "avatars": "Gian_Maria_Volonté_Mara_Krupp.png",
+          "name": "吉安·马利亚·沃隆特",
+          "id": "nm0002231",
+          "englishName": "Gian Maria Volonté Mara Krupp"
         }
       ],
       "original_title": "Per qualche dollaro in più",
@@ -6807,6 +8165,13 @@
           "name": "理查德·阿滕伯勒",
           "id": "extra-Richard-Attenborough",
           "englishName": "Richard Attenborough"
+        },
+        {
+          "alt": "",
+          "avatars": "Jeff_Goldblum.png",
+          "name": "杰夫·戈德布拉姆",
+          "id": "nm0000156",
+          "englishName": "Jeff Goldblum"
         }
       ],
       "original_title": "Jurassic Park",
@@ -6854,6 +8219,20 @@
           "avatars": "斯碧尔_谢波德.png",
           "name": "斯碧尔·谢波德",
           "id": "1007016"
+        },
+        {
+          "alt": "",
+          "avatars": "Harvey_Keitel.png",
+          "name": "哈威·凯尔",
+          "id": "nm0000172",
+          "englishName": "Harvey Keitel"
+        },
+        {
+          "alt": "",
+          "avatars": "Cybill_Shepherd.png",
+          "name": "撒比尔·谢菲尔德",
+          "id": "nm0001732",
+          "englishName": "Cybill Shepherd"
         }
       ],
       "original_title": "Taxi Driver",
@@ -6947,6 +8326,20 @@
           "avatars": "杰克_莱蒙.png",
           "name": "杰克·莱蒙",
           "id": "1007006"
+        },
+        {
+          "alt": "",
+          "avatars": "Jack_Lemmon.png",
+          "name": "杰克·勒蒙",
+          "id": "nm0000493",
+          "englishName": "Jack Lemmon"
+        },
+        {
+          "alt": "",
+          "avatars": "George_Raft.png",
+          "name": "乔治·拉夫特",
+          "id": "nm0706368",
+          "englishName": "George Raft"
         }
       ],
       "original_title": "Some Like It Hot",
@@ -7084,6 +8477,13 @@
           "avatars": "杰基_库根.png",
           "name": "杰基·库根",
           "id": "1041235"
+        },
+        {
+          "alt": "",
+          "avatars": "Charles_Chaplin.png",
+          "name": "查尔斯·卓别林",
+          "id": "nm0000122",
+          "englishName": "Charles Chaplin"
         }
       ],
       "original_title": "The Kid",
@@ -7130,6 +8530,20 @@
           "avatars": "乔治_桑德斯.png",
           "name": "乔治·桑德斯",
           "id": "1056113"
+        },
+        {
+          "alt": "",
+          "avatars": "Bette_Davis.png",
+          "name": "贝蒂·戴维丝",
+          "id": "nm0000012",
+          "englishName": "Bette Davis"
+        },
+        {
+          "alt": "",
+          "avatars": "Celeste_Holm.png",
+          "name": "西莱斯特·霍尔姆",
+          "id": "nm0002141",
+          "englishName": "Celeste Holm"
         }
       ],
       "original_title": "All About Eve",
@@ -7178,6 +8592,27 @@
           "avatars": "托妮_科莱特.png",
           "name": "托妮·科莱特",
           "id": "1041108"
+        },
+        {
+          "alt": "",
+          "avatars": "Haley_Joel_Osment.png",
+          "name": "海利·乔·奥斯蒙特",
+          "id": "nm0005286",
+          "englishName": "Haley Joel Osment"
+        },
+        {
+          "alt": "",
+          "avatars": "Toni_Collette.png",
+          "name": "托妮·柯莱特",
+          "id": "nm0001057",
+          "englishName": "Toni Collette"
+        },
+        {
+          "alt": "",
+          "avatars": "Olivia_Williams.png",
+          "name": "奥利维亚·威廉姆斯",
+          "id": "nm0931404",
+          "englishName": "Olivia Williams"
         }
       ],
       "original_title": "The Sixth Sense",
@@ -7226,6 +8661,13 @@
           "avatars": "根津甚八.png",
           "name": "根津甚八",
           "id": "1037931"
+        },
+        {
+          "alt": "",
+          "avatars": "Daisuke_Ryu.png",
+          "name": "隆大介",
+          "id": "nm0753480",
+          "englishName": "Daisuke Ryu"
         }
       ],
       "original_title": "乱",
@@ -7281,6 +8723,13 @@
           "name": "詹姆斯·伍兹",
           "id": "extra-James-Woods",
           "englishName": "James Woods"
+        },
+        {
+          "alt": "",
+          "avatars": "Joe_Pesci.png",
+          "name": "乔·派西",
+          "id": "nm0000582",
+          "englishName": "Joe Pesci"
         }
       ],
       "original_title": "Casino",
@@ -7336,6 +8785,13 @@
           "name": "伍迪·哈里森",
           "id": "extra-Woody-Harrelson",
           "englishName": "Woody Harrelson"
+        },
+        {
+          "alt": "",
+          "avatars": "Javier_Bardem.png",
+          "name": "贾维尔·巴登",
+          "id": "nm0000849",
+          "englishName": "Javier Bardem"
         }
       ],
       "original_title": "No Country for Old Men",
@@ -7390,6 +8846,27 @@
           "avatars": "大卫_科列侬.png",
           "name": "大卫·科列侬",
           "id": "1078440"
+        },
+        {
+          "alt": "",
+          "avatars": "Kurt_Russell.png",
+          "name": "库特·拉塞尔",
+          "id": "nm0000621",
+          "englishName": "Kurt Russell"
+        },
+        {
+          "alt": "",
+          "avatars": "Wilford_Brimley_T·K·卡特_T.K._Carter.png",
+          "name": "威尔福德·布雷姆利",
+          "id": "nm0141953",
+          "englishName": "Wilford Brimley T·K·卡特 T.K. Carter"
+        },
+        {
+          "alt": "",
+          "avatars": "David_Clennon.png",
+          "name": "大卫·克莱隆",
+          "id": "nm0166359",
+          "englishName": "David Clennon"
         }
       ],
       "original_title": "The Thing",
@@ -7533,6 +9010,13 @@
           "avatars": "薇薇卡_福克斯.png",
           "name": "薇薇卡·福克斯",
           "id": "1025223"
+        },
+        {
+          "alt": "",
+          "avatars": "Daryl_Hannah.png",
+          "name": "达丽尔·汉娜",
+          "id": "nm0000435",
+          "englishName": "Daryl Hannah"
         }
       ],
       "original_title": "Kill Bill: Vol. 1",
@@ -7581,6 +9065,13 @@
           "avatars": "Yoshimasa_Hosoya.png",
           "name": "Yoshimasa Hosoya",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "Ábalo",
+          "id": null,
+          "englishName": "Natsuki Hanae Yoshimasa Hosoya"
         }
       ],
       "original_title": "Shingeki no Kyojin: The Last Attack",
@@ -7629,6 +9120,34 @@
           "avatars": "玛丽维尔_贝尔杜.png",
           "name": "玛丽维尔·贝尔杜",
           "id": "1027896"
+        },
+        {
+          "alt": "",
+          "avatars": "Ivana_Baquero.png",
+          "name": "伊娃娜·巴克洛",
+          "id": "nm1419440",
+          "englishName": "Ivana Baquero"
+        },
+        {
+          "alt": "",
+          "avatars": "Sergi_López.png",
+          "name": "塞尔吉·洛佩兹",
+          "id": "nm0530365",
+          "englishName": "Sergi López"
+        },
+        {
+          "alt": "",
+          "avatars": "Maribel_Verdú.png",
+          "name": "玛丽贝尔·芭杜",
+          "id": "nm0893941",
+          "englishName": "Maribel Verdú"
+        },
+        {
+          "alt": "",
+          "avatars": "Doug_Jones.png",
+          "name": "道格·琼斯",
+          "id": "nm0427964",
+          "englishName": "Doug Jones"
         }
       ],
       "original_title": "El laberinto del fauno",
@@ -7742,6 +9261,13 @@
           "name": "克里斯托弗·普卢默",
           "id": "extra-Christopher-Plummer",
           "englishName": "Christopher Plummer"
+        },
+        {
+          "alt": "",
+          "avatars": "Russell_Crowe.png",
+          "name": "拉塞尔·克罗",
+          "id": "nm0000128",
+          "englishName": "Russell Crowe"
         }
       ],
       "original_title": "A Beautiful Mind",
@@ -7790,6 +9316,20 @@
           "avatars": "提姆_霍尔特.png",
           "name": "提姆·霍尔特",
           "id": "1005017"
+        },
+        {
+          "alt": "",
+          "avatars": "Tim_Holt.png",
+          "name": "蒂姆·霍尔特",
+          "id": "nm0392529",
+          "englishName": "Tim Holt"
+        },
+        {
+          "alt": "",
+          "avatars": "Bruce_Bennett.png",
+          "name": "布鲁斯·班奈特",
+          "id": "nm0071636",
+          "englishName": "Bruce Bennett"
         }
       ],
       "original_title": "The Treasure of the Sierra Madre",
@@ -7838,6 +9378,13 @@
           "avatars": "美轮明宏.png",
           "name": "美轮明宏",
           "id": "1045925"
+        },
+        {
+          "alt": "",
+          "avatars": "Tatsuya_Gashuin.png",
+          "name": "我修院达也",
+          "id": "nm0309107",
+          "englishName": "Tatsuya Gashuin"
         }
       ],
       "original_title": "ハウルの動く城",
@@ -8008,6 +9555,13 @@
           "avatars": "山田五十铃.png",
           "name": "山田五十铃",
           "id": "1008122"
+        },
+        {
+          "alt": "",
+          "avatars": "Yôko_Tsukasa.png",
+          "name": "司叶子",
+          "id": "nm0875362",
+          "englishName": "Yôko Tsukasa"
         }
       ],
       "original_title": "用心棒",
@@ -8116,6 +9670,13 @@
           "avatars": "安妮_班克罗夫特.png",
           "name": "安妮·班克罗夫特",
           "id": "1049606"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Gielgud.png",
+          "name": "约翰·吉尔古德",
+          "id": "nm0000024",
+          "englishName": "John Gielgud"
         }
       ],
       "original_title": "The Elephant Man",
@@ -8163,6 +9724,27 @@
           "avatars": "艾瑞克_爱都.png",
           "name": "艾瑞克·爱都",
           "id": "1002750"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Cleese.png",
+          "name": "约翰·克里斯",
+          "id": "nm0000092",
+          "englishName": "John Cleese"
+        },
+        {
+          "alt": "",
+          "avatars": "Eric_Idle.png",
+          "name": "埃里克·艾多尔",
+          "id": "nm0001385",
+          "englishName": "Eric Idle"
+        },
+        {
+          "alt": "",
+          "avatars": "Terry_Gilliam.png",
+          "name": "特里·吉列姆",
+          "id": "nm0000416",
+          "englishName": "Terry Gilliam"
         }
       ],
       "original_title": "Monty Python and the Holy Grail",
@@ -8217,6 +9799,27 @@
           "avatars": "罗伯特_卡明斯.png",
           "name": "罗伯特·卡明斯",
           "id": "1075738"
+        },
+        {
+          "alt": "",
+          "avatars": "Ray_Milland.png",
+          "name": "雷·米兰",
+          "id": "nm0001537",
+          "englishName": "Ray Milland"
+        },
+        {
+          "alt": "",
+          "avatars": "Robert_Cummings.png",
+          "name": "罗伯特.卡明斯",
+          "id": "nm0191950",
+          "englishName": "Robert Cummings"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Williams.png",
+          "name": "约翰·威廉姆斯",
+          "id": "nm0002354",
+          "englishName": "John Williams"
         }
       ],
       "original_title": "Dial M for Murder",
@@ -8366,6 +9969,20 @@
           "avatars": "巴勃罗_拉戈.png",
           "name": "巴勃罗·拉戈",
           "id": "1027560"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "里卡杜·达林",
+          "id": null,
+          "englishName": "Ricardo Darín Carla Quevedo"
+        },
+        {
+          "alt": "",
+          "avatars": "Pablo_Rago.png",
+          "name": "帕博罗·拉格",
+          "id": "nm0706567",
+          "englishName": "Pablo Rago"
         }
       ],
       "original_title": "El secreto de sus ojos",
@@ -8414,6 +10031,13 @@
           "avatars": "费雯_丽.png",
           "name": "费雯·丽",
           "id": "1010506"
+        },
+        {
+          "alt": "",
+          "avatars": "Evelyn_Keyes.png",
+          "name": "伊芙琳·凯斯",
+          "id": "nm0450810",
+          "englishName": "Evelyn Keyes"
         }
       ],
       "original_title": "Gone with the Wind",
@@ -8529,6 +10153,20 @@
           "avatars": "约翰_休斯顿.png",
           "name": "约翰·休斯顿",
           "id": "1025239"
+        },
+        {
+          "alt": "",
+          "avatars": "Faye_Dunaway.png",
+          "name": "费·唐娜薇",
+          "id": "nm0001159",
+          "englishName": "Faye Dunaway"
+        },
+        {
+          "alt": "",
+          "avatars": "Perry_Lopez.png",
+          "name": "佩里·洛佩兹",
+          "id": "nm0520164",
+          "englishName": "Perry Lopez"
         }
       ],
       "original_title": "Chinatown",
@@ -8577,6 +10215,27 @@
           "avatars": "斯蒂芬_瑞.png",
           "name": "斯蒂芬·瑞",
           "id": "1041170"
+        },
+        {
+          "alt": "",
+          "avatars": "Natalie_Portman.png",
+          "name": "娜塔丽·波特曼",
+          "id": "nm0000204",
+          "englishName": "Natalie Portman"
+        },
+        {
+          "alt": "",
+          "avatars": "Stephen_Rea.png",
+          "name": "斯蒂芬·雷",
+          "id": "nm0001653",
+          "englishName": "Stephen Rea"
+        },
+        {
+          "alt": "",
+          "avatars": "Stephen_Fry.png",
+          "name": "史蒂芬·弗莱",
+          "id": "nm0000410",
+          "englishName": "Stephen Fry"
         }
       ],
       "original_title": "V for Vendetta",
@@ -8734,6 +10393,13 @@
           "name": "志村乔",
           "id": "extra-Takashi-Shimura",
           "englishName": "Takashi Shimura"
+        },
+        {
+          "alt": "",
+          "avatars": "Masayuki_Mori.png",
+          "name": "森雅之",
+          "id": "nm0605270",
+          "englishName": "Masayuki Mori"
         }
       ],
       "original_title": "羅生門",
@@ -8829,6 +10495,13 @@
           "avatars": "约翰尼_李_米勒.png",
           "name": "约翰尼·李·米勒",
           "id": "1041125"
+        },
+        {
+          "alt": "",
+          "avatars": "Kevin_McKidd.png",
+          "name": "凯文·麦克基德",
+          "id": "nm0571727",
+          "englishName": "Kevin McKidd"
         }
       ],
       "original_title": "Trainspotting",
@@ -8932,6 +10605,20 @@
           "name": "拉尔夫·费因斯",
           "id": "extra-Ralph-Fiennes",
           "englishName": "Ralph Fiennes"
+        },
+        {
+          "alt": "",
+          "avatars": "Michael_Gambon.png",
+          "name": "迈克尔·冈本",
+          "id": "nm0002091",
+          "englishName": "Michael Gambon"
+        },
+        {
+          "alt": "",
+          "avatars": "Alan_Rickman.png",
+          "name": "阿兰·里克曼",
+          "id": "nm0000614",
+          "englishName": "Alan Rickman"
         }
       ],
       "original_title": "Harry Potter and the Deathly Hallows: Part 2",
@@ -9075,6 +10762,13 @@
           "avatars": "尼克_诺特.png",
           "name": "尼克·诺特",
           "id": "1006989"
+        },
+        {
+          "alt": "",
+          "avatars": "Jennifer_Morrison.png",
+          "name": "詹尼弗·莫里森",
+          "id": "nm0607185",
+          "englishName": "Jennifer Morrison"
         }
       ],
       "original_title": "Warrior",
@@ -9123,6 +10817,27 @@
           "avatars": "帕特里克_马基.png",
           "name": "帕特里克·马基",
           "id": "1125081"
+        },
+        {
+          "alt": "",
+          "avatars": "Patrick_Magee.png",
+          "name": "帕特里克·马吉",
+          "id": "nm0535861",
+          "englishName": "Patrick Magee"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "瑞恩·奥尼尔",
+          "id": null,
+          "englishName": "Ryan O'Neal Marisa Berenson"
+        },
+        {
+          "alt": "",
+          "avatars": "Hardy_Krüger.png",
+          "name": "哈迪·克鲁格",
+          "id": "nm0473228",
+          "englishName": "Hardy Krüger"
         }
       ],
       "original_title": "Barry Lyndon",
@@ -9171,6 +10886,27 @@
           "avatars": "哈雅_哈拉里特.png",
           "name": "哈雅·哈拉里特",
           "id": "1050253"
+        },
+        {
+          "alt": "",
+          "avatars": "Charlton_Heston.png",
+          "name": "查尔顿·赫斯顿",
+          "id": "nm0000032",
+          "englishName": "Charlton Heston"
+        },
+        {
+          "alt": "",
+          "avatars": "Haya_Harareet.png",
+          "name": "哈亚·哈拉雷",
+          "id": "nm0361823",
+          "englishName": "Haya Harareet"
+        },
+        {
+          "alt": "",
+          "avatars": "Stephen_Boyd.png",
+          "name": "斯蒂芬·博伊德",
+          "id": "nm0000963",
+          "englishName": "Stephen Boyd"
         }
       ],
       "original_title": "Ben-Hur",
@@ -9225,6 +10961,34 @@
           "avatars": "弗兰西斯_麦克多蒙德.png",
           "name": "弗兰西斯·麦克多蒙德",
           "id": "1010548"
+        },
+        {
+          "alt": "",
+          "avatars": "William_H._Macy.png",
+          "name": "威廉·梅西",
+          "id": "nm0000513",
+          "englishName": "William H. Macy"
+        },
+        {
+          "alt": "",
+          "avatars": "Steve_Buscemi.png",
+          "name": "史蒂夫·巴斯米",
+          "id": "nm0000114",
+          "englishName": "Steve Buscemi"
+        },
+        {
+          "alt": "",
+          "avatars": "Frances_McDormand.png",
+          "name": "弗朗西丝·麦克道蒙",
+          "id": null,
+          "englishName": "Frances McDormand"
+        },
+        {
+          "alt": "",
+          "avatars": "Peter_Stormare.png",
+          "name": "彼得·施特曼",
+          "id": "nm0001780",
+          "englishName": "Peter Stormare"
         }
       ],
       "original_title": "Fargo",
@@ -9327,6 +11091,20 @@
           "avatars": "乔_佩西.png",
           "name": "乔·佩西",
           "id": "1004598"
+        },
+        {
+          "alt": "",
+          "avatars": "Joe_Pesci.png",
+          "name": "乔·派西",
+          "id": "nm0000582",
+          "englishName": "Joe Pesci"
+        },
+        {
+          "alt": "",
+          "avatars": "Frank_Vincent.png",
+          "name": "弗兰克·文森特",
+          "id": "nm0898634",
+          "englishName": "Frank Vincent"
         }
       ],
       "original_title": "Raging Bull",
@@ -9519,6 +11297,20 @@
           "avatars": "糸井重里.png",
           "name": "糸井重里",
           "id": "1379738"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "系井重里",
+          "id": null,
+          "englishName": "Shigesato Itoi"
+        },
+        {
+          "alt": "",
+          "avatars": "Sumi_Shimamoto.png",
+          "name": "岛本须美",
+          "id": "nm0793585",
+          "englishName": "Sumi Shimamoto"
         }
       ],
       "original_title": "となりのトトロ",
@@ -9566,6 +11358,27 @@
           "avatars": "科里_哈德里克.png",
           "name": "科里·哈德里克",
           "id": "1040665"
+        },
+        {
+          "alt": "",
+          "avatars": "Chris_Carley.png",
+          "name": "克里斯托弗·卡利",
+          "id": "nm1542291",
+          "englishName": "Chris Carley"
+        },
+        {
+          "alt": "",
+          "avatars": "Bee_Vang.png",
+          "name": "比·王",
+          "id": "nm3057402",
+          "englishName": "Bee Vang"
+        },
+        {
+          "alt": "",
+          "avatars": "Ahney_Her.png",
+          "name": "安蕾•荷",
+          "id": "nm3115704",
+          "englishName": "Ahney Her"
         }
       ],
       "original_title": "Gran Torino",
@@ -9615,6 +11428,27 @@
           "avatars": "布拉德_加内特.png",
           "name": "布拉德·加内特",
           "id": "1002727"
+        },
+        {
+          "alt": "",
+          "avatars": "Ian_Holm.png",
+          "name": "伊恩·霍姆",
+          "id": "nm0000453",
+          "englishName": "Ian Holm"
+        },
+        {
+          "alt": "",
+          "avatars": "Lou_Romano.png",
+          "name": "卢·罗马诺",
+          "id": "nm0738918",
+          "englishName": "Lou Romano"
+        },
+        {
+          "alt": "",
+          "avatars": "Brian_Dennehy.png",
+          "name": "布赖恩·丹内利",
+          "id": "nm0001133",
+          "englishName": "Brian Dennehy"
         }
       ],
       "original_title": "Ratatouille",
@@ -9715,6 +11549,13 @@
           "avatars": "Kemal_Sunal.png",
           "name": "Kemal Sunal",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "Özkul",
+          "id": null,
+          "englishName": "Tarik Akan Kemal Sunal"
         }
       ],
       "original_title": "Hababam Sinifi: Sinifta Kaldi",
@@ -9809,6 +11650,13 @@
           "avatars": "安德莉亚_埃克特.png",
           "name": "安德莉亚·埃克特",
           "id": "1051117"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "朱莉·黛尔比",
+          "id": null,
+          "englishName": "Julie Delpy Andrea Eckert Hanno Pöschl"
         }
       ],
       "original_title": "Before Sunrise",
@@ -9863,6 +11711,20 @@
           "avatars": "宋在浩.png",
           "name": "宋在浩",
           "id": "1033753"
+        },
+        {
+          "alt": "",
+          "avatars": "Sang-kyung_Kim.png",
+          "name": "金相庆/金尚庆",
+          "id": "nm5470717",
+          "englishName": "Sang-kyung Kim"
+        },
+        {
+          "alt": "",
+          "avatars": "Roe-ha_Kim.png",
+          "name": "金雷河/金赖河",
+          "id": "nm1323287",
+          "englishName": "Roe-ha Kim"
         }
       ],
       "original_title": "Memories Of Murder",
@@ -9911,6 +11773,20 @@
           "avatars": "克雷格_费格森.png",
           "name": "克雷格·费格森",
           "id": "1048146"
+        },
+        {
+          "alt": "",
+          "avatars": "Craig_Ferguson.png",
+          "name": "克雷格·弗格森",
+          "id": "nm0272401",
+          "englishName": "Craig Ferguson"
+        },
+        {
+          "alt": "",
+          "avatars": "America_Ferrera.png",
+          "name": "亚美利加·费雷拉",
+          "id": "nm1065229",
+          "englishName": "America Ferrera"
         }
       ],
       "original_title": "How to Train Your Dragon",
@@ -9970,6 +11846,27 @@
           "avatars": "爱德华_詹姆斯_奥莫斯.png",
           "name": "爱德华·詹姆斯·奥莫斯",
           "id": "1031917"
+        },
+        {
+          "alt": "",
+          "avatars": "Rutger_Hauer.png",
+          "name": "鲁特格·哈尔",
+          "id": "nm0000442",
+          "englishName": "Rutger Hauer"
+        },
+        {
+          "alt": "",
+          "avatars": "Sean_Young.png",
+          "name": "肖恩·扬",
+          "id": "nm0000707",
+          "englishName": "Sean Young"
+        },
+        {
+          "alt": "",
+          "avatars": "Edward_James_Olmos.png",
+          "name": "埃德华·詹姆斯·奥尔摩斯",
+          "id": "nm0001579",
+          "englishName": "Edward James Olmos"
         }
       ],
       "original_title": "Blade Runner",
@@ -10114,6 +12011,27 @@
           "avatars": "史蒂夫_布西密.png",
           "name": "史蒂夫·布西密",
           "id": "1054409"
+        },
+        {
+          "alt": "",
+          "avatars": "Steve_Buscemi.png",
+          "name": "史蒂夫·巴斯米",
+          "id": "nm0000114",
+          "englishName": "Steve Buscemi"
+        },
+        {
+          "alt": "",
+          "avatars": "Billy_Crystal.png",
+          "name": "比利·克里斯托尔",
+          "id": "nm0000345",
+          "englishName": "Billy Crystal"
+        },
+        {
+          "alt": "",
+          "avatars": "Mary_Gibbs.png",
+          "name": "玛丽·吉布斯",
+          "id": "nm0316701",
+          "englishName": "Mary Gibbs"
         }
       ],
       "original_title": "Monsters University",
@@ -10174,6 +12092,20 @@
           "avatars": "理查德_德莱弗斯.png",
           "name": "理查德·德莱弗斯",
           "id": "1041114"
+        },
+        {
+          "alt": "",
+          "avatars": "Roy_Scheider.png",
+          "name": "罗伊·谢德",
+          "id": "nm0001702",
+          "englishName": "Roy Scheider"
+        },
+        {
+          "alt": "",
+          "avatars": "Lorraine_Gary.png",
+          "name": "洛兰·加里",
+          "id": "nm0308882",
+          "englishName": "Lorraine Gary"
         }
       ],
       "original_title": "Jaws",
@@ -10269,6 +12201,13 @@
           "avatars": "约翰_林奇.png",
           "name": "约翰·林奇",
           "id": "1054701"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "艾玛·汤普森",
+          "id": null,
+          "englishName": "Emma Thompson Nye Heron"
         }
       ],
       "original_title": "In the Name of the Father",
@@ -10372,6 +12311,27 @@
           "name": "亨利·伯格曼",
           "id": "extra-Henry-Bergman",
           "englishName": "Henry Bergman"
+        },
+        {
+          "alt": "",
+          "avatars": "Charles_Chaplin.png",
+          "name": "查尔斯·卓别林",
+          "id": "nm0000122",
+          "englishName": "Charles Chaplin"
+        },
+        {
+          "alt": "",
+          "avatars": "Mack_Swain.png",
+          "name": "马克·斯维恩",
+          "id": "nm0841501",
+          "englishName": "Mack Swain"
+        },
+        {
+          "alt": "",
+          "avatars": "Tom_Murray.png",
+          "name": "汤姆·默里",
+          "id": "nm0615306",
+          "englishName": "Tom Murray"
         }
       ],
       "original_title": "The Gold Rush",
@@ -10419,6 +12379,27 @@
           "avatars": "巴瑞_哈姆弗莱斯.png",
           "name": "巴瑞·哈姆弗莱斯",
           "id": "1004926"
+        },
+        {
+          "alt": "",
+          "avatars": "Toni_Collette.png",
+          "name": "托妮·柯莱特",
+          "id": "nm0001057",
+          "englishName": "Toni Collette"
+        },
+        {
+          "alt": "",
+          "avatars": "Philip_Seymour_Hoffman.png",
+          "name": "菲利普·塞莫尔·霍夫曼",
+          "id": "nm0000450",
+          "englishName": "Philip Seymour Hoffman"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "艾瑞克·巴纳",
+          "id": null,
+          "englishName": "Eric Bana Barry Humphries"
         }
       ],
       "original_title": "Mary and Max",
@@ -10528,6 +12509,13 @@
           "name": "克里斯托弗·沃肯",
           "id": "extra-Christopher-Walken",
           "englishName": "Christopher Walken"
+        },
+        {
+          "alt": "",
+          "avatars": "John_Savage.png",
+          "name": "约翰·沙维奇",
+          "id": "nm0001698",
+          "englishName": "John Savage"
         }
       ],
       "original_title": "The Deer Hunter",
@@ -10726,6 +12714,27 @@
           "avatars": "波特_杨.png",
           "name": "波特·杨",
           "id": "1048180"
+        },
+        {
+          "alt": "",
+          "avatars": "Talia_Shire.png",
+          "name": "塔里亚·希雷/泰拉·莎尔",
+          "id": "nm0001735",
+          "englishName": "Talia Shire"
+        },
+        {
+          "alt": "",
+          "avatars": "Burt_Young.png",
+          "name": "布特·扬",
+          "id": "nm0949350",
+          "englishName": "Burt Young"
+        },
+        {
+          "alt": "",
+          "avatars": "Carl_Weathers.png",
+          "name": "卡尔·韦瑟斯",
+          "id": "nm0001835",
+          "englishName": "Carl Weathers"
         }
       ],
       "original_title": "Rocky",
@@ -10784,6 +12793,13 @@
           "avatars": "托马斯_米切尔.png",
           "name": "托马斯·米切尔",
           "id": "1124117"
+        },
+        {
+          "alt": "",
+          "avatars": "Jean_Arthur.png",
+          "name": "简·阿瑟",
+          "id": "nm0000795",
+          "englishName": "Jean Arthur"
         }
       ],
       "original_title": "Mr. Smith Goes to Washington",
@@ -10832,6 +12848,13 @@
           "avatars": "奥兰多_布鲁姆.png",
           "name": "奥兰多·布鲁姆",
           "id": "1008069"
+        },
+        {
+          "alt": "",
+          "avatars": "Keira_Knightley.png",
+          "name": "凯拉·奈特丽",
+          "id": "nm0461136",
+          "englishName": "Keira Knightley"
         }
       ],
       "original_title": "Pirates of the Caribbean: The Curse of the Black Pearl",
@@ -10933,6 +12956,20 @@
           "avatars": "李_科布.png",
           "name": "李·科布",
           "id": "1036551"
+        },
+        {
+          "alt": "",
+          "avatars": "Karl_Malden.png",
+          "name": "卡尔·马尔登",
+          "id": "nm0001500",
+          "englishName": "Karl Malden"
+        },
+        {
+          "alt": "",
+          "avatars": "Rod_Steiger.png",
+          "name": "罗德·斯泰格尔",
+          "id": "nm0001768",
+          "englishName": "Rod Steiger"
         }
       ],
       "original_title": "On the Waterfront",
@@ -11123,6 +13160,34 @@
           "avatars": "英里德_图林.png",
           "name": "英里德·图林",
           "id": "1005075"
+        },
+        {
+          "alt": "",
+          "avatars": "Victor_Sjöström.png",
+          "name": "维克多·斯约斯特洛姆",
+          "id": "nm0803705",
+          "englishName": "Victor Sjöström"
+        },
+        {
+          "alt": "",
+          "avatars": "Bibi_Andersson.png",
+          "name": "毕比·安德森",
+          "id": "nm0000761",
+          "englishName": "Bibi Andersson"
+        },
+        {
+          "alt": "",
+          "avatars": "Ingrid_Thulin.png",
+          "name": "英格里德·苏琳",
+          "id": "nm0862026",
+          "englishName": "Ingrid Thulin"
+        },
+        {
+          "alt": "",
+          "avatars": "Gunnar_Björnstrand.png",
+          "name": "甘纳尔·布耶恩施特兰德",
+          "id": "nm0085038",
+          "englishName": "Gunnar Björnstrand"
         }
       ],
       "original_title": "Smultronstället",
@@ -11171,6 +13236,20 @@
           "avatars": "琳达_汉密尔顿.png",
           "name": "琳达·汉密尔顿",
           "id": "1027821"
+        },
+        {
+          "alt": "",
+          "avatars": "Arnold_Schwarzenegger.png",
+          "name": "阿诺德·施瓦辛格",
+          "id": "nm0000216",
+          "englishName": "Arnold Schwarzenegger"
+        },
+        {
+          "alt": "",
+          "avatars": "Paul_Winfield.png",
+          "name": "保罗·温菲尔德",
+          "id": "nm0934902",
+          "englishName": "Paul Winfield"
         }
       ],
       "original_title": "The Terminator",
@@ -11386,6 +13465,20 @@
           "avatars": "伯纳德_李.png",
           "name": "伯纳德·李",
           "id": "1016712"
+        },
+        {
+          "alt": "",
+          "avatars": "Alida_Valli.png",
+          "name": "阿莉达·娃丽",
+          "id": "nm0885098",
+          "englishName": "Alida Valli"
+        },
+        {
+          "alt": "",
+          "avatars": "Trevor_Howard.png",
+          "name": "特雷弗·霍华德",
+          "id": "nm0002145",
+          "englishName": "Trevor Howard"
         }
       ],
       "original_title": "The Third Man",
@@ -11433,6 +13526,20 @@
           "avatars": "朱丽安_摩尔.png",
           "name": "朱丽安·摩尔",
           "id": "1054519"
+        },
+        {
+          "alt": "",
+          "avatars": "Steve_Buscemi.png",
+          "name": "史蒂夫·巴斯米",
+          "id": "nm0000114",
+          "englishName": "Steve Buscemi"
+        },
+        {
+          "alt": "",
+          "avatars": "Jeff_Bridges.png",
+          "name": "杰夫·布里奇斯",
+          "id": "nm0000313",
+          "englishName": "Jeff Bridges"
         }
       ],
       "original_title": "The Big Lebowski",
@@ -11535,6 +13642,27 @@
           "avatars": "达纳_安德鲁斯.png",
           "name": "达纳·安德鲁斯",
           "id": "1014034"
+        },
+        {
+          "alt": "",
+          "avatars": "Myrna_Loy.png",
+          "name": "茂娜·洛伊",
+          "id": "nm0001485",
+          "englishName": "Myrna Loy"
+        },
+        {
+          "alt": "",
+          "avatars": "Fredric_March.png",
+          "name": "弗雷德里克·马区",
+          "id": "nm0545298",
+          "englishName": "Fredric March"
+        },
+        {
+          "alt": "",
+          "avatars": "Teresa_Wright.png",
+          "name": "特里莎·莱特",
+          "id": "nm0942863",
+          "englishName": "Teresa Wright"
         }
       ],
       "original_title": "The Best Years of Our Lives",
@@ -11629,6 +13757,20 @@
           "avatars": "尼尔斯_波普.png",
           "name": "尼尔斯·波普",
           "id": "1019333"
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "甘纳尔·布耶恩施特兰德",
+          "id": null,
+          "englishName": "Gunnar Björnstrand Bengt Ekerot Nils Poppe"
+        },
+        {
+          "alt": "",
+          "avatars": "Max.png",
+          "name": "马克斯·冯·赛多",
+          "id": "nm1796057",
+          "englishName": "Max"
         }
       ],
       "original_title": "Det sjunde inseglet",
@@ -11724,6 +13866,13 @@
           "avatars": "杰昆_菲尼克斯.png",
           "name": "杰昆·菲尼克斯",
           "id": "1047979"
+        },
+        {
+          "alt": "",
+          "avatars": "Hakeem_Kae-Kazim.png",
+          "name": "哈基姆·卡伊·卡西姆",
+          "id": "nm0434444",
+          "englishName": "Hakeem Kae-Kazim"
         }
       ],
       "original_title": "Hotel Rwanda",
@@ -11820,6 +13969,34 @@
           "avatars": "汤姆_贝伦杰.png",
           "name": "汤姆·贝伦杰",
           "id": "1019024"
+        },
+        {
+          "alt": "",
+          "avatars": "Keith_David.png",
+          "name": "基思·大卫",
+          "id": "nm0202966",
+          "englishName": "Keith David"
+        },
+        {
+          "alt": "",
+          "avatars": "Forest_Whitaker.png",
+          "name": "福雷斯特·惠特克",
+          "id": "nm0001845",
+          "englishName": "Forest Whitaker"
+        },
+        {
+          "alt": "",
+          "avatars": "Francesco_Quinn.png",
+          "name": "弗朗西斯科·奎恩",
+          "id": "nm0005331",
+          "englishName": "Francesco Quinn"
+        },
+        {
+          "alt": "",
+          "avatars": "Kevin_Dillon.png",
+          "name": "凯文·狄龙",
+          "id": "nm0001143",
+          "englishName": "Kevin Dillon"
         }
       ],
       "original_title": "Platoon",
@@ -11866,6 +14043,27 @@
           "avatars": "琼_艾伦.png",
           "name": "琼·艾伦",
           "id": "1025215"
+        },
+        {
+          "alt": "",
+          "avatars": "Richard_Gere.png",
+          "name": "理查德·基尔",
+          "id": "nm0000152",
+          "englishName": "Richard Gere"
+        },
+        {
+          "alt": "",
+          "avatars": "Cary-Hiroyuki_Tagawa.png",
+          "name": "凯里-川田博之",
+          "id": "nm0846480",
+          "englishName": "Cary-Hiroyuki Tagawa"
+        },
+        {
+          "alt": "",
+          "avatars": "Sara_Roemer.png",
+          "name": "萨拉·罗默",
+          "id": "nm2105255",
+          "englishName": "Sara Roemer"
         }
       ],
       "original_title": "Hachi: A Dog's Tale",
@@ -11926,6 +14124,20 @@
           "avatars": "杰森_米勒.png",
           "name": "杰森·米勒",
           "id": "1121202"
+        },
+        {
+          "alt": "",
+          "avatars": "Ellen_Burstyn.png",
+          "name": "艾伦·波士汀",
+          "id": "nm0000995",
+          "englishName": "Ellen Burstyn"
+        },
+        {
+          "alt": "",
+          "avatars": "Max.png",
+          "name": "马克斯·冯·赛多",
+          "id": "nm1796057",
+          "englishName": "Max"
         }
       ],
       "original_title": "The Exorcist",
@@ -12070,6 +14282,20 @@
           "avatars": "雷_博尔格.png",
           "name": "雷·博尔格",
           "id": "1013987"
+        },
+        {
+          "alt": "",
+          "avatars": "Ray_Bolger.png",
+          "name": "雷·博尔杰",
+          "id": "nm0001961",
+          "englishName": "Ray Bolger"
+        },
+        {
+          "alt": "",
+          "avatars": "Bert_Lahr.png",
+          "name": "伯特·拉尔",
+          "id": "nm0481618",
+          "englishName": "Bert Lahr"
         }
       ],
       "original_title": "The Wizard of Oz",
@@ -12118,6 +14344,27 @@
           "avatars": "科里_费尔德曼.png",
           "name": "科里·费尔德曼",
           "id": "1009240"
+        },
+        {
+          "alt": "",
+          "avatars": "River_Phoenix.png",
+          "name": "瑞弗·菲尼克斯",
+          "id": "nm0000203",
+          "englishName": "River Phoenix"
+        },
+        {
+          "alt": "",
+          "avatars": "Corey_Feldman.png",
+          "name": "克里·费尔德曼",
+          "id": "nm0000397",
+          "englishName": "Corey Feldman"
+        },
+        {
+          "alt": "",
+          "avatars": "Jerry_O'Connell.png",
+          "name": "杰瑞·奥康耐/谢利·奥康奴",
+          "id": "nm0005278",
+          "englishName": "Jerry O'Connell"
         }
       ],
       "original_title": "Stand by Me",
@@ -12260,6 +14507,13 @@
           "avatars": "Hümeyra.png",
           "name": "Hümeyra",
           "id": ""
+        },
+        {
+          "alt": "",
+          "avatars": null,
+          "name": "Çetin",
+          "id": null,
+          "englishName": "Tekindor Fikret Kuskan Hümeyra"
         }
       ],
       "original_title": "Babam ve Oglum",
@@ -12361,6 +14615,13 @@
           "name": "罗伯特·杜瓦尔",
           "id": "extra-Robert-Duvall",
           "englishName": "Robert Duvall"
+        },
+        {
+          "alt": "",
+          "avatars": "Faye_Dunaway.png",
+          "name": "费·唐娜薇",
+          "id": "nm0001159",
+          "englishName": "Faye Dunaway"
         }
       ],
       "original_title": "Network",
