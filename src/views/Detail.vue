@@ -36,6 +36,14 @@ function getWebpUrl(src: string) {
   return `/static/img/${src.replace('.png', '.webp')}`
 }
 
+function getInitial(name: string) {
+  if (!name) return '?'
+  // 英文名取首字母
+  if (/^[A-Za-z]/.test(name)) return name.charAt(0).toUpperCase()
+  // 中文名取第一个字
+  return name.charAt(0)
+}
+
 function goBack() {
   router.back()
 }
@@ -327,8 +335,8 @@ const allActors = computed(() => {
 
           <!-- Cast Section -->
           <div v-if="allActors.length > 0" class="mt-8 pt-6 border-t border-gray-700">
-            <h3 class="text-xl font-bold text-white mb-4">主演</h3>
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">主演</h3>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
               <div
                 v-for="actor in allActors"
                 :key="actor.id"
@@ -338,18 +346,16 @@ const allActors = computed(() => {
                   v-if="actor.avatars"
                   :src="getImageUrl(actor.avatars, true)"
                   :alt="actor.name"
-                  class="w-20 h-20 rounded-full mx-auto mb-2 object-cover bg-dark-300"
+                  class="w-16 h-20 sm:w-20 sm:h-24 rounded-lg mx-auto mb-1.5 sm:mb-2 object-cover bg-dark-300"
                   loading="lazy"
                 />
                 <div
                   v-else
-                  class="w-20 h-20 rounded-full mx-auto mb-2 bg-dark-300 flex items-center justify-center text-gray-500"
+                  class="w-16 h-20 sm:w-20 sm:h-24 rounded-lg mx-auto mb-1.5 sm:mb-2 bg-dark-300 flex items-center justify-center"
                 >
-                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
+                  <span class="text-xl sm:text-2xl font-bold text-gray-500">{{ getInitial(actor.name) }}</span>
                 </div>
-                <p class="text-sm text-gray-300 font-medium">{{ actor.name }}</p>
+                <p class="text-xs sm:text-sm text-gray-300 font-medium">{{ actor.name }}</p>
                 <p v-if="actor.englishName" class="text-xs text-gray-500 mt-0.5">{{ actor.englishName }}</p>
               </div>
             </div>
@@ -357,20 +363,27 @@ const allActors = computed(() => {
 
           <!-- Directors Section -->
           <div v-if="movie.subject?.directors?.length" class="mt-8 pt-6 border-t border-gray-700">
-            <h3 class="text-xl font-bold text-white mb-4">导演</h3>
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">导演</h3>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4">
               <div
                 v-for="director in movie.subject.directors"
                 :key="director.id"
                 class="text-center"
               >
                 <img
+                  v-if="director.avatars"
                   :src="getImageUrl(director.avatars, true)"
                   :alt="director.name"
-                  class="w-20 h-20 rounded-full mx-auto mb-2 object-cover bg-dark-300"
+                  class="w-16 h-20 sm:w-20 sm:h-24 rounded-lg mx-auto mb-1.5 sm:mb-2 object-cover bg-dark-300"
                   loading="lazy"
                 />
-                <p class="text-sm text-gray-300">{{ director.name }}</p>
+                <div
+                  v-else
+                  class="w-16 h-20 sm:w-20 sm:h-24 rounded-lg mx-auto mb-1.5 sm:mb-2 bg-dark-300 flex items-center justify-center"
+                >
+                  <span class="text-xl sm:text-2xl font-bold text-gray-500">{{ getInitial(director.name) }}</span>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-300">{{ director.name }}</p>
               </div>
             </div>
           </div>
