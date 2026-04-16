@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import type { Movie } from '@/types'
+import type { Movie, MovieListItem, MovieDetail } from '@/types'
 import { PAGE_SIZE } from '@/types'
 import moviesListData from '@/data/movies-list.json'
 import moviesDetailData from '@/data/movies-detail.json'
@@ -40,17 +40,16 @@ export const useMovieStore = defineStore('movie', () => {
 
   // Actions
   function initMovies() {
-    // 合并列表数据和详情数据
-    const list = Array.isArray(moviesListData) ? moviesListData : (moviesListData as any).default || []
-    const details = moviesDetailData as Record<string, any>
+    const list = moviesListData as MovieListItem[]
+    const details = moviesDetailData as Record<string, MovieDetail>
     
-    movies.value = list.map((item: any) => {
+    movies.value = list.map((item) => {
       const detail = details[item.imdb] || {}
       return {
         ...item,
         ...detail
       } as Movie
-    }).sort((a: Movie, b: Movie) => a.order - b.order)
+    }).sort((a, b) => a.order - b.order)
     
     loaded.value = true
   }
@@ -73,7 +72,10 @@ export const useMovieStore = defineStore('movie', () => {
         movie.englishName.toLowerCase().includes(lowerKeyword) ||
         movie.nickName?.toLowerCase().includes(lowerKeyword) ||
         movie.director?.toLowerCase().includes(lowerKeyword) ||
-        movie.actors?.toLowerCase().includes(lowerKeyword)
+        movie.actors?.toLowerCase().includes(lowerKeyword) ||
+        movie.subject?.genres?.some(g => g.toLowerCase().includes(lowerKeyword)) ||
+        movie.subject?.year?.includes(lowerKeyword) ||
+        movie.aka?.toLowerCase().includes(lowerKeyword)
       )
     })
   }

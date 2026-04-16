@@ -354,8 +354,8 @@ const allActors = computed(() => {
             <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">主演</h3>
             <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 sm:gap-4">
               <div
-                v-for="actor in allActors"
-                :key="actor.id"
+                v-for="(actor, idx) in allActors"
+                :key="actor.id || idx"
                 class="text-center"
               >
                 <img
@@ -382,8 +382,8 @@ const allActors = computed(() => {
             <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">导演</h3>
             <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 sm:gap-4">
               <div
-                v-for="director in movie.subject.directors"
-                :key="director.id"
+                v-for="(director, idx) in movie.subject.directors"
+                :key="director.id || idx"
                 class="text-center"
               >
                 <img

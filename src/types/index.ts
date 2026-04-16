@@ -1,16 +1,16 @@
 export interface Cast {
-  alt: string
-  avatars: string
+  alt: string | null
+  avatars: string | null
   name: string
-  id: string
+  id: string | null
   englishName?: string
 }
 
 export interface Director {
-  alt: string
-  avatars: string
+  alt: string | null
+  avatars: string | null
   name: string
-  id: string
+  id: string | null
 }
 
 export interface Subject {
