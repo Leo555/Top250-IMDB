@@ -68,59 +68,10 @@ function formatVotes(votes?: number | string) {
   return num.toString()
 }
 
-// 解析演员列表（从 actors 字符串中提取更多演员）
-function parseActors(actorsStr?: string) {
-  if (!actorsStr) return []
-  
-  // 匹配格式：名字 空格 英文名
-  // 例如："蒂姆·罗宾斯 Tim Robbins 摩根·弗里曼 Morgan Freeman"
-  const actors: Array<{name: string, englishName: string}> = []
-  const regex = /(\S+?)\s+([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)/g
-  let match
-  
-  while ((match = regex.exec(actorsStr)) !== null) {
-    actors.push({
-      name: match[1],
-      englishName: match[2]
-    })
-  }
-  
-  return actors
-}
-
-// 合并主演信息（优先使用 subject.casts，补充 actors 字符串中的演员）
+// 主演列表（直接使用 subject.casts）
 const allActors = computed(() => {
   if (!movie.value) return []
-  
-  const casts = movie.value.subject?.casts || []
-  const additionalActors = parseActors(movie.value.actors)
-  
-  // 如果 subject.casts 已有数据，直接返回
-  if (casts.length > 0) {
-    // 补充额外的演员（没有头像的）
-    const castNames = new Set(casts.map(c => c.name))
-    const extra = additionalActors.filter(a => !castNames.has(a.name))
-    
-    return [
-      ...casts,
-      ...extra.slice(0, 5).map(actor => ({
-        name: actor.name,
-        englishName: actor.englishName,
-        id: `extra-${actor.name}`,
-        alt: '',
-        avatars: ''
-      }))
-    ]
-  }
-  
-  // 否则使用解析出的演员列表
-  return additionalActors.slice(0, 8).map(actor => ({
-    name: actor.name,
-    englishName: actor.englishName,
-    id: `actor-${actor.name}`,
-    alt: '',
-    avatars: ''
-  }))
+  return movie.value.subject?.casts || []
 })
 </script>
 
