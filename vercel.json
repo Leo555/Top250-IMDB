@@ -2,6 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/((?!static/).*)", "destination": "/index.html" }
+    { "source": "/((?!static/|sitemap\\.xml|robots\\.txt|sw\\.js|workbox-).*)", "destination": "/index.html" }
   ]
 }
