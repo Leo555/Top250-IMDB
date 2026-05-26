@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /static/img/avatars/
+
+Sitemap: https://movie.lz5z.com/sitemap.xml
